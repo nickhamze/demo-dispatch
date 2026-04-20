@@ -1,0 +1,95 @@
+# Alt text for each illustration.
+# Used by process_images.py to populate {slug}.alt.txt and by build-wxr.js to
+# write _wp_attachment_image_alt at import time.
+# One to two factual sentences, no marketing voice.
+
+lighthouse: |
+  A coastal lighthouse standing on a low cliff at midday, drawn in flat
+  terracotta and ocean teal with hand-drawn ink contours.
+harbor: |
+  A small harbor with two sailboats moored at a wooden pier, drawn in flat
+  ocean teal and sage green.
+postcard: |
+  A single blank postcard lying flat on a wooden table, drawn in flat
+  terracotta and mustard ochre.
+fountain-pen: |
+  A fountain pen lying at a slight angle with its cap removed, drawn in flat
+  terracotta and ocean teal.
+ink-bottle: |
+  A glass ink bottle, half full, with a quill resting beside it, drawn in
+  flat mustard ochre and sage green.
+typewriter: |
+  A portable typewriter seen from a three-quarter angle, drawn in flat
+  terracotta and mustard ochre.
+bookshelf: |
+  A single bookshelf holding a row of cloth-bound books, drawn in flat
+  ocean teal and sage green.
+paperweight: |
+  A glass paperweight resting on a folded sheet of plain paper, drawn in
+  flat terracotta and ocean teal.
+brass-key: |
+  A single ornate brass key resting on a plain surface, drawn in flat
+  mustard ochre and sage green.
+compass: |
+  A brass compass with the needle pointing north, drawn in flat terracotta
+  and mustard ochre.
+folded-map: |
+  A folded paper map, partially open, with no visible labels or place
+  names, drawn in flat ocean teal and sage green.
+train: |
+  A steam train approaching across an open landscape, drawn in flat
+  terracotta and ocean teal.
+bicycle: |
+  A single bicycle leaning against a low garden wall, drawn in flat mustard
+  ochre and sage green.
+cafe-table: |
+  A small round café table with one teacup and no chairs, drawn in flat
+  terracotta and mustard ochre.
+teacup: |
+  A porcelain teacup and saucer viewed from above, drawn in flat ocean teal
+  and sage green.
+kettle: |
+  A stovetop kettle on a quiet hob with a thread of steam, drawn in flat
+  terracotta and ocean teal.
+lemon: |
+  A single lemon resting on a folded cotton cloth, drawn in flat mustard
+  ochre and sage green.
+fig: |
+  A halved fig fruit showing seeds, on a small plate, drawn in flat
+  terracotta and mustard ochre.
+paper-boat: |
+  A folded paper boat floating in a shallow puddle, drawn in flat ocean
+  teal and sage green.
+kite: |
+  A single diamond kite caught mid-air against an open sky, drawn in flat
+  terracotta and ocean teal.
+observatory: |
+  A hilltop observatory dome at dusk, drawn in flat mustard ochre and sage
+  green.
+telescope: |
+  A small refracting telescope mounted on a tripod, drawn in flat
+  terracotta and mustard ochre.
+weather-vane: |
+  A rooftop weather vane shaped like an arrow, drawn in flat ocean teal and
+  sage green.
+snowdrop: |
+  A single snowdrop flower bending slightly on its stem, drawn in flat
+  terracotta and ocean teal.
+fern: |
+  A single fern frond uncurling, drawn in flat mustard ochre and sage
+  green.
+pinecone: |
+  A single pinecone resting upright, drawn in flat terracotta and mustard
+  ochre.
+river-stones: |
+  A small stack of three smooth river stones, drawn in flat ocean teal and
+  sage green.
+lantern: |
+  A paper lantern hanging from a thin wire, drawn in flat terracotta and
+  ocean teal.
+sailboat: |
+  A single sailboat on a calm horizon with its sail half-furled, drawn in
+  flat mustard ochre and sage green.
+library-window: |
+  A tall library window framed by curtains, with no figures inside, drawn
+  in flat terracotta and mustard ochre.

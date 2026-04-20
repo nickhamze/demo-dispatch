@@ -1,0 +1,707 @@
+# Demo Dispatch - content manifest.
+# This file is the authoritative list of every post and page in the dataset.
+# build-wxr.js reads this manifest and assembles themeunittestdata-v2.xml.
+#
+# Date scheme:
+#   - Release date floor: 2026-04-20.
+#   - The lead marquee post is dated 2026-04-27 (release + 7 days) so it sits
+#     above WP's default Hello world! in most preview environments.
+#   - Articles posts are dated backwards from there at irregular intervals
+#     across ~17 months, ending around 2024-11.
+#   - Sandbox posts are dated 2024-09 to 2024-04 (18-24 months back) so they
+#     never appear on page 1 of the blog index given posts_per_page=10 and
+#     ~25 visible Articles posts ahead of them.
+#   - See spec/dating-scheme.md for the full rationale.
+#
+# Block whitelist for marquee posts (must degrade in classic themes):
+#   paragraph, heading, image, quote, list, gallery, embed, separator, table.
+# Sandbox posts may use any blocks.
+
+categories:
+  - slug: articles
+    name: Articles
+    description: Long-form essays, photo-essays, recipes, reviews, and recaps.
+  - slug: notes
+    name: Notes
+    description: Short observations and asides.
+  - slug: reviews
+    name: Reviews
+    description: Considered notes on small things.
+  - slug: recipes
+    name: Recipes
+    description: A handful of seasonal recipes.
+  - slug: how-to
+    name: How-To
+    description: Step-by-step instructions.
+  - slug: audio
+    name: Audio
+    description: Self-hosted audio episodes.
+  - slug: video
+    name: Video
+    description: Self-hosted and embedded video.
+  - slug: sandbox
+    name: Sandbox
+    description: Theme stress tests. Reachable from /category/sandbox/.
+
+tags:
+  - light
+  - paper
+  - water
+  - weather
+  - color
+  - listening
+  - typography
+  - maps
+  - navigation
+  - small-things
+
+# ---------------------------------------------------------------------------
+# Marquee posts (Articles category, dated forward)
+# ---------------------------------------------------------------------------
+
+posts:
+
+  # Lead post - dated release+7 days so it leads the blog index.
+  - slug: how-a-lighthouse-works
+    title: How a lighthouse works
+    author: tomas
+    date: 2026-04-27 09:00:00
+    category: articles
+    tags: [light, water, navigation]
+    format: standard
+    sticky: true
+    word_target: 1500
+    featured_image: lighthouse
+    inline_images: [harbor, lantern]
+    summary: |
+      A long-form essay covering Fresnel lenses, characteristic flash patterns,
+      and why a lighthouse is really a clock.
+
+  - slug: notes-on-the-color-blue
+    title: Notes on the color blue
+    author: mira
+    date: 2026-04-12 14:30:00
+    category: articles
+    tags: [color, light]
+    format: standard
+    word_target: 1500
+    featured_image: ink-bottle
+    inline_images: [paperweight]
+    summary: |
+      An essay on the long, strange history of blue as a pigment, ending at
+      the Yves Klein patent.
+
+  - slug: a-short-history-of-the-printed-page
+    title: A short history of the printed page
+    author: daniyal
+    date: 2026-03-30 11:15:00
+    category: articles
+    tags: [paper, typography]
+    format: standard
+    word_target: 1500
+    featured_image: typewriter
+    inline_images: [bookshelf, library-window]
+    summary: |
+      From woodblock to movable type to phototypesetting, with sidebars on
+      paper sizes.
+
+  - slug: why-we-still-write-postcards
+    title: Why we still write postcards
+    author: akosua
+    date: 2026-03-18 08:00:00
+    category: articles
+    tags: [paper, small-things]
+    format: standard
+    word_target: 1500
+    featured_image: postcard
+    inline_images: []
+    summary: |
+      A defense of the postcard as the slowest message worth sending.
+
+  - slug: the-grammar-of-maps
+    title: The grammar of maps
+    author: tomas
+    date: 2026-02-22 19:45:00
+    category: articles
+    tags: [maps, navigation]
+    format: standard
+    word_target: 1500
+    featured_image: folded-map
+    inline_images: [compass]
+    summary: |
+      How cartographers compose information - and what an honest map omits.
+
+  # Photo essays
+  - slug: twelve-fountain-pens
+    title: Twelve fountain pens
+    author: mira
+    date: 2026-02-08 12:00:00
+    category: articles
+    tags: [small-things, paper]
+    format: gallery
+    word_target: 700
+    featured_image: fountain-pen
+    inline_images: [ink-bottle, fountain-pen]
+    gallery_subjects: [fountain-pen, ink-bottle]
+    summary: |
+      An illustrated catalogue of twelve pens, with captions on each.
+
+  - slug: harbor-light-at-five-oclock
+    title: Harbor light at five o'clock
+    author: tomas
+    date: 2026-01-28 17:05:00
+    category: articles
+    tags: [light, water]
+    format: image
+    word_target: 600
+    featured_image: harbor
+    inline_images: [sailboat, lighthouse]
+    summary: |
+      A short photo-essay about evening light on a small harbor.
+
+  - slug: a-field-guide-to-weather-vanes
+    title: A field guide to weather vanes
+    author: daniyal
+    date: 2026-01-14 10:30:00
+    category: articles
+    tags: [weather, small-things]
+    format: gallery
+    word_target: 700
+    featured_image: weather-vane
+    inline_images: [weather-vane]
+    gallery_subjects: [weather-vane, kite]
+    summary: |
+      Field notes on rooftop weather vanes seen on a slow walk.
+
+  - slug: things-found-in-a-library-window
+    title: Things found in a library window
+    author: akosua
+    date: 2025-12-30 16:00:00
+    category: articles
+    tags: [light, small-things]
+    format: image
+    word_target: 600
+    featured_image: library-window
+    inline_images: [bookshelf, paperweight]
+    summary: |
+      A list essay catalogued by what the afternoon sun illuminates.
+
+  # Short notes (post formats workout)
+  - slug: an-aside-about-listening
+    title: An aside about listening
+    author: akosua
+    date: 2025-12-12 21:00:00
+    category: notes
+    tags: [listening]
+    format: aside
+    word_target: 120
+    featured_image: null
+    summary: |
+      A two-paragraph note about listening to rain through an open window.
+
+  - slug: status-update-still-here
+    title: ""
+    author: mira
+    date: 2025-11-29 09:30:00
+    category: notes
+    tags: [small-things]
+    format: status
+    word_target: 30
+    featured_image: null
+    summary: |
+      Twitter-length post, intentionally empty title to test theme handling.
+
+  - slug: a-link-worth-keeping
+    title: A link worth keeping
+    author: daniyal
+    date: 2025-11-18 13:45:00
+    category: notes
+    tags: [paper]
+    format: link
+    word_target: 80
+    featured_image: null
+    summary: |
+      A link-format post with a single outbound URL.
+
+  - slug: on-quiet-rooms
+    title: On quiet rooms
+    author: tomas
+    date: 2025-10-30 07:15:00
+    category: notes
+    tags: [listening]
+    format: quote
+    word_target: 100
+    featured_image: null
+    summary: |
+      A quote-format post built around a single short pull-quote.
+
+  - slug: two-photographs-of-snow
+    title: Two photographs of snow
+    author: mira
+    date: 2025-10-09 11:00:00
+    category: notes
+    tags: [weather]
+    format: image
+    word_target: 90
+    featured_image: snowdrop
+    summary: |
+      Image-format post with one image and one caption.
+
+  - slug: a-six-second-clip
+    title: A six-second clip
+    author: tomas
+    date: 2025-09-22 18:20:00
+    category: video
+    tags: [water]
+    format: video
+    word_target: 60
+    featured_image: paper-boat
+    media: paper-boat-clip.mp4
+    summary: |
+      Video-format post that embeds the bundled MP4.
+
+  # Specialised posts
+  - slug: lemon-ice
+    title: Lemon ice
+    author: akosua
+    date: 2025-09-04 15:00:00
+    category: recipes
+    tags: [color]
+    format: standard
+    word_target: 350
+    featured_image: lemon
+    inline_images: [teacup]
+    summary: |
+      A two-ingredient recipe with structured ingredient and method lists.
+
+  - slug: folding-a-paper-boat
+    title: Folding a paper boat
+    author: mira
+    date: 2025-08-18 12:30:00
+    category: how-to
+    tags: [paper, water]
+    format: standard
+    word_target: 400
+    featured_image: paper-boat
+    inline_images: [paper-boat]
+    summary: |
+      Five numbered steps with one inline image per step.
+
+  - slug: on-a-particular-teacup
+    title: On a particular teacup
+    author: akosua
+    date: 2025-07-29 08:45:00
+    category: reviews
+    tags: [small-things]
+    format: standard
+    word_target: 500
+    featured_image: teacup
+    inline_images: []
+    summary: |
+      A review of a single ceramic teacup, with a star-rating-shaped table.
+
+  - slug: notes-from-a-small-observatory
+    title: Notes from a small observatory
+    author: tomas
+    date: 2025-07-04 22:10:00
+    category: articles
+    tags: [light, navigation]
+    format: standard
+    word_target: 800
+    featured_image: observatory
+    inline_images: [telescope]
+    summary: |
+      A recap-style post about a quiet evening at a small hilltop observatory.
+
+  - slug: episode-1-paper
+    title: 'Episode 1: Paper'
+    author: daniyal
+    date: 2025-06-12 10:00:00
+    category: audio
+    tags: [paper, listening]
+    format: audio
+    word_target: 250
+    featured_image: bookshelf
+    media: episode-1-paper.mp3
+    summary: |
+      A self-hosted MP3 episode with a chapter list rendered as an OL.
+
+  # Filler Articles posts to push Sandbox below the fold
+  - slug: an-evening-on-the-pier
+    title: An evening on the pier
+    author: tomas
+    date: 2025-05-22 19:00:00
+    category: articles
+    tags: [water, light]
+    format: standard
+    word_target: 500
+    featured_image: sailboat
+    summary: |
+      A short essay about boats coming in.
+
+  - slug: a-kettle-and-a-clock
+    title: A kettle and a clock
+    author: akosua
+    date: 2025-04-30 06:30:00
+    category: articles
+    tags: [small-things, listening]
+    format: standard
+    word_target: 500
+    featured_image: kettle
+    summary: |
+      An essay about the sound of a kettle as a domestic timekeeper.
+
+  - slug: stones-that-fit-the-hand
+    title: Stones that fit the hand
+    author: mira
+    date: 2025-03-14 14:15:00
+    category: articles
+    tags: [small-things]
+    format: standard
+    word_target: 500
+    featured_image: river-stones
+    summary: |
+      A meditative essay about river stones.
+
+  - slug: the-fern-uncurls-slowly
+    title: The fern uncurls slowly
+    author: akosua
+    date: 2025-02-19 09:20:00
+    category: articles
+    tags: [weather, color]
+    format: standard
+    word_target: 500
+    featured_image: fern
+    summary: |
+      Essay tracking a single fern across a season.
+
+  - slug: bicycles-i-have-known
+    title: Bicycles I have known
+    author: daniyal
+    date: 2024-12-08 11:50:00
+    category: articles
+    tags: [small-things]
+    format: standard
+    word_target: 600
+    featured_image: bicycle
+    summary: |
+      An affectionate list essay about three former bicycles.
+
+# ---------------------------------------------------------------------------
+# Sandbox posts (theme stress tests, dated 18-24 months back)
+# ---------------------------------------------------------------------------
+
+  - slug: cover-block-stress-test
+    title: Cover block - text overlay at every alignment
+    author: mira
+    date: 2024-09-18 12:00:00
+    category: sandbox
+    tags: [typography]
+    format: standard
+    block_safe: false
+    summary: |
+      Cover blocks at every alignment with overlay text in every supported
+      position. Verifies fixed/parallax behaviour.
+
+  - slug: columns-and-groups-nested
+    title: Columns and groups, nested
+    author: daniyal
+    date: 2024-08-30 14:30:00
+    category: sandbox
+    tags: [typography]
+    format: standard
+    block_safe: false
+    summary: |
+      Columns inside Groups inside Columns. Verifies wide / full alignment
+      under nesting.
+
+  - slug: query-loop-variations
+    title: Query loop variations
+    author: tomas
+    date: 2024-08-12 09:00:00
+    category: sandbox
+    tags: []
+    format: standard
+    block_safe: false
+    summary: |
+      Default, grid, and image-only query loop variations on a single page.
+
+  - slug: synced-pattern-references
+    title: Synced pattern references
+    author: akosua
+    date: 2024-07-25 16:00:00
+    category: sandbox
+    tags: []
+    format: standard
+    block_safe: false
+    summary: |
+      Two posts referencing the same synced pattern, plus a paragraph block
+      between.
+
+  - slug: fluid-typography-stress
+    title: Fluid typography stress
+    author: daniyal
+    date: 2024-07-04 10:00:00
+    category: sandbox
+    tags: [typography]
+    format: standard
+    block_safe: true
+    summary: |
+      One paragraph at every heading level, one extremely short paragraph,
+      and one paragraph containing the longest word in the dataset.
+
+  - slug: long-word-line-break-test
+    title: 'Donaudampfschifffahrtsgesellschaftskapitän'
+    author: mira
+    date: 2024-06-20 08:00:00
+    category: sandbox
+    tags: [typography]
+    format: standard
+    block_safe: true
+    summary: |
+      Title and body both contain the longest word in the dataset.
+
+  - slug: many-comments-pagination-test
+    title: Many comments - pagination test
+    author: tomas
+    date: 2024-06-02 18:00:00
+    category: sandbox
+    tags: []
+    format: standard
+    block_safe: true
+    comment_count: 53
+    summary: |
+      A short post that hosts 53 threaded comments to exercise comment
+      pagination at the WP default of 5 per page.
+
+  - slug: password-protected
+    title: A locked drawer
+    author: mira
+    date: 2024-05-22 09:00:00
+    category: sandbox
+    tags: []
+    format: standard
+    block_safe: true
+    password: 'showthistheme'
+    summary: |
+      Password-protected post. Password is "showthistheme".
+
+  - slug: no-title
+    title: ''
+    author: akosua
+    date: 2024-05-08 11:00:00
+    category: sandbox
+    tags: []
+    format: standard
+    block_safe: true
+    summary: |
+      No-title post to verify themes render a sensible permalink fallback.
+
+  - slug: no-body
+    title: 'A title with no body'
+    author: tomas
+    date: 2024-04-27 13:00:00
+    category: sandbox
+    tags: []
+    format: standard
+    block_safe: true
+    body: ''
+    summary: |
+      A title with empty body to verify themes render the post header without
+      breaking layout.
+
+  - slug: scheduled-future
+    title: 'A post scheduled in 2099'
+    author: daniyal
+    date: 2099-01-01 00:00:00
+    status: future
+    category: sandbox
+    tags: []
+    format: standard
+    block_safe: true
+    summary: |
+      Scheduled post should not appear in the blog index.
+
+  - slug: a-draft-not-yet-published
+    title: 'A draft not yet published'
+    author: mira
+    date: 2024-04-10 09:00:00
+    status: draft
+    category: sandbox
+    tags: []
+    format: standard
+    block_safe: true
+    summary: |
+      Draft should not appear in the blog index.
+
+  # Non-Latin script coverage (one post per script)
+  - slug: japanese-script-test
+    title: '光と紙'
+    author: akosua
+    date: 2024-09-05 10:00:00
+    category: sandbox
+    tags: [typography]
+    format: standard
+    block_safe: true
+    lang: ja
+    summary: |
+      Short Japanese-language post titled "Light and Paper".
+
+  - slug: arabic-script-rtl-test
+    title: 'الضوء والورق'
+    author: daniyal
+    date: 2024-08-21 11:00:00
+    category: sandbox
+    tags: [typography]
+    format: standard
+    block_safe: true
+    lang: ar
+    rtl: true
+    summary: |
+      Short Arabic-language post (right-to-left).
+
+  - slug: hindi-script-test
+    title: 'प्रकाश और कागज़'
+    author: tomas
+    date: 2024-08-07 12:00:00
+    category: sandbox
+    tags: [typography]
+    format: standard
+    block_safe: true
+    lang: hi
+    summary: |
+      Short Hindi-language post titled "Light and Paper".
+
+  - slug: cyrillic-script-test
+    title: 'Свет и бумага'
+    author: mira
+    date: 2024-07-18 14:00:00
+    category: sandbox
+    tags: [typography]
+    format: standard
+    block_safe: true
+    lang: ru
+    summary: |
+      Short Russian-language post titled "Light and Paper".
+
+  - slug: greek-script-test
+    title: 'Φως και χαρτί'
+    author: daniyal
+    date: 2024-07-11 15:00:00
+    category: sandbox
+    tags: [typography]
+    format: standard
+    block_safe: true
+    lang: el
+    summary: |
+      Short Greek-language post titled "Light and Paper".
+
+  - slug: emoji-title
+    title: '☕ A morning'
+    author: akosua
+    date: 2024-06-28 07:00:00
+    category: sandbox
+    tags: []
+    format: standard
+    block_safe: true
+    summary: |
+      A post whose title leads with an emoji glyph.
+
+# ---------------------------------------------------------------------------
+# Pages
+# ---------------------------------------------------------------------------
+
+pages:
+  - slug: about
+    title: About
+    parent: null
+    order: 1
+    summary: |
+      Publication mission plus author cards (one card per author).
+
+  - slug: contact
+    title: Contact
+    parent: null
+    order: 2
+    summary: |
+      A static contact page with HTML form markup; no plugin needed.
+
+  - slug: elements
+    title: Elements
+    parent: null
+    order: 3
+    summary: |
+      Typography and block reference page. Renders every heading level,
+      paragraph, blockquote, pullquote, ordered and unordered lists, definition
+      list, table, code, preformatted, figure with caption, every button
+      variant, every alignment, and a six-swatch palette grid.
+
+  - slug: privacy
+    title: Privacy
+    parent: null
+    order: 4
+    summary: |
+      Our published privacy policy at /privacy/. Distinct from the WP default
+      /privacy-policy/ draft, which we cannot publish via WXR-only.
+
+  - slug: colophon
+    title: Colophon
+    parent: null
+    order: 5
+    summary: |
+      Credits the illustration palette, typeface assumptions, dataset version,
+      and a link to the GitHub repo.
+
+  # Page-hierarchy test
+  - slug: notebooks
+    title: Notebooks
+    parent: null
+    order: 6
+    summary: |
+      Parent page for the page-hierarchy test.
+
+  - slug: notebooks/red
+    title: Red notebook
+    parent: notebooks
+    order: 1
+    summary: |
+      First child page.
+
+  - slug: notebooks/blue
+    title: Blue notebook
+    parent: notebooks
+    order: 2
+    summary: |
+      Second child page.
+
+# ---------------------------------------------------------------------------
+# Menus
+# ---------------------------------------------------------------------------
+
+menus:
+  - slug: primary-menu
+    name: Primary
+    items:
+      - {label: Articles, target: category:articles}
+      - {label: Notes, target: category:notes, children: [
+          {label: Asides, target: category:notes},
+          {label: Quotes, target: category:notes},
+        ]}
+      - {label: Audio, target: category:audio}
+      - {label: About, target: page:about}
+      - {label: Contact, target: page:contact}
+
+  - slug: footer-menu
+    name: Footer
+    items:
+      - {label: Privacy, target: page:privacy}
+      - {label: Colophon, target: page:colophon}
+      - {label: Elements, target: page:elements}
+
+  - slug: social-menu
+    name: Social
+    items:
+      - {label: Bluesky, target: 'https://bsky.app/profile/example.invalid'}
+      - {label: Mastodon, target: 'https://social.example/@demo-dispatch'}
+      - {label: YouTube, target: 'https://www.youtube.com/@example'}
+      - {label: RSS, target: '/feed/'}

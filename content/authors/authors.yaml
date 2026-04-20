@@ -1,0 +1,46 @@
+# Demo Dispatch - fictional author records.
+# Imported by build-wxr.js into <wp:author> blocks.
+
+- login: mira
+  display_name: Mira Halász
+  first_name: Mira
+  last_name: Halász
+  email: mira@demo-dispatch.example
+  avatar_slug: paperweight
+  bio: |
+    Mira writes about objects that hold weight - in the desk drawer, in the
+    archive, in memory. Based in a small flat with a north-facing window.
+  url: https://social.example/@mira
+
+- login: daniyal
+  display_name: Daniyal Rashid
+  first_name: Daniyal
+  last_name: Rashid
+  email: daniyal@demo-dispatch.example
+  avatar_slug: brass-key
+  bio: |
+    Daniyal is interested in mechanisms - locks, keys, the small clicks of
+    everyday life. Writes mostly long essays, occasionally short ones.
+  url: https://social.example/@daniyal
+
+- login: akosua
+  display_name: Akosua Mensah
+  first_name: Akosua
+  last_name: Mensah
+  email: akosua@demo-dispatch.example
+  avatar_slug: teacup
+  bio: |
+    Akosua keeps notebooks of weather, light, and tea. Her recipes have
+    appeared in two anthologies that do not exist.
+  url: https://social.example/@akosua
+
+- login: tomas
+  display_name: Tomás Quintero
+  first_name: Tomás
+  last_name: Quintero
+  email: tomas@demo-dispatch.example
+  avatar_slug: compass
+  bio: |
+    Tomás writes about navigation - on water, on paper, in cities. Currently
+    pretending to learn to sail.
+  url: https://social.example/@tomas

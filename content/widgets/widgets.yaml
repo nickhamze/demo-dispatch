@@ -1,0 +1,85 @@
+# Widget assignments for the dataset.
+#
+# Both classic widget areas and block-based widget areas are populated.
+# build-wxr.js writes the corresponding `wp_options` rows (sidebars_widgets,
+# widget_*, etc) into the WXR via the standard <wp:wp_options> extension
+# the WP Importer recognises.
+#
+# Sidebar IDs are the WP defaults; themes override them as needed.
+
+classic_sidebars:
+
+  sidebar-1:
+    - widget: search
+      title: Search
+    - widget: recent-posts
+      title: Recent posts
+      number: 5
+    - widget: recent-comments
+      title: Recent comments
+      number: 5
+    - widget: categories
+      title: Categories
+      dropdown: false
+      hierarchical: true
+      count: true
+    - widget: tag_cloud
+      title: Tags
+      taxonomy: post_tag
+    - widget: archives
+      title: Archives
+      dropdown: false
+      count: false
+    - widget: calendar
+      title: Calendar
+
+  sidebar-2:
+    - widget: text
+      title: About Demo Dispatch
+      content: |
+        A sample publication used to preview WordPress themes. Replace this
+        widget with something of your own.
+    - widget: media_image
+      title: Featured image
+      attachment: lighthouse
+    - widget: nav_menu
+      title: Quick links
+      menu_slug: footer-menu
+    - widget: rss
+      title: External feed
+      url: https://example.com/feed/
+
+  footer-1:
+    - widget: text
+      title: Colophon
+      content: |
+        Demo Dispatch is sample content. Read the
+        <a href="/colophon/">colophon</a> for the typeface, palette, and
+        license details.
+
+  footer-2:
+    - widget: nav_menu
+      title: Footer menu
+      menu_slug: footer-menu
+
+  footer-3:
+    - widget: nav_menu
+      title: Social
+      menu_slug: social-menu
+
+block_widget_areas:
+  # When the active theme registers `wp_block` widget areas, build-wxr.js
+  # populates them with block-equivalent content.
+  sidebar-1:
+    - block: search
+    - block: latest-posts
+      attrs: {postsToShow: 5, displayPostDate: true}
+    - block: latest-comments
+      attrs: {commentsToShow: 5}
+    - block: categories
+      attrs: {showHierarchy: true, showPostCounts: true}
+    - block: tag-cloud
+      attrs: {taxonomy: post_tag}
+    - block: archives
+      attrs: {displayAsDropdown: false, showPostCounts: false}
+    - block: calendar
