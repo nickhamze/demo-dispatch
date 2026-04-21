@@ -9,7 +9,7 @@
       "step": "importWxr",
       "file": {
         "resource": "url",
-        "url": "https://raw.githubusercontent.com/nickhamze/demo-dispatch/a3308b68d1d3ab88327aaa6822468c29dfa0ce79/themeunittestdata-v2.xml"
+        "url": "https://raw.githubusercontent.com/nickhamze/demo-dispatch/1b6ecefe5b10284d6ed6b988c07c3e83aa5c28eb/themeunittestdata-v2.xml"
       }
     }
   ]
