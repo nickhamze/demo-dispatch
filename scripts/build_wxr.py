@@ -106,7 +106,22 @@ INLINE_RULES = [
 # because wrapping a <figure> inside a <p> is invalid HTML and forces every
 # theme to render the image at intrinsic pixel size, breaking the column
 # constraint - the exact symptom users hit before this change.
-_STANDALONE_IMAGE_RE = re.compile(r"^!\[([^\]]*)\]\(([^)]+)\)$")
+#
+# The optional trailing `{.alignleft}` etc. is Pandoc attribute syntax used
+# in elements.md to exercise every image alignment WordPress supports
+# (left/right/center/wide/full). Captured separately so render_image_block
+# can fold the alignment into both the wp:image JSON attrs and the figure
+# class list.
+_STANDALONE_IMAGE_RE = re.compile(
+    r"^!\[([^\]]*)\]\(([^)]+)\)(?:\s*\{\.([a-z]+)\})?$"
+)
+_ALIGN_TO_BLOCK_VALUE = {
+    "alignleft": "left",
+    "alignright": "right",
+    "aligncenter": "center",
+    "alignwide": "wide",
+    "alignfull": "full",
+}
 
 
 def render_inline(text: str) -> str:
@@ -115,7 +130,7 @@ def render_inline(text: str) -> str:
     return text
 
 
-def render_image_block(alt: str, src: str) -> str:
+def render_image_block(alt: str, src: str, align_class: str | None = None) -> str:
     """Emit a full Gutenberg wp:image block for a standalone image line.
 
     Why a real block (not just <figure>):
@@ -130,10 +145,25 @@ def render_image_block(alt: str, src: str) -> str:
     scripts/process_images.py (1200x675). The bare-media regex maps
     `lemon.webp` to that crop downstream; sizes in the rendered HTML stay
     in sync with the resolved URL.
+
+    `align_class` is one of alignleft/alignright/aligncenter/alignwide/
+    alignfull, captured from a trailing `{.alignXxx}` attribute on the
+    Markdown image. It is folded into both the JSON attrs (so the editor
+    sees the canonical block state) and the figure class list (so the
+    rendered HTML carries the styling).
     """
+    align_value = _ALIGN_TO_BLOCK_VALUE.get(align_class or "")
+    attrs = '{"sizeSlug":"large","linkDestination":"none"'
+    fig_classes = ["wp-block-image"]
+    if align_value:
+        attrs += f',"align":"{align_value}"'
+        fig_classes.append(align_class)
+    fig_classes.append("size-large")
+    attrs += "}"
+    fig_class = " ".join(fig_classes)
     return (
-        '<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->\n'
-        f'<figure class="wp-block-image size-large">'
+        f'<!-- wp:image {attrs} -->\n'
+        f'<figure class="{fig_class}">'
         f'<img src="{src}" alt="{alt}" width="1200" height="675"/>'
         f'</figure>\n'
         '<!-- /wp:image -->'
@@ -161,11 +191,28 @@ def md_to_html(body: str) -> str:
             continue
 
         # Standalone image: emit a real wp:image block (not wrapped in <p>).
-        img_match = _STANDALONE_IMAGE_RE.match(stripped)
-        if img_match:
-            out.append(render_image_block(img_match.group(1), img_match.group(2)))
-            i += 1
-            continue
+        # Authors sometimes wrap long alt text across lines:
+        #     ![A short stack of trial posters, two-color letterpress,
+        #     drying on the rack.](poster-stack.webp)
+        # Detect a leading `![` and consume continuation lines until the
+        # closing `)` so the wrapped form parses identically to the inline
+        # form. Without this, the link regex in render_inline matches just
+        # the `[alt](url)` portion, leaving the `!` as a literal character.
+        if stripped.startswith("!["):
+            buf = stripped
+            j = i + 1
+            while ")" not in buf and j < len(lines):
+                buf += " " + lines[j].strip()
+                j += 1
+            img_match = _STANDALONE_IMAGE_RE.match(buf)
+            if img_match:
+                out.append(render_image_block(
+                    img_match.group(1),
+                    img_match.group(2),
+                    img_match.group(3),
+                ))
+                i = j
+                continue
 
         m = re.match(r"^(#{1,6})\s+(.+)$", stripped)
         if m:
