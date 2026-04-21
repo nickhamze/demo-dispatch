@@ -9,7 +9,7 @@
     <title>Demo Dispatch</title>
     <link>https://example.com</link>
     <description>A sample site for previewing WordPress themes.</description>
-    <pubDate>Tue, 21 Apr 2026 00:09:05 +0000</pubDate>
+    <pubDate>Tue, 21 Apr 2026 00:12:43 +0000</pubDate>
     <language>en-US</language>
     <wp:wxr_version>1.2</wp:wxr_version>
     <wp:base_site_url>https://example.com</wp:base_site_url>
@@ -47,155 +47,155 @@
     <wp:author_last_name><![CDATA[Quintero]]></wp:author_last_name>
   </wp:author>
   <wp:category>
-    <wp:term_id>51926</wp:term_id>
+    <wp:term_id>1349</wp:term_id>
     <wp:category_nicename><![CDATA[articles]]></wp:category_nicename>
     <wp:category_parent></wp:category_parent>
     <wp:cat_name><![CDATA[Articles]]></wp:cat_name>
     <wp:category_description><![CDATA[Long-form essays, photo-essays, recipes, reviews, and recaps.]]></wp:category_description>
   </wp:category>
   <wp:category>
-    <wp:term_id>4627</wp:term_id>
+    <wp:term_id>90683</wp:term_id>
     <wp:category_nicename><![CDATA[notes]]></wp:category_nicename>
     <wp:category_parent></wp:category_parent>
     <wp:cat_name><![CDATA[Notes]]></wp:cat_name>
     <wp:category_description><![CDATA[Short observations and asides.]]></wp:category_description>
   </wp:category>
   <wp:category>
-    <wp:term_id>58854</wp:term_id>
+    <wp:term_id>50982</wp:term_id>
     <wp:category_nicename><![CDATA[reviews]]></wp:category_nicename>
     <wp:category_parent></wp:category_parent>
     <wp:cat_name><![CDATA[Reviews]]></wp:cat_name>
     <wp:category_description><![CDATA[Considered notes on small things.]]></wp:category_description>
   </wp:category>
   <wp:category>
-    <wp:term_id>70984</wp:term_id>
+    <wp:term_id>35188</wp:term_id>
     <wp:category_nicename><![CDATA[recipes]]></wp:category_nicename>
     <wp:category_parent></wp:category_parent>
     <wp:cat_name><![CDATA[Recipes]]></wp:cat_name>
     <wp:category_description><![CDATA[A handful of seasonal recipes.]]></wp:category_description>
   </wp:category>
   <wp:category>
-    <wp:term_id>57307</wp:term_id>
+    <wp:term_id>75332</wp:term_id>
     <wp:category_nicename><![CDATA[how-to]]></wp:category_nicename>
     <wp:category_parent></wp:category_parent>
     <wp:cat_name><![CDATA[How-To]]></wp:cat_name>
     <wp:category_description><![CDATA[Step-by-step instructions.]]></wp:category_description>
   </wp:category>
   <wp:category>
-    <wp:term_id>93936</wp:term_id>
+    <wp:term_id>22486</wp:term_id>
     <wp:category_nicename><![CDATA[audio]]></wp:category_nicename>
     <wp:category_parent></wp:category_parent>
     <wp:cat_name><![CDATA[Audio]]></wp:cat_name>
     <wp:category_description><![CDATA[Self-hosted audio episodes.]]></wp:category_description>
   </wp:category>
   <wp:category>
-    <wp:term_id>54147</wp:term_id>
+    <wp:term_id>2</wp:term_id>
     <wp:category_nicename><![CDATA[video]]></wp:category_nicename>
     <wp:category_parent></wp:category_parent>
     <wp:cat_name><![CDATA[Video]]></wp:cat_name>
     <wp:category_description><![CDATA[Self-hosted and embedded video.]]></wp:category_description>
   </wp:category>
   <wp:category>
-    <wp:term_id>58889</wp:term_id>
+    <wp:term_id>98281</wp:term_id>
     <wp:category_nicename><![CDATA[sandbox]]></wp:category_nicename>
     <wp:category_parent></wp:category_parent>
     <wp:cat_name><![CDATA[Sandbox]]></wp:cat_name>
     <wp:category_description><![CDATA[Theme stress tests. Reachable from /category/sandbox/.]]></wp:category_description>
   </wp:category>
   <wp:tag>
-    <wp:term_id>72237</wp:term_id>
+    <wp:term_id>61756</wp:term_id>
     <wp:tag_slug><![CDATA[light]]></wp:tag_slug>
     <wp:tag_name><![CDATA[light]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>14885</wp:term_id>
+    <wp:term_id>12493</wp:term_id>
     <wp:tag_slug><![CDATA[paper]]></wp:tag_slug>
     <wp:tag_name><![CDATA[paper]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>23268</wp:term_id>
+    <wp:term_id>74695</wp:term_id>
     <wp:tag_slug><![CDATA[water]]></wp:tag_slug>
     <wp:tag_name><![CDATA[water]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>39675</wp:term_id>
+    <wp:term_id>85378</wp:term_id>
     <wp:tag_slug><![CDATA[weather]]></wp:tag_slug>
     <wp:tag_name><![CDATA[weather]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>66590</wp:term_id>
+    <wp:term_id>43883</wp:term_id>
     <wp:tag_slug><![CDATA[color]]></wp:tag_slug>
     <wp:tag_name><![CDATA[color]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>59750</wp:term_id>
+    <wp:term_id>47508</wp:term_id>
     <wp:tag_slug><![CDATA[listening]]></wp:tag_slug>
     <wp:tag_name><![CDATA[listening]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>37878</wp:term_id>
+    <wp:term_id>88687</wp:term_id>
     <wp:tag_slug><![CDATA[typography]]></wp:tag_slug>
     <wp:tag_name><![CDATA[typography]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>76976</wp:term_id>
+    <wp:term_id>31005</wp:term_id>
     <wp:tag_slug><![CDATA[maps]]></wp:tag_slug>
     <wp:tag_name><![CDATA[maps]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>98627</wp:term_id>
+    <wp:term_id>33315</wp:term_id>
     <wp:tag_slug><![CDATA[navigation]]></wp:tag_slug>
     <wp:tag_name><![CDATA[navigation]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>81447</wp:term_id>
+    <wp:term_id>62856</wp:term_id>
     <wp:tag_slug><![CDATA[small-things]]></wp:tag_slug>
     <wp:tag_name><![CDATA[small things]]></wp:tag_name>
   </wp:tag>
   <wp:term>
-    <wp:term_id>54869</wp:term_id>
+    <wp:term_id>38762</wp:term_id>
     <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[post-format-aside]]></wp:term_slug>
     <wp:term_name><![CDATA[Post Format: Aside]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>23619</wp:term_id>
+    <wp:term_id>77549</wp:term_id>
     <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[post-format-audio]]></wp:term_slug>
     <wp:term_name><![CDATA[Post Format: Audio]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>85992</wp:term_id>
+    <wp:term_id>63506</wp:term_id>
     <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[post-format-gallery]]></wp:term_slug>
     <wp:term_name><![CDATA[Post Format: Gallery]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>53227</wp:term_id>
+    <wp:term_id>59140</wp:term_id>
     <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[post-format-image]]></wp:term_slug>
     <wp:term_name><![CDATA[Post Format: Image]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>44091</wp:term_id>
+    <wp:term_id>78320</wp:term_id>
     <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[post-format-link]]></wp:term_slug>
     <wp:term_name><![CDATA[Post Format: Link]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>45838</wp:term_id>
+    <wp:term_id>61827</wp:term_id>
     <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[post-format-quote]]></wp:term_slug>
     <wp:term_name><![CDATA[Post Format: Quote]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>9271</wp:term_id>
+    <wp:term_id>33988</wp:term_id>
     <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[post-format-status]]></wp:term_slug>
     <wp:term_name><![CDATA[Post Format: Status]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>83706</wp:term_id>
+    <wp:term_id>68076</wp:term_id>
     <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[post-format-video]]></wp:term_slug>
     <wp:term_name><![CDATA[Post Format: Video]]></wp:term_name>
@@ -3684,9 +3684,7 @@ breaking layout.]]></excerpt:encoded>
       <dc:creator><![CDATA[admin]]></dc:creator>
       <guid isPermaLink="false">https://example.com/?p=1043</guid>
       <description></description>
-      <content:encoded><![CDATA[<h1>About Demo Dispatch</h1>
-
-<p>Demo Dispatch is a sample publication. It exists, in any active install, for exactly one reason: to make a WordPress theme look like a real site full of real content while a visitor is previewing it.</p>
+      <content:encoded><![CDATA[<p>Demo Dispatch is a sample publication. It exists, in any active install, for exactly one reason: to make a WordPress theme look like a real site full of real content while a visitor is previewing it.</p>
 
 <p>The articles are written for the dataset, not for any particular topic. They are real prose, edited to a publishable standard, on neutral evergreen subjects - lighthouses, paper, the colour blue, the grammar of maps - so that the active theme can show what it looks like with thoughtful writing on top of it. The illustrations are produced from a single locked palette so the corpus reads as one publication. The structural test cases (cover blocks, query loops, password-protected posts, fifty-three threaded comments) live in a <code>Sandbox</code> category, dated old enough that they fall below the home page fold.</p>
 
@@ -3726,9 +3724,7 @@ breaking layout.]]></excerpt:encoded>
       <dc:creator><![CDATA[admin]]></dc:creator>
       <guid isPermaLink="false">https://example.com/?p=1044</guid>
       <description></description>
-      <content:encoded><![CDATA[<h1>Contact</h1>
-
-<p>This is a sample contact page. The form below is plain HTML markup; it does not submit anywhere and the dataset does not depend on any contact-form plugin. Replace it with your own form when you delete the sample content.</p>
+      <content:encoded><![CDATA[<p>This is a sample contact page. The form below is plain HTML markup; it does not submit anywhere and the dataset does not depend on any contact-form plugin. Replace it with your own form when you delete the sample content.</p>
 
 <form action="#" method="post" class="contact-form">
 
@@ -3792,9 +3788,7 @@ breaking layout.]]></excerpt:encoded>
       <dc:creator><![CDATA[admin]]></dc:creator>
       <guid isPermaLink="false">https://example.com/?p=1045</guid>
       <description></description>
-      <content:encoded><![CDATA[<h1>Elements</h1>
-
-<p>A typography and block reference. Every element a theme should style is on this page. If anything below renders unexpectedly in the active theme, that is a styling bug worth investigating.</p>
+      <content:encoded><![CDATA[<p>A typography and block reference. Every element a theme should style is on this page. If anything below renders unexpectedly in the active theme, that is a styling bug worth investigating.</p>
 
 <h2>Headings</h2>
 
@@ -3963,9 +3957,7 @@ variant, every alignment, and a six-swatch palette grid.]]></excerpt:encoded>
       <dc:creator><![CDATA[admin]]></dc:creator>
       <guid isPermaLink="false">https://example.com/?p=1046</guid>
       <description></description>
-      <content:encoded><![CDATA[<h1>Privacy</h1>
-
-<p>This is sample content for theme previews. The privacy policy below is illustrative only - it describes what an honest, minimal privacy policy might look like for the kind of small publication this dataset is imitating. Replace it with a real policy that reflects what your site actually does before going live.</p>
+      <content:encoded><![CDATA[<p>This is sample content for theme previews. The privacy policy below is illustrative only - it describes what an honest, minimal privacy policy might look like for the kind of small publication this dataset is imitating. Replace it with a real policy that reflects what your site actually does before going live.</p>
 
 <p>The dataset itself does not include any tracking pixels, analytics snippets, third-party fonts, or external embeds whose privacy properties have not been documented. Every image in <code>images/</code> is bundled in the dataset repository.</p>
 
@@ -4016,9 +4008,7 @@ variant, every alignment, and a six-swatch palette grid.]]></excerpt:encoded>
       <dc:creator><![CDATA[admin]]></dc:creator>
       <guid isPermaLink="false">https://example.com/?p=1047</guid>
       <description></description>
-      <content:encoded><![CDATA[<h1>Colophon</h1>
-
-<p>This site is running the <strong>Demo Dispatch</strong> sample dataset, version 1.0.0, released 2026-04-20.</p>
+      <content:encoded><![CDATA[<p>This site is running the <strong>Demo Dispatch</strong> sample dataset, version 1.0.0, released 2026-04-20.</p>
 
 <h2>Type</h2>
 
@@ -4065,9 +4055,7 @@ and a link to the GitHub repo.]]></excerpt:encoded>
       <dc:creator><![CDATA[admin]]></dc:creator>
       <guid isPermaLink="false">https://example.com/?p=1048</guid>
       <description></description>
-      <content:encoded><![CDATA[<h1>Notebooks</h1>
-
-<p>A parent page for the page-hierarchy test. The two child pages - <a href="/notebooks/red/">Red notebook</a> and <a href="/notebooks/blue/">Blue notebook</a> - verify that the active theme renders nested page navigation correctly.</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>A parent page for the page-hierarchy test. The two child pages - <a href="/notebooks/red/">Red notebook</a> and <a href="/notebooks/blue/">Blue notebook</a> - verify that the active theme renders nested page navigation correctly.</p>]]></content:encoded>
       <excerpt:encoded><![CDATA[Parent page for the page-hierarchy test.]]></excerpt:encoded>
       <wp:post_id>1048</wp:post_id>
       <wp:post_date><![CDATA[2026-04-20 09:00:00]]></wp:post_date>

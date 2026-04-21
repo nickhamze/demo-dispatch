@@ -247,6 +247,16 @@ _BARE_MEDIA_RE = re.compile(
 )
 
 
+_LEADING_H1_RE = re.compile(r"^\s*#\s+[^\n]+\n+")
+
+
+def strip_leading_h1(body: str) -> str:
+    # WordPress renders the post/page title as <h1>; a leading H1 in the body
+    # produces a visual double title in most themes. Authors keep the H1 in
+    # markdown for readability; we strip it at build time.
+    return _LEADING_H1_RE.sub("", body, count=1)
+
+
 def absolutize_media(body: str) -> str:
     if not MEDIA_BASE_URL:
         return body
@@ -522,7 +532,7 @@ def main() -> int:
         next_comment_base += 1000  # roomy stride per post
 
         # Convert markdown body to HTML, but preserve raw HTML / wp:* blocks.
-        html_body = absolutize_media(md_to_html(body))
+        html_body = absolutize_media(md_to_html(strip_leading_h1(body)))
         posts_xml.append(
             render_post(item, html_body, post_id, author_login,
                         post_comments, comment_base)
@@ -539,7 +549,7 @@ def main() -> int:
         next_post_id += 1
         page["date"] = "2026-04-20 09:00:00"
         page["category"] = None
-        html_body = absolutize_media(md_to_html(body))
+        html_body = absolutize_media(md_to_html(strip_leading_h1(body)))
         posts_xml.append(
             render_post(page, html_body, post_id, "admin",
                         [], next_comment_base)
