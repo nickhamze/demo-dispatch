@@ -96,16 +96,48 @@ INLINE_RULES = [
     (re.compile(r"\*\*(.+?)\*\*"), r"<strong>\1</strong>"),
     (re.compile(r"(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)"), r"<em>\1</em>"),
     (re.compile(r"`([^`]+)`"), r"<code>\1</code>"),
-    (re.compile(r"!\[([^\]]*)\]\(([^)]+)\)"),
-     r'<figure class="wp-block-image"><img src="\2" alt="\1"/></figure>'),
     (re.compile(r"\[([^\]]+)\]\(([^)]+)\)"), r'<a href="\2">\1</a>'),
 ]
+
+# Standalone image lines like `![alt](lemon.webp)` get promoted to a real
+# wp:image block in render_image_block(); the inline regex above does not
+# rewrite images at all, so any (very rare) inline-in-paragraph image would
+# be passed through verbatim by render_inline. We accept that trade-off
+# because wrapping a <figure> inside a <p> is invalid HTML and forces every
+# theme to render the image at intrinsic pixel size, breaking the column
+# constraint - the exact symptom users hit before this change.
+_STANDALONE_IMAGE_RE = re.compile(r"^!\[([^\]]*)\]\(([^)]+)\)$")
 
 
 def render_inline(text: str) -> str:
     for rx, repl in INLINE_RULES:
         text = rx.sub(repl, text)
     return text
+
+
+def render_image_block(alt: str, src: str) -> str:
+    """Emit a full Gutenberg wp:image block for a standalone image line.
+
+    Why a real block (not just <figure>):
+    - Block themes constrain image width through .wp-block-image.size-large
+      img { max-width: 100%; height: auto; }. Without the size-large class
+      and the wrapping comment, themes render the image at its intrinsic
+      pixel size, which overflows the article column on narrow viewports.
+    - The wp:image comment lets the block editor reopen the post without
+      the "this block contains unexpected or invalid content" warning.
+
+    Width/height defaults assume the standard 16:9-1200 crop produced by
+    scripts/process_images.py (1200x675). The bare-media regex maps
+    `lemon.webp` to that crop downstream; sizes in the rendered HTML stay
+    in sync with the resolved URL.
+    """
+    return (
+        '<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->\n'
+        f'<figure class="wp-block-image size-large">'
+        f'<img src="{src}" alt="{alt}" width="1200" height="675"/>'
+        f'</figure>\n'
+        '<!-- /wp:image -->'
+    )
 
 
 def md_to_html(body: str) -> str:
@@ -125,6 +157,13 @@ def md_to_html(body: str) -> str:
 
         if not stripped:
             out.append("")
+            i += 1
+            continue
+
+        # Standalone image: emit a real wp:image block (not wrapped in <p>).
+        img_match = _STANDALONE_IMAGE_RE.match(stripped)
+        if img_match:
+            out.append(render_image_block(img_match.group(1), img_match.group(2)))
             i += 1
             continue
 
