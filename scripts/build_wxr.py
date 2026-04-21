@@ -46,16 +46,39 @@ SITE_URL = "https://example.com"
 SITE_TITLE = "Demo Dispatch"
 SITE_TAGLINE = "A sample site for previewing WordPress themes."
 
-# Where attachment files actually live. Defaults to the GitHub raw URL for
-# the bundled images so a fresh build "just works" when imported into
-# Playground; override via env for testing against a different host or a
-# pinned commit SHA, e.g.:
-#   MEDIA_BASE_URL=https://raw.githubusercontent.com/nickhamze/demo-dispatch/<sha>/images
-# When empty, attachment URLs would fall back to https://example.com/wp-content/uploads/...
-# which 404s in Playground - so we never want that as the published default.
-MEDIA_BASE_URL = os.environ.get(
-    "MEDIA_BASE_URL",
-    "https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images",
+# Where attachment files actually live. Defaults to the current git HEAD
+# SHA on raw.githubusercontent.com so every URL in the WXR is unambiguous
+# and CDN-cacheable.
+#
+# Why not /main/ ? raw.githubusercontent.com routinely returns 404 for image
+# files referenced by branch name even when the file is fully pushed
+# (verified: the same path with the explicit commit SHA returns 200). The
+# branch-ref propagation can lag for hours per directory. Pinning to the
+# HEAD SHA dodges the issue entirely - the SHA-keyed cache is populated
+# the moment GitHub registers the push.
+#
+# Override via env for one-off builds against a different host, e.g.:
+#   MEDIA_BASE_URL=https://example.com/uploads python3 scripts/build_wxr.py
+
+
+def _git_head_sha() -> str | None:
+    import subprocess
+    try:
+        out = subprocess.run(
+            ["git", "-C", str(ROOT), "rev-parse", "HEAD"],
+            capture_output=True, text=True, check=True,
+        )
+        return out.stdout.strip() or None
+    except Exception:
+        return None
+
+
+_DEFAULT_REPO = "nickhamze/demo-dispatch"
+_HEAD_SHA = _git_head_sha()
+MEDIA_BASE_URL = os.environ.get("MEDIA_BASE_URL") or (
+    f"https://raw.githubusercontent.com/{_DEFAULT_REPO}/{_HEAD_SHA}/images"
+    if _HEAD_SHA
+    else f"https://raw.githubusercontent.com/{_DEFAULT_REPO}/main/images"
 )
 
 # Stable starting IDs - leave room above the WP defaults (1, 2).
@@ -480,10 +503,17 @@ def render_post(item: dict, body: str, post_id: int, author_login: str,
         # meta_value, with backfill_attachment_urls remapping the URL after
         # import. We also emit an RSS <enclosure /> element below for
         # podcasting clients that read the feed directly.
+        # A relative `url` (no scheme) is resolved against MEDIA_BASE_URL so
+        # the enclosure travels on the same SHA-pinned CDN path as the other
+        # attachments.
+        enc_url = enclosure["url"]
+        if not enc_url.startswith(("http://", "https://")):
+            enc_url = f"{MEDIA_BASE_URL.rstrip('/')}/{enc_url.lstrip('/')}"
+            enclosure = dict(enclosure, url=enc_url)
         meta_lines.append(
             _postmeta(
                 "enclosure",
-                f"{enclosure['url']}\n{enclosure.get('length', 0)}\n{enclosure.get('type', 'audio/mpeg')}",
+                f"{enc_url}\n{enclosure.get('length', 0)}\n{enclosure.get('type', 'audio/mpeg')}",
             )
         )
     for key, value in (item.get("custom_fields") or {}).items():
