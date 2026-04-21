@@ -9,7 +9,7 @@
     <title>Demo Dispatch</title>
     <link>https://example.com</link>
     <description>A sample site for previewing WordPress themes.</description>
-    <pubDate>Tue, 21 Apr 2026 16:47:06 +0000</pubDate>
+    <pubDate>Tue, 21 Apr 2026 16:55:42 +0000</pubDate>
     <language>en-US</language>
     <wp:wxr_version>1.2</wp:wxr_version>
     <wp:base_site_url>https://example.com</wp:base_site_url>
@@ -47,7 +47,7 @@
     <wp:author_last_name><![CDATA[Quintero]]></wp:author_last_name>
   </wp:author>
   <wp:term>
-    <wp:term_id>91064</wp:term_id>
+    <wp:term_id>32804</wp:term_id>
     <wp:term_taxonomy><![CDATA[category]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[dispatch]]></wp:term_slug>
     <wp:term_parent><![CDATA[]]></wp:term_parent>
@@ -57,7 +57,7 @@ from the four members. Multi-author. Flatters news and magazine themes.
 ]]></wp:term_description>
   </wp:term>
   <wp:term>
-    <wp:term_id>23191</wp:term_id>
+    <wp:term_id>10673</wp:term_id>
     <wp:term_taxonomy><![CDATA[category]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[field-notes]]></wp:term_slug>
     <wp:term_parent><![CDATA[]]></wp:term_parent>
@@ -67,7 +67,7 @@ of paying attention. Flatters blog and journal themes.
 ]]></wp:term_description>
   </wp:term>
   <wp:term>
-    <wp:term_id>65432</wp:term_id>
+    <wp:term_id>920</wp:term_id>
     <wp:term_taxonomy><![CDATA[category]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[projects]]></wp:term_slug>
     <wp:term_parent><![CDATA[]]></wp:term_parent>
@@ -77,7 +77,7 @@ for clients. Flatters portfolio and agency themes.
 ]]></wp:term_description>
   </wp:term>
   <wp:term>
-    <wp:term_id>90221</wp:term_id>
+    <wp:term_id>94070</wp:term_id>
     <wp:term_taxonomy><![CDATA[category]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[catalog]]></wp:term_slug>
     <wp:term_parent><![CDATA[]]></wp:term_parent>
@@ -89,7 +89,7 @@ themes layer onto wp:post-terms.
 ]]></wp:term_description>
   </wp:term>
   <wp:term>
-    <wp:term_id>57825</wp:term_id>
+    <wp:term_id>28124</wp:term_id>
     <wp:term_taxonomy><![CDATA[category]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[shop-shelf]]></wp:term_slug>
     <wp:term_parent><![CDATA[catalog]]></wp:term_parent>
@@ -99,7 +99,7 @@ zines, prints, notebooks, tea blends. Flatters shop-adjacent themes.
 ]]></wp:term_description>
   </wp:term>
   <wp:term>
-    <wp:term_id>33111</wp:term_id>
+    <wp:term_id>96180</wp:term_id>
     <wp:term_taxonomy><![CDATA[category]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[kitchen]]></wp:term_slug>
     <wp:term_parent><![CDATA[]]></wp:term_parent>
@@ -110,7 +110,7 @@ fragment. Flatters food and restaurant themes.
 ]]></wp:term_description>
   </wp:term>
   <wp:term>
-    <wp:term_id>67279</wp:term_id>
+    <wp:term_id>3744</wp:term_id>
     <wp:term_taxonomy><![CDATA[category]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[sandbox]]></wp:term_slug>
     <wp:term_parent><![CDATA[]]></wp:term_parent>
@@ -121,131 +121,131 @@ the public feed.
 ]]></wp:term_description>
   </wp:term>
   <wp:tag>
-    <wp:term_id>75098</wp:term_id>
+    <wp:term_id>47085</wp:term_id>
     <wp:tag_slug><![CDATA[light]]></wp:tag_slug>
     <wp:tag_name><![CDATA[light]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>98204</wp:term_id>
+    <wp:term_id>15020</wp:term_id>
     <wp:tag_slug><![CDATA[paper]]></wp:tag_slug>
     <wp:tag_name><![CDATA[paper]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>13730</wp:term_id>
+    <wp:term_id>6793</wp:term_id>
     <wp:tag_slug><![CDATA[water]]></wp:tag_slug>
     <wp:tag_name><![CDATA[water]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>23485</wp:term_id>
+    <wp:term_id>36926</wp:term_id>
     <wp:tag_slug><![CDATA[weather]]></wp:tag_slug>
     <wp:tag_name><![CDATA[weather]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>8578</wp:term_id>
+    <wp:term_id>25296</wp:term_id>
     <wp:tag_slug><![CDATA[color]]></wp:tag_slug>
     <wp:tag_name><![CDATA[color]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>27666</wp:term_id>
+    <wp:term_id>24890</wp:term_id>
     <wp:tag_slug><![CDATA[listening]]></wp:tag_slug>
     <wp:tag_name><![CDATA[listening]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>74096</wp:term_id>
+    <wp:term_id>47817</wp:term_id>
     <wp:tag_slug><![CDATA[typography]]></wp:tag_slug>
     <wp:tag_name><![CDATA[typography]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>58787</wp:term_id>
+    <wp:term_id>41718</wp:term_id>
     <wp:tag_slug><![CDATA[maps]]></wp:tag_slug>
     <wp:tag_name><![CDATA[maps]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>49135</wp:term_id>
+    <wp:term_id>12767</wp:term_id>
     <wp:tag_slug><![CDATA[navigation]]></wp:tag_slug>
     <wp:tag_name><![CDATA[navigation]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>85568</wp:term_id>
+    <wp:term_id>9798</wp:term_id>
     <wp:tag_slug><![CDATA[small-things]]></wp:tag_slug>
     <wp:tag_name><![CDATA[small things]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>72319</wp:term_id>
+    <wp:term_id>44225</wp:term_id>
     <wp:tag_slug><![CDATA[food]]></wp:tag_slug>
     <wp:tag_name><![CDATA[food]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>59035</wp:term_id>
+    <wp:term_id>97388</wp:term_id>
     <wp:tag_slug><![CDATA[workshop]]></wp:tag_slug>
     <wp:tag_name><![CDATA[workshop]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>8786</wp:term_id>
+    <wp:term_id>94429</wp:term_id>
     <wp:tag_slug><![CDATA[print]]></wp:tag_slug>
     <wp:tag_name><![CDATA[print]]></wp:tag_name>
   </wp:tag>
   <wp:tag>
-    <wp:term_id>77879</wp:term_id>
+    <wp:term_id>2330</wp:term_id>
     <wp:tag_slug><![CDATA[opening]]></wp:tag_slug>
     <wp:tag_name><![CDATA[opening]]></wp:tag_name>
   </wp:tag>
   <wp:term>
-    <wp:term_id>73234</wp:term_id>
+    <wp:term_id>36811</wp:term_id>
     <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[post-format-aside]]></wp:term_slug>
     <wp:term_name><![CDATA[Post Format: Aside]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>70791</wp:term_id>
+    <wp:term_id>5297</wp:term_id>
     <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[post-format-audio]]></wp:term_slug>
     <wp:term_name><![CDATA[Post Format: Audio]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>20804</wp:term_id>
+    <wp:term_id>56249</wp:term_id>
     <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[post-format-gallery]]></wp:term_slug>
     <wp:term_name><![CDATA[Post Format: Gallery]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>75960</wp:term_id>
+    <wp:term_id>3046</wp:term_id>
     <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[post-format-image]]></wp:term_slug>
     <wp:term_name><![CDATA[Post Format: Image]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>5663</wp:term_id>
+    <wp:term_id>50322</wp:term_id>
     <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[post-format-link]]></wp:term_slug>
     <wp:term_name><![CDATA[Post Format: Link]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>82463</wp:term_id>
+    <wp:term_id>33919</wp:term_id>
     <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[post-format-quote]]></wp:term_slug>
     <wp:term_name><![CDATA[Post Format: Quote]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>42542</wp:term_id>
+    <wp:term_id>78228</wp:term_id>
     <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[post-format-video]]></wp:term_slug>
     <wp:term_name><![CDATA[Post Format: Video]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>82697</wp:term_id>
+    <wp:term_id>17966</wp:term_id>
     <wp:term_taxonomy><![CDATA[nav_menu]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[primary-menu]]></wp:term_slug>
     <wp:term_name><![CDATA[Primary]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>68788</wp:term_id>
+    <wp:term_id>73671</wp:term_id>
     <wp:term_taxonomy><![CDATA[nav_menu]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[footer-menu]]></wp:term_slug>
     <wp:term_name><![CDATA[Footer]]></wp:term_name>
   </wp:term>
   <wp:term>
-    <wp:term_id>56779</wp:term_id>
+    <wp:term_id>20503</wp:term_id>
     <wp:term_taxonomy><![CDATA[nav_menu]]></wp:term_taxonomy>
     <wp:term_slug><![CDATA[social-menu]]></wp:term_slug>
     <wp:term_name><![CDATA[Social]]></wp:term_name>
@@ -255,7 +255,7 @@ the public feed.
       <link>https://example.com/lighthouse/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[mira]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/lighthouse.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/lighthouse/lighthouse--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -271,7 +271,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/lighthouse.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/lighthouse/lighthouse--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A coastal lighthouse standing on a low cliff at midday, drawn in flat terracotta and ocean teal with hand-drawn ink contours.]]></wp:meta_value>
@@ -282,7 +282,7 @@ the public feed.
       <link>https://example.com/gallery-wall/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[tomas]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/gallery-wall.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/gallery-wall/gallery-wall--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -298,7 +298,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/gallery-wall.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/gallery-wall/gallery-wall--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A plain interior wall with three vague rectangular framed pieces hung at gallery height, with no readable images inside the frames, drawn in flat terracotta and mustard ochre.]]></wp:meta_value>
@@ -309,7 +309,7 @@ the public feed.
       <link>https://example.com/print-press/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[daniyal]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/print-press.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/print-press/print-press--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -325,7 +325,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/print-press.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/print-press/print-press--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A small letterpress in three-quarter view with a type drawer visible to one side, drawn in flat terracotta and mustard ochre.]]></wp:meta_value>
@@ -336,7 +336,7 @@ the public feed.
       <link>https://example.com/lemon-cake/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[akosua]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/lemon-cake.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/lemon-cake/lemon-cake--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -352,7 +352,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/lemon-cake.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/lemon-cake/lemon-cake--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A single slice of lemon cake on a small porcelain plate with a fork resting beside it, drawn in flat mustard ochre and sage green.]]></wp:meta_value>
@@ -363,7 +363,7 @@ the public feed.
       <link>https://example.com/zine-cover/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[daniyal]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/zine-cover.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/zine-cover/zine-cover--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -379,7 +379,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/zine-cover.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/zine-cover/zine-cover--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A single zine cover seen face-on, with two abstract shapes on a paper field and no readable text, drawn in flat terracotta and ocean teal.]]></wp:meta_value>
@@ -390,7 +390,7 @@ the public feed.
       <link>https://example.com/ink-bottle/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[mira]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/ink-bottle.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/ink-bottle/ink-bottle--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -406,7 +406,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/ink-bottle.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/ink-bottle/ink-bottle--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A glass ink bottle, half full, with a quill resting beside it, drawn in flat mustard ochre and sage green.]]></wp:meta_value>
@@ -417,7 +417,7 @@ the public feed.
       <link>https://example.com/bread-loaf/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[akosua]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/bread-loaf.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/bread-loaf/bread-loaf--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -433,7 +433,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/bread-loaf.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/bread-loaf/bread-loaf--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A single loaf of country bread on a wooden board with one slice cut and leaning against it, drawn in flat mustard ochre and sage green.]]></wp:meta_value>
@@ -444,7 +444,7 @@ the public feed.
       <link>https://example.com/typewriter/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[mira]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/typewriter.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/typewriter/typewriter--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -460,7 +460,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/typewriter.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/typewriter/typewriter--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A portable typewriter seen from a three-quarter angle, drawn in flat terracotta and mustard ochre.]]></wp:meta_value>
@@ -471,7 +471,7 @@ the public feed.
       <link>https://example.com/folded-map/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[daniyal]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/folded-map.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/folded-map/folded-map--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -487,7 +487,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/folded-map.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/folded-map/folded-map--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A folded paper map, partially open, with no visible labels or place names, drawn in flat ocean teal and sage green.]]></wp:meta_value>
@@ -498,7 +498,7 @@ the public feed.
       <link>https://example.com/harbor-print/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[daniyal]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/harbor-print.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/harbor-print/harbor-print--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -514,7 +514,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/harbor-print.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/harbor-print/harbor-print--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A framed two-color print of a small harbor at dusk leaning against a wall, with abstract horizon shapes only, drawn in flat terracotta and ocean teal.]]></wp:meta_value>
@@ -525,7 +525,7 @@ the public feed.
       <link>https://example.com/zine-stack/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[tomas]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/zine-stack.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/zine-stack/zine-stack--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -541,7 +541,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/zine-stack.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/zine-stack/zine-stack--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A short stack of zines on a wooden counter seen from a three-quarter angle, with abstract covers and no readable text, drawn in flat terracotta and mustard ochre.]]></wp:meta_value>
@@ -552,7 +552,7 @@ the public feed.
       <link>https://example.com/postcard/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[akosua]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/postcard.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/postcard/postcard--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -568,7 +568,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/postcard.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/postcard/postcard--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A single blank postcard lying flat on a wooden table, drawn in flat terracotta and mustard ochre.]]></wp:meta_value>
@@ -579,7 +579,7 @@ the public feed.
       <link>https://example.com/cookbook-cover/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[daniyal]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/cookbook-cover.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/cookbook-cover/cookbook-cover--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -595,7 +595,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/cookbook-cover.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/cookbook-cover/cookbook-cover--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A single hardbound cookbook cover with an abstract two-color geometric pattern and no readable text, drawn in flat terracotta and mustard ochre.]]></wp:meta_value>
@@ -606,7 +606,7 @@ the public feed.
       <link>https://example.com/lemon/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[akosua]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/lemon.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/lemon/lemon--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -622,7 +622,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/lemon.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/lemon/lemon--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A single lemon resting on a folded cotton cloth, drawn in flat mustard ochre and sage green.]]></wp:meta_value>
@@ -633,7 +633,7 @@ the public feed.
       <link>https://example.com/pocket-notebook/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[daniyal]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/pocket-notebook.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/pocket-notebook/pocket-notebook--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -649,7 +649,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/pocket-notebook.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/pocket-notebook/pocket-notebook--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[Three small pocket notebooks fanned slightly in three different cover colors, with the sewn binding visible, drawn in flat terracotta and mustard ochre.]]></wp:meta_value>
@@ -660,7 +660,7 @@ the public feed.
       <link>https://example.com/fountain-pen/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[mira]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/fountain-pen.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/fountain-pen/fountain-pen--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -676,7 +676,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/fountain-pen.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/fountain-pen/fountain-pen--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A fountain pen lying at a slight angle with its cap removed, drawn in flat terracotta and ocean teal.]]></wp:meta_value>
@@ -687,7 +687,7 @@ the public feed.
       <link>https://example.com/harbor/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[tomas]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/harbor.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/harbor/harbor--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -703,7 +703,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/harbor.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/harbor/harbor--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A small harbor with two sailboats moored at a wooden pier, drawn in flat ocean teal and sage green.]]></wp:meta_value>
@@ -714,7 +714,7 @@ the public feed.
       <link>https://example.com/tea-tin/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[akosua]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/tea-tin.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/tea-tin/tea-tin--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -730,7 +730,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/tea-tin.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/tea-tin/tea-tin--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A small steel tin of loose-leaf tea with the lid removed and resting beside it, with a few tea leaves visible inside, drawn in flat mustard ochre and sage green.]]></wp:meta_value>
@@ -741,7 +741,7 @@ the public feed.
       <link>https://example.com/library-window/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[mira]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/library-window.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/library-window/library-window--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -757,7 +757,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/library-window.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/library-window/library-window--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A tall library window framed by curtains, with no figures inside, drawn in flat terracotta and mustard ochre.]]></wp:meta_value>
@@ -768,7 +768,7 @@ the public feed.
       <link>https://example.com/observatory/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[mira]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/observatory.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/observatory/observatory--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -784,7 +784,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/observatory.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/observatory/observatory--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A hilltop observatory dome at dusk, drawn in flat mustard ochre and sage green.]]></wp:meta_value>
@@ -795,7 +795,7 @@ the public feed.
       <link>https://example.com/snowdrop/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[akosua]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/snowdrop.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/snowdrop/snowdrop--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -811,7 +811,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/snowdrop.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/snowdrop/snowdrop--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A single snowdrop flower bending slightly on its stem, drawn in flat terracotta and ocean teal.]]></wp:meta_value>
@@ -822,7 +822,7 @@ the public feed.
       <link>https://example.com/paper-boat/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[daniyal]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/paper-boat.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/paper-boat/paper-boat--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -838,7 +838,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/paper-boat.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/paper-boat/paper-boat--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A folded paper boat floating in a shallow puddle, drawn in flat ocean teal and sage green.]]></wp:meta_value>
@@ -849,7 +849,7 @@ the public feed.
       <link>https://example.com/teacup/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[akosua]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/teacup.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/teacup/teacup--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -865,7 +865,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/teacup.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/teacup/teacup--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A porcelain teacup and saucer viewed from above, drawn in flat ocean teal and sage green.]]></wp:meta_value>
@@ -876,7 +876,7 @@ the public feed.
       <link>https://example.com/bookshelf/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[mira]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/bookshelf.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/bookshelf/bookshelf--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -892,7 +892,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/bookshelf.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/bookshelf/bookshelf--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A single bookshelf holding a row of cloth-bound books, drawn in flat ocean teal and sage green.]]></wp:meta_value>
@@ -903,7 +903,7 @@ the public feed.
       <link>https://example.com/sailboat/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[tomas]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/sailboat.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/sailboat/sailboat--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -919,7 +919,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/sailboat.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/sailboat/sailboat--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A single sailboat on a calm horizon with its sail half-furled, drawn in flat mustard ochre and sage green.]]></wp:meta_value>
@@ -930,7 +930,7 @@ the public feed.
       <link>https://example.com/kettle/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[akosua]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/kettle.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/kettle/kettle--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -946,7 +946,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/kettle.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/kettle/kettle--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A stovetop kettle on a quiet hob with a thread of steam, drawn in flat terracotta and ocean teal.]]></wp:meta_value>
@@ -957,7 +957,7 @@ the public feed.
       <link>https://example.com/river-stones/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[mira]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/river-stones.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/river-stones/river-stones--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -973,7 +973,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/river-stones.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/river-stones/river-stones--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A small stack of three smooth river stones, drawn in flat ocean teal and sage green.]]></wp:meta_value>
@@ -984,7 +984,7 @@ the public feed.
       <link>https://example.com/fern/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[akosua]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/fern.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/fern/fern--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1000,7 +1000,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/fern.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/fern/fern--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A single fern frond uncurling, drawn in flat mustard ochre and sage green.]]></wp:meta_value>
@@ -1011,7 +1011,7 @@ the public feed.
       <link>https://example.com/bicycle/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <dc:creator><![CDATA[tomas]]></dc:creator>
-      <guid isPermaLink="false">https://example.com/wp-content/uploads/bicycle.webp</guid>
+      <guid isPermaLink="false">https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/bicycle/bicycle--16x9-1200.webp</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
       <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1027,7 +1027,7 @@ the public feed.
       <wp:post_type><![CDATA[attachment]]></wp:post_type>
       <wp:post_password><![CDATA[]]></wp:post_password>
       <wp:is_sticky>0</wp:is_sticky>
-      <wp:attachment_url><![CDATA[https://example.com/wp-content/uploads/bicycle.webp]]></wp:attachment_url>
+      <wp:attachment_url><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/bicycle/bicycle--16x9-1200.webp]]></wp:attachment_url>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_wp_attachment_image_alt]]></wp:meta_key>
         <wp:meta_value><![CDATA[A single bicycle leaning against a low garden wall, drawn in flat mustard ochre and sage green.]]></wp:meta_value>
@@ -1328,7 +1328,7 @@ the public feed.
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-        <wp:meta_value><![CDATA[65432]]></wp:meta_value>
+        <wp:meta_value><![CDATA[920]]></wp:meta_value>
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
@@ -1438,7 +1438,7 @@ the public feed.
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-        <wp:meta_value><![CDATA[91064]]></wp:meta_value>
+        <wp:meta_value><![CDATA[32804]]></wp:meta_value>
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
@@ -1493,7 +1493,7 @@ the public feed.
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-        <wp:meta_value><![CDATA[91064]]></wp:meta_value>
+        <wp:meta_value><![CDATA[32804]]></wp:meta_value>
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
@@ -1548,7 +1548,7 @@ the public feed.
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-        <wp:meta_value><![CDATA[23191]]></wp:meta_value>
+        <wp:meta_value><![CDATA[10673]]></wp:meta_value>
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
@@ -1603,7 +1603,7 @@ the public feed.
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-        <wp:meta_value><![CDATA[33111]]></wp:meta_value>
+        <wp:meta_value><![CDATA[96180]]></wp:meta_value>
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
@@ -1658,7 +1658,7 @@ the public feed.
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-        <wp:meta_value><![CDATA[57825]]></wp:meta_value>
+        <wp:meta_value><![CDATA[28124]]></wp:meta_value>
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
@@ -1878,7 +1878,7 @@ the public feed.
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-        <wp:meta_value><![CDATA[8786]]></wp:meta_value>
+        <wp:meta_value><![CDATA[94429]]></wp:meta_value>
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
@@ -1933,7 +1933,7 @@ the public feed.
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-        <wp:meta_value><![CDATA[72319]]></wp:meta_value>
+        <wp:meta_value><![CDATA[44225]]></wp:meta_value>
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
@@ -2987,11 +2987,11 @@ gallery, hours, and a brief note on the work.]]></excerpt:encoded>
 
 <p><strong>Approach.</strong> We spent a morning at the press with Bell himself, looking at sixty years of his own composing-stick work. The wordmark we eventually drew borrows the long descenders and the wide counter from his 1972 wedding invitations and nothing else.</p>
 
-<p><figure class="wp-block-image"><img src="poster-stack.webp" alt="A short stack of trial posters, two-color letterpress, drying on the rack."/></figure></p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/poster-stack/poster-stack--16x9-1200.webp" alt="A short stack of trial posters, two-color letterpress, drying on the rack."/></figure></p>
 
 <p>The card is two passes — a warm grey for the address block, a deep terracotta for the wordmark. We proofed it twice and printed a hundred for the opening.</p>
 
-<p><figure class="wp-block-image"><img src="proofs.webp" alt="Three proofs on rough cotton paper, printed two-color, terracotta and warm grey."/></figure></p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/proofs/proofs--16x9-1200.webp" alt="Three proofs on rough cotton paper, printed two-color, terracotta and warm grey."/></figure></p>
 
 <p><strong>Outcome.</strong> Bell hung the new sign on the new shopfront last Tuesday. The mark looks like it has always been there, which is what Bell asked for and what we hoped to do.</p>
 
@@ -3033,7 +3033,7 @@ year-old neighborhood print shop. Brief / approach / outcome.]]></excerpt:encode
 
 <p>This time we are using a little less sugar and a little more zest, which fixes a thing that was bothering me about the last batch — it was sweet but not very <em>lemon</em>, which seems like the wrong direction for a cake that has "lemon" in the name.</p>
 
-<p><figure class="wp-block-image"><img src="lemon.webp" alt="A single lemon resting on a folded cotton cloth."/></figure></p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/lemon/lemon--16x9-1200.webp" alt="A single lemon resting on a folded cotton cloth."/></figure></p>
 
 <p>The recipe is the one in the back of <a href="/project-quarterly-cookbook/">Quarterly</a>, the small cookbook we made for a friend last winter. It will be on the <a href="/menu/">Menu</a> Thursday and Friday, sold by the slice, until it is gone. It goes well with the house tea.</p>
 
@@ -3338,7 +3338,7 @@ paper sizes.]]></excerpt:encoded>
 
 <p><strong>Approach.</strong> We spent a Saturday in the museum watching how people moved through it. They moved badly, the way people do in any one-room museum, in loops, missing the case in the far corner with the brass log every time.</p>
 
-<p><figure class="wp-block-image"><img src="compass.webp" alt="A small brass compass, the needle pointing north."/></figure></p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/compass/compass--16x9-1200.webp" alt="A small brass compass, the needle pointing north."/></figure></p>
 
 <p>We made three things.</p>
 
@@ -3346,7 +3346,7 @@ paper sizes.]]></excerpt:encoded>
 
 <p>Second, a deck of forty pocket cards, one per exhibit, in two colors. The front of each card is the exhibit's name, number, and date. The back is a single paragraph that tells you what to look for. The cards live in a small wooden tray near the door.</p>
 
-<p><figure class="wp-block-image"><img src="harbor.webp" alt="The harbor seen from the breakwater at low tide."/></figure></p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/harbor/harbor--16x9-1200.webp" alt="The harbor seen from the breakwater at low tide."/></figure></p>
 
 <p>Third, an exterior sign. Cast aluminum, two-color enamel, mounted at eye height on the seaward side of the building so it catches the light from the afternoon. It says simply: HARBOR MUSEUM, OPEN.</p>
 
@@ -3539,11 +3539,11 @@ this week.]]></excerpt:encoded>
 
 <p><strong>Approach.</strong> We worked through the recipes one weekend at a long kitchen table, deciding which forty out of the seventy-three the mother had written. We cooked twelve of them ourselves before we had any opinions about how the book should look.</p>
 
-<p><figure class="wp-block-image"><img src="cookbook-spread.webp" alt="A spread from the cookbook, showing a recipe and a full-bleed photograph on the facing page."/></figure></p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/cookbook-spread/cookbook-spread--16x9-1200.webp" alt="A spread from the cookbook, showing a recipe and a full-bleed photograph on the facing page."/></figure></p>
 
 <p>The book is set in a single typeface family, contemporary, with old-style numerals for the quantities. Headings are hand-set on the studio's press in a contrasting display face and pasted into the master at the right angle to look as though they were typed onto each page. The mother liked this very much.</p>
 
-<p><figure class="wp-block-image"><img src="lemon-cake.webp" alt="Lemon cake, the recipe in the book, photographed at the studio."/></figure></p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/lemon-cake/lemon-cake--16x9-1200.webp" alt="Lemon cake, the recipe in the book, photographed at the studio."/></figure></p>
 
 <p><strong>Outcome.</strong> Ninety-six pages, sewn binding, hard cover with a blind-debossed spine. A run of three hundred. The friend gave the first copy to her mother on a Tuesday afternoon and called us afterwards. The mother had read it straight through, looking for what was missing. She said nothing was.</p>
 
@@ -3605,7 +3605,7 @@ five-image gallery of spreads.]]></excerpt:encoded>
 
 <p>Serve in small, cold cups.</p>
 
-<p><figure class="wp-block-image"><img src="teacup.webp" alt="Lemon ice served in a small porcelain teacup."/></figure></p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/teacup/teacup--16x9-1200.webp" alt="Lemon ice served in a small porcelain teacup."/></figure></p>
 
 <p>It is the right pudding for a Sunday afternoon at the end of summer, when nobody wants anything heavy and there is still warmth in the garden. It is also good - and this is admittedly slightly less seasonal - in February, served alongside a single shot of cold espresso.</p>
 
@@ -3843,11 +3843,11 @@ price, paper weight, and stocking note.]]></excerpt:encoded>
 
 <p>The light in a small harbor at five o'clock in the afternoon, at this time of year, is approximately the colour of the inside of a brass instrument. It is not yellow. It is not orange. It is the particular metallic colour that brass takes on when somebody has not polished it for a long time but also has not let it tarnish.</p>
 
-<p><figure class="wp-block-image"><img src="sailboat.webp" alt="A sailboat at anchor in the foreground."/></figure></p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/sailboat/sailboat--16x9-1200.webp" alt="A sailboat at anchor in the foreground."/></figure></p>
 
 <p>The light comes in low across the water and turns every white surface - the white of a sail, the white of a railing, the white of a sleeping seagull - into the same brass colour. The hulls of the moored boats, which are mostly painted some shade of cream or ivory, also become brass. The water itself takes on the colour of the harbor floor, which here is sand, which means the water becomes a brass-coloured mirror with the sailboats reflected in it.</p>
 
-<p><figure class="wp-block-image"><img src="lighthouse.webp" alt="The harbor light coming on at the end of the breakwater."/></figure></p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/lighthouse/lighthouse--16x9-1200.webp" alt="The harbor light coming on at the end of the breakwater."/></figure></p>
 
 <p>At about ten past five, the harbor light at the end of the breakwater comes on. It is a small, white, unimpressive light, much less interesting than a real lighthouse, but for the next twenty minutes it is competing with the sunset, and it loses. By half past five the sun is below the horizon, the brass colour drains out of everything, and the harbor light suddenly becomes the brightest thing in the scene. The boats turn into silhouettes. The water goes black.</p>
 
@@ -4049,7 +4049,7 @@ notes.]]></excerpt:encoded>
 
 <p>The library on the corner has one tall window that catches the afternoon sun, and on the wide sill of that window the librarians have, over many decades, built up a small museum.</p>
 
-<p><figure class="wp-block-image"><img src="bookshelf.webp" alt="A bookshelf seen from the library window seat."/></figure></p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/bookshelf/bookshelf--16x9-1200.webp" alt="A bookshelf seen from the library window seat."/></figure></p>
 
 <p>Today, on the sill, in roughly the order I notice them:</p>
 
@@ -4073,7 +4073,7 @@ notes.]]></excerpt:encoded>
 
 <p>rubber band, and a single bus ticket from another country.</p>
 
-<p><figure class="wp-block-image"><img src="paperweight.webp" alt="The paperweight, photographed in the same window light."/></figure></p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/paperweight/paperweight--16x9-1200.webp" alt="The paperweight, photographed in the same window light."/></figure></p>
 
 <p>These things are not displayed. They are not catalogued. The librarians have, between them, agreed to let them accumulate. Once or twice a year somebody dusts the sill, picks up the items individually, looks at each one for a moment, and puts it back roughly where it was. Nothing has ever been removed.</p>
 
@@ -4119,7 +4119,7 @@ notes.]]></excerpt:encoded>
 
 <p>The dome is small. The telescope inside it is small. The members of the society, on the night I visited, numbered four. They had set out three folding chairs at the back of the dome, a flask of tea, and a plate of biscuits.</p>
 
-<p><figure class="wp-block-image"><img src="telescope.webp" alt="A small refracting telescope on its tripod, viewed in low light."/></figure></p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/telescope/telescope--16x9-1200.webp" alt="A small refracting telescope on its tripod, viewed in low light."/></figure></p>
 
 <p>The thing being observed, that night, was Saturn. The rings were sharp. The moons - I counted four, though there were probably more present - sat in a casual diagonal across the field of view. The other members took turns at the eyepiece. Each of them murmured "still there" or "still beautiful" or, in one case, "still impossible," and then stepped back to let the next person look.</p>
 
@@ -4158,7 +4158,7 @@ notes.]]></excerpt:encoded>
       <dc:creator><![CDATA[akosua]]></dc:creator>
       <guid isPermaLink="false">https://example.com/?p=1026</guid>
       <description></description>
-      <content:encoded><![CDATA[<p><figure class="wp-block-image"><img src="snowdrop.webp" alt="A single snowdrop emerging through a thin layer of late snow."/></figure></p>
+      <content:encoded><![CDATA[<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/snowdrop/snowdrop--16x9-1200.webp" alt="A single snowdrop emerging through a thin layer of late snow."/></figure></p>
 
 <p>A short Kitchen note on cooking in cold weather. The first snowdrop of the year, photographed in the back garden at half past eight on a Sunday morning. The snow is the second snow of the season; the first snow vanished in a day.</p>
 
@@ -4199,7 +4199,7 @@ cooking in cold weather.]]></excerpt:encoded>
       <description></description>
       <content:encoded><![CDATA[<blockquote><p>This is sample content for theme previews.</p></blockquote>
 
-<p>[video src="paper-boat-clip.mp4" poster="paper-boat.webp" width="1280" height="720"][/video]</p>
+<p>[video src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/_media/paper-boat-clip.mp4" poster="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/paper-boat/paper-boat--16x9-1200.webp" width="1280" height="720"][/video]</p>
 
 <p>A folded paper boat in a shallow puddle, six seconds long, no sound. Filmed on a phone in a courtyard during a brief gap in the rain. The boat rotates about a quarter-turn over the course of the clip and then the wind catches it and it leaves the frame.</p>]]></content:encoded>
       <excerpt:encoded><![CDATA[Video-format Dispatch post that embeds the bundled MP4.]]></excerpt:encoded>
@@ -4260,7 +4260,7 @@ cooking in cold weather.]]></excerpt:encoded>
 
 <p>back.** You now have a smaller triangle. Open out the base again and collapse it into a smaller diamond, then pull the two top corners apart to form the boat.</p>
 
-<p><figure class="wp-block-image"><img src="paper-boat.webp" alt="A finished paper boat in a shallow puddle."/></figure></p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/paper-boat/paper-boat--16x9-1200.webp" alt="A finished paper boat in a shallow puddle."/></figure></p>
 
 <p>The boat will float for somewhere between thirty seconds and three minutes, depending on the paper and the water. It is improved, in my view, by being launched with a small ceremony - a hand on the side of the puddle, a short word, an unhurried release.</p>]]></content:encoded>
       <excerpt:encoded><![CDATA[Five numbered steps with one inline image per step.]]></excerpt:encoded>
@@ -4344,10 +4344,10 @@ table at the end.]]></excerpt:encoded>
       <dc:creator><![CDATA[mira]]></dc:creator>
       <guid isPermaLink="false">https://example.com/?p=1030</guid>
       <description></description>
-      <enclosure url="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/_media/episode-1-paper.mp3" length="4194304" type="audio/mpeg"/>
+      <enclosure url="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/_media/episode-1-paper.mp3" length="4194304" type="audio/mpeg"/>
       <content:encoded><![CDATA[<blockquote><p>This is sample content for theme previews.</p></blockquote>
 
-<p>[audio src="episode-1-paper.mp3" preload="metadata"][/audio]</p>
+<p>[audio src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/_media/episode-1-paper.mp3" preload="metadata"][/audio]</p>
 
 <p>The first episode of an occasional podcast about small things. Mira and I sit at a kitchen table for forty-three minutes and talk about paper: the surface, the sound, the smell, the way it ages, and why a particular A4 sheet from a particular Italian mill has been sitting in a folder on Mira's desk for nine years without ever being written on.</p>
 
@@ -4395,7 +4395,7 @@ table at the end.]]></excerpt:encoded>
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[enclosure]]></wp:meta_key>
-        <wp:meta_value><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/_media/episode-1-paper.mp3
+        <wp:meta_value><![CDATA[https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/_media/episode-1-paper.mp3
 4194304
 audio/mpeg]]></wp:meta_value>
       </wp:postmeta>
@@ -4632,9 +4632,9 @@ audio/mpeg]]></wp:meta_value>
 
 <p>This post puts the Cover block through its paces. It is not intended to be read; it is intended to be inspected by a theme reviewer who wants to know how the active theme styles overlay text on full-width imagery.</p>
 
-<!-- wp:cover {"url":"harbor.webp","dimRatio":40,"contentPosition":"top left","align":"full"} -->
+<!-- wp:cover {"url":"https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/harbor/harbor--16x9-1200.webp","dimRatio":40,"contentPosition":"top left","align":"full"} -->
 
-<div class="wp-block-cover alignfull"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="harbor.webp"/><div class="wp-block-cover__inner-container">
+<div class="wp-block-cover alignfull"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/harbor/harbor--16x9-1200.webp"/><div class="wp-block-cover__inner-container">
 
 <!-- wp:heading {"level":2,"textAlign":"left","textColor":"white"} -->
 
@@ -4646,9 +4646,9 @@ audio/mpeg]]></wp:meta_value>
 
 <!-- /wp:cover -->
 
-<!-- wp:cover {"url":"lighthouse.webp","dimRatio":70,"contentPosition":"center center","align":"wide"} -->
+<!-- wp:cover {"url":"https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/lighthouse/lighthouse--16x9-1200.webp","dimRatio":70,"contentPosition":"center center","align":"wide"} -->
 
-<div class="wp-block-cover alignwide"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-70 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="lighthouse.webp"/><div class="wp-block-cover__inner-container">
+<div class="wp-block-cover alignwide"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-70 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/lighthouse/lighthouse--16x9-1200.webp"/><div class="wp-block-cover__inner-container">
 
 <!-- wp:heading {"level":2,"textAlign":"center","textColor":"white"} -->
 
@@ -4660,9 +4660,9 @@ audio/mpeg]]></wp:meta_value>
 
 <!-- /wp:cover -->
 
-<!-- wp:cover {"url":"sailboat.webp","dimRatio":20,"contentPosition":"bottom right"} -->
+<!-- wp:cover {"url":"https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/sailboat/sailboat--16x9-1200.webp","dimRatio":20,"contentPosition":"bottom right"} -->
 
-<div class="wp-block-cover"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="sailboat.webp"/><div class="wp-block-cover__inner-container">
+<div class="wp-block-cover"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/sailboat/sailboat--16x9-1200.webp"/><div class="wp-block-cover__inner-container">
 
 <!-- wp:heading {"level":2,"textAlign":"right","textColor":"white"} -->
 
@@ -4674,9 +4674,9 @@ audio/mpeg]]></wp:meta_value>
 
 <!-- /wp:cover -->
 
-<!-- wp:cover {"url":"observatory.webp","dimRatio":50,"contentPosition":"center center","hasParallax":true,"align":"full"} -->
+<!-- wp:cover {"url":"https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/observatory/observatory--16x9-1200.webp","dimRatio":50,"contentPosition":"center center","hasParallax":true,"align":"full"} -->
 
-<div class="wp-block-cover alignfull has-parallax" style="background-image:url(observatory.webp);background-position:50% 50%"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container">
+<div class="wp-block-cover alignfull has-parallax" style="background-image:url(https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/observatory/observatory--16x9-1200.webp);background-position:50% 50%"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container">
 
 <!-- wp:heading {"level":2,"textAlign":"center","textColor":"white"} -->
 
@@ -6137,9 +6137,9 @@ breaking layout.]]></excerpt:encoded>
       <dc:creator><![CDATA[admin]]></dc:creator>
       <guid isPermaLink="false">https://example.com/?p=1054</guid>
       <description></description>
-      <content:encoded><![CDATA[<!-- wp:cover {"url":"harbor.webp","dimRatio":40,"overlayColor":"ink","minHeight":520,"minHeightUnit":"px","align":"full","style":{"color":{"overlay":"#1B1B1F"}}} -->
+      <content:encoded><![CDATA[<!-- wp:cover {"url":"https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/harbor/harbor--16x9-1200.webp","dimRatio":40,"overlayColor":"ink","minHeight":520,"minHeightUnit":"px","align":"full","style":{"color":{"overlay":"#1B1B1F"}}} -->
 
-<div class="wp-block-cover alignfull" style="min-height:520px"><span aria-hidden="true" class="wp-block-cover__background has-ink-background-color has-background-dim-40 has-background-dim" style="background-color:#1B1B1F"></span><img class="wp-block-cover__image-background" alt="" src="harbor.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
+<div class="wp-block-cover alignfull" style="min-height:520px"><span aria-hidden="true" class="wp-block-cover__background has-ink-background-color has-background-dim-40 has-background-dim" style="background-color:#1B1B1F"></span><img class="wp-block-cover__image-background" alt="" src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/harbor/harbor--16x9-1200.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
 
 <!-- wp:heading {"level":1,"textAlign":"left","textColor":"paper","fontSize":"display","style":{"color":{"text":"#F4EFE6"},"typography":{"fontSize":"3.5rem","lineHeight":"1.05","fontStyle":"normal","fontWeight":"600"}}} -->
 
@@ -6205,7 +6205,7 @@ breaking layout.]]></excerpt:encoded>
 
 <!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":"2px"}}} -->
 
-<figure class="wp-block-image size-large"><img src="bookshelf.webp" alt="A bookshelf with a row of cloth-bound books." style="border-radius:2px"/></figure>
+<figure class="wp-block-image size-large"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/bookshelf/bookshelf--16x9-1200.webp" alt="A bookshelf with a row of cloth-bound books." style="border-radius:2px"/></figure>
 
 <!-- /wp:image -->
 
@@ -6237,7 +6237,7 @@ breaking layout.]]></excerpt:encoded>
 
 <!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":"2px"}}} -->
 
-<figure class="wp-block-image size-large"><img src="print-press.webp" alt="A small letterpress in the studio's print room." style="border-radius:2px"/></figure>
+<figure class="wp-block-image size-large"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/print-press/print-press--16x9-1200.webp" alt="A small letterpress in the studio's print room." style="border-radius:2px"/></figure>
 
 <!-- /wp:image -->
 
@@ -6269,7 +6269,7 @@ breaking layout.]]></excerpt:encoded>
 
 <!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":"2px"}}} -->
 
-<figure class="wp-block-image size-large"><img src="zine-stack.webp" alt="A short stack of zines on a wooden counter." style="border-radius:2px"/></figure>
+<figure class="wp-block-image size-large"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/zine-stack/zine-stack--16x9-1200.webp" alt="A short stack of zines on a wooden counter." style="border-radius:2px"/></figure>
 
 <!-- /wp:image -->
 
@@ -6301,7 +6301,7 @@ breaking layout.]]></excerpt:encoded>
 
 <!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":"2px"}}} -->
 
-<figure class="wp-block-image size-large"><img src="lemon-cake.webp" alt="A lemon cake on a porcelain plate." style="border-radius:2px"/></figure>
+<figure class="wp-block-image size-large"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/lemon-cake/lemon-cake--16x9-1200.webp" alt="A lemon cake on a porcelain plate." style="border-radius:2px"/></figure>
 
 <!-- /wp:image -->
 
@@ -6401,7 +6401,7 @@ breaking layout.]]></excerpt:encoded>
 
 <!-- /wp:buttons -->
 
-</div><figure class="wp-block-media-text__media"><img src="print-press.webp" alt="A small letterpress in the studio's print room."/></figure></div>
+</div><figure class="wp-block-media-text__media"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/print-press/print-press--16x9-1200.webp" alt="A small letterpress in the studio's print room."/></figure></div>
 
 <!-- /wp:media-text -->
 
@@ -6732,7 +6732,7 @@ text price range. Closes with a CTA band.]]></excerpt:encoded>
 
 <!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":"100%"},"layout":{"selfStretch":"fixed","flexSize":"180px"}}} -->
 
-<figure class="wp-block-image size-large"><img src="paperweight.webp" alt="Mira's avatar — a glass paperweight on an old map." style="border-radius:100%;max-width:180px"/></figure>
+<figure class="wp-block-image size-large"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/paperweight/paperweight--16x9-1200.webp" alt="Mira's avatar — a glass paperweight on an old map." style="border-radius:100%;max-width:180px"/></figure>
 
 <!-- /wp:image -->
 
@@ -6764,7 +6764,7 @@ text price range. Closes with a CTA band.]]></excerpt:encoded>
 
 <!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":"100%"}}} -->
 
-<figure class="wp-block-image size-large"><img src="brass-key.webp" alt="Daniyal's avatar — an ornate brass key on a plain surface." style="border-radius:100%;max-width:180px"/></figure>
+<figure class="wp-block-image size-large"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/brass-key/brass-key--16x9-1200.webp" alt="Daniyal's avatar — an ornate brass key on a plain surface." style="border-radius:100%;max-width:180px"/></figure>
 
 <!-- /wp:image -->
 
@@ -6796,7 +6796,7 @@ text price range. Closes with a CTA band.]]></excerpt:encoded>
 
 <!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":"100%"}}} -->
 
-<figure class="wp-block-image size-large"><img src="teacup.webp" alt="Akosua's avatar — a porcelain teacup with saucer." style="border-radius:100%;max-width:180px"/></figure>
+<figure class="wp-block-image size-large"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/teacup/teacup--16x9-1200.webp" alt="Akosua's avatar — a porcelain teacup with saucer." style="border-radius:100%;max-width:180px"/></figure>
 
 <!-- /wp:image -->
 
@@ -6828,7 +6828,7 @@ text price range. Closes with a CTA band.]]></excerpt:encoded>
 
 <!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":"100%"}}} -->
 
-<figure class="wp-block-image size-large"><img src="compass.webp" alt="Tomás's avatar — a brass compass with the needle pointing north." style="border-radius:100%;max-width:180px"/></figure>
+<figure class="wp-block-image size-large"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/compass/compass--16x9-1200.webp" alt="Tomás's avatar — a brass compass with the needle pointing north." style="border-radius:100%;max-width:180px"/></figure>
 
 <!-- /wp:image -->
 
@@ -6952,7 +6952,7 @@ working principles.]]></excerpt:encoded>
 
 <!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":"2px"}}} -->
 
-<figure class="wp-block-image size-large"><a href="/shop-quiet-rooms-zine/"><img src="zine-cover.webp" alt="Cover of the Quiet Rooms zine, two-color letterpress." style="border-radius:2px"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/shop-quiet-rooms-zine/"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/zine-cover/zine-cover--16x9-1200.webp" alt="Cover of the Quiet Rooms zine, two-color letterpress." style="border-radius:2px"/></a></figure>
 
 <!-- /wp:image -->
 
@@ -6984,7 +6984,7 @@ working principles.]]></excerpt:encoded>
 
 <!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":"2px"}}} -->
 
-<figure class="wp-block-image size-large"><a href="/shop-harbor-print/"><img src="harbor-print.webp" alt="Harbor at five o'clock, two-color screenprint." style="border-radius:2px"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/shop-harbor-print/"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/harbor-print/harbor-print--16x9-1200.webp" alt="Harbor at five o'clock, two-color screenprint." style="border-radius:2px"/></a></figure>
 
 <!-- /wp:image -->
 
@@ -7016,7 +7016,7 @@ working principles.]]></excerpt:encoded>
 
 <!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":"2px"}}} -->
 
-<figure class="wp-block-image size-large"><a href="/shop-pocket-notebook/"><img src="pocket-notebook.webp" alt="A small pocket notebook in three cover colors." style="border-radius:2px"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/shop-pocket-notebook/"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/pocket-notebook/pocket-notebook--16x9-1200.webp" alt="A small pocket notebook in three cover colors." style="border-radius:2px"/></a></figure>
 
 <!-- /wp:image -->
 
@@ -7048,7 +7048,7 @@ working principles.]]></excerpt:encoded>
 
 <!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":"2px"}}} -->
 
-<figure class="wp-block-image size-large"><a href="/shop-house-tea-tin/"><img src="tea-tin.webp" alt="A small steel tin of the studio's house tea blend." style="border-radius:2px"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/shop-house-tea-tin/"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/tea-tin/tea-tin--16x9-1200.webp" alt="A small steel tin of the studio's house tea blend." style="border-radius:2px"/></a></figure>
 
 <!-- /wp:image -->
 
@@ -7130,9 +7130,9 @@ on shipping and returns.]]></excerpt:encoded>
       <dc:creator><![CDATA[admin]]></dc:creator>
       <guid isPermaLink="false">https://example.com/?p=1058</guid>
       <description></description>
-      <content:encoded><![CDATA[<!-- wp:cover {"url":"lemon-cake.webp","dimRatio":50,"customOverlayColor":"#1B1B1F","minHeight":360,"minHeightUnit":"px","align":"full","style":{"color":{"overlay":"#1B1B1F"}}} -->
+      <content:encoded><![CDATA[<!-- wp:cover {"url":"https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/lemon-cake/lemon-cake--16x9-1200.webp","dimRatio":50,"customOverlayColor":"#1B1B1F","minHeight":360,"minHeightUnit":"px","align":"full","style":{"color":{"overlay":"#1B1B1F"}}} -->
 
-<div class="wp-block-cover alignfull" style="min-height:360px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-50 has-background-dim" style="background-color:#1B1B1F"></span><img class="wp-block-cover__image-background" alt="" src="lemon-cake.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
+<div class="wp-block-cover alignfull" style="min-height:360px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-50 has-background-dim" style="background-color:#1B1B1F"></span><img class="wp-block-cover__image-background" alt="" src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/lemon-cake/lemon-cake--16x9-1200.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
 
 <!-- wp:paragraph {"align":"center","textColor":"paper","fontSize":"small","style":{"color":{"text":"#F4EFE6"},"typography":{"fontSize":"0.875rem","letterSpacing":"0.1em","textTransform":"uppercase","fontWeight":"600"}}} -->
 
@@ -7592,9 +7592,9 @@ Closes with a note on hours and reservations.]]></excerpt:encoded>
       <dc:creator><![CDATA[admin]]></dc:creator>
       <guid isPermaLink="false">https://example.com/?p=1059</guid>
       <description></description>
-      <content:encoded><![CDATA[<!-- wp:cover {"url":"studio-frontage.webp","dimRatio":35,"customOverlayColor":"#1B1B1F","minHeight":420,"minHeightUnit":"px","align":"full","style":{"color":{"overlay":"#1B1B1F"}}} -->
+      <content:encoded><![CDATA[<!-- wp:cover {"url":"https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/studio-frontage/studio-frontage--16x9-1200.webp","dimRatio":35,"customOverlayColor":"#1B1B1F","minHeight":420,"minHeightUnit":"px","align":"full","style":{"color":{"overlay":"#1B1B1F"}}} -->
 
-<div class="wp-block-cover alignfull" style="min-height:420px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-30 has-background-dim" style="background-color:#1B1B1F"></span><img class="wp-block-cover__image-background" alt="" src="studio-frontage.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
+<div class="wp-block-cover alignfull" style="min-height:420px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-30 has-background-dim" style="background-color:#1B1B1F"></span><img class="wp-block-cover__image-background" alt="" src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/studio-frontage/studio-frontage--16x9-1200.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
 
 <!-- wp:heading {"level":1,"textAlign":"left","textColor":"paper","fontSize":"display","style":{"color":{"text":"#F4EFE6"},"typography":{"fontSize":"3.5rem","lineHeight":"1.05","fontWeight":"600"}}} -->
 
@@ -7714,7 +7714,7 @@ Closes with a note on hours and reservations.]]></excerpt:encoded>
 
 <!-- wp:image {"align":"wide","sizeSlug":"large","style":{"border":{"radius":"2px"}}} -->
 
-<figure class="wp-block-image alignwide size-large"><img src="studio-map.webp" alt="A simple illustrated map showing the studio's location two blocks up from the harbor." style="border-radius:2px"/></figure>
+<figure class="wp-block-image alignwide size-large"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/studio-map/studio-map--16x9-1200.webp" alt="A simple illustrated map showing the studio's location two blocks up from the harbor." style="border-radius:2px"/></figure>
 
 <!-- /wp:image -->
 
@@ -7804,7 +7804,7 @@ accessibility note.]]></excerpt:encoded>
 
 <!-- wp:image {"align":"wide","sizeSlug":"large","style":{"border":{"radius":"2px"}}} -->
 
-<figure class="wp-block-image alignwide size-large"><img src="studio-frontage.webp" alt="The studio frontage with the green door, two blocks up from the harbor." style="border-radius:2px"/></figure>
+<figure class="wp-block-image alignwide size-large"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/studio-frontage/studio-frontage--16x9-1200.webp" alt="The studio frontage with the green door, two blocks up from the harbor." style="border-radius:2px"/></figure>
 
 <!-- /wp:image -->
 
@@ -8102,9 +8102,9 @@ the studio's address & hours pulled from Visit.]]></excerpt:encoded>
 
 <!-- /wp:paragraph -->
 
-<!-- wp:file {"href":"press-kit-wordmark.pdf","displayPreview":false} -->
+<!-- wp:file {"href":"https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/_media/press-kit-wordmark.pdf","displayPreview":false} -->
 
-<div class="wp-block-file"><a href="press-kit-wordmark.pdf">Demo Dispatch wordmark (PDF, 220 KB)</a><a href="press-kit-wordmark.pdf" class="wp-block-file__button wp-element-button" download>Download</a></div>
+<div class="wp-block-file"><a href="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/_media/press-kit-wordmark.pdf">Demo Dispatch wordmark (PDF, 220 KB)</a><a href="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/_media/press-kit-wordmark.pdf" class="wp-block-file__button wp-element-button" download>Download</a></div>
 
 <!-- /wp:file -->
 
@@ -8236,19 +8236,19 @@ the studio's address & hours pulled from Visit.]]></excerpt:encoded>
 
 <!-- wp:image {"sizeSlug":"large"} -->
 
-<figure class="wp-block-image size-large"><img src="studio-frontage.webp" alt="The studio frontage with the green door."/></figure>
+<figure class="wp-block-image size-large"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/studio-frontage/studio-frontage--16x9-1200.webp" alt="The studio frontage with the green door."/></figure>
 
 <!-- /wp:image -->
 
 <!-- wp:image {"sizeSlug":"large"} -->
 
-<figure class="wp-block-image size-large"><img src="print-press.webp" alt="A small letterpress in the studio's print room."/></figure>
+<figure class="wp-block-image size-large"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/print-press/print-press--16x9-1200.webp" alt="A small letterpress in the studio's print room."/></figure>
 
 <!-- /wp:image -->
 
 <!-- wp:image {"sizeSlug":"large"} -->
 
-<figure class="wp-block-image size-large"><img src="gallery-wall.webp" alt="The front gallery's sage wall with three pieces hung."/></figure>
+<figure class="wp-block-image size-large"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/gallery-wall/gallery-wall--16x9-1200.webp" alt="The front gallery's sage wall with three pieces hung."/></figure>
 
 <!-- /wp:image -->
 
@@ -8624,19 +8624,19 @@ version, and a link to the GitHub repo. Briefly winks at being a demo.]]></excer
 
 <p>A left-aligned image (textual content wraps around it) followed by a right-aligned image, then a centered, a wide, and a full-width image.</p>
 
-<p><figure class="wp-block-image"><img src="paperweight.webp" alt="Aligned left."/></figure>{.alignleft}</p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/paperweight/paperweight--16x9-1200.webp" alt="Aligned left."/></figure>{.alignleft}</p>
 
 <p>A paragraph alongside the left-aligned image to demonstrate text wrap. This paragraph contains enough prose to show how the active theme handles the float-clearing margin between body text and an image floated to the left edge of the content area.</p>
 
-<p><figure class="wp-block-image"><img src="compass.webp" alt="Aligned right."/></figure>{.alignright}</p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/compass/compass--16x9-1200.webp" alt="Aligned right."/></figure>{.alignright}</p>
 
 <p>A paragraph alongside the right-aligned image. Similar to the above but mirrored. Themes should clear the float at the end of the next block without leaving the body text wrapped under a tall image.</p>
 
-<p><figure class="wp-block-image"><img src="teacup.webp" alt="Aligned centre."/></figure>{.aligncenter}</p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/teacup/teacup--16x9-1200.webp" alt="Aligned centre."/></figure>{.aligncenter}</p>
 
-<p><figure class="wp-block-image"><img src="harbor.webp" alt="Wide alignment."/></figure>{.alignwide}</p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/harbor/harbor--16x9-1200.webp" alt="Wide alignment."/></figure>{.alignwide}</p>
 
-<p><figure class="wp-block-image"><img src="lighthouse.webp" alt="Full alignment."/></figure>{.alignfull}</p>
+<p><figure class="wp-block-image"><img src="https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/lighthouse/lighthouse--16x9-1200.webp" alt="Full alignment."/></figure>{.alignfull}</p>
 
 <h2>Palette</h2>
 

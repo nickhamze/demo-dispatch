@@ -46,10 +46,17 @@ SITE_URL = "https://example.com"
 SITE_TITLE = "Demo Dispatch"
 SITE_TAGLINE = "A sample site for previewing WordPress themes."
 
-# Where attachment files actually live. Override at build time, e.g.:
-#   MEDIA_BASE_URL=https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images
-# When set, attachment URLs in the WXR resolve to {MEDIA_BASE_URL}/{slug}/{slug}--16x9-1200.webp.
-MEDIA_BASE_URL = os.environ.get("MEDIA_BASE_URL", "")
+# Where attachment files actually live. Defaults to the GitHub raw URL for
+# the bundled images so a fresh build "just works" when imported into
+# Playground; override via env for testing against a different host or a
+# pinned commit SHA, e.g.:
+#   MEDIA_BASE_URL=https://raw.githubusercontent.com/nickhamze/demo-dispatch/<sha>/images
+# When empty, attachment URLs would fall back to https://example.com/wp-content/uploads/...
+# which 404s in Playground - so we never want that as the published default.
+MEDIA_BASE_URL = os.environ.get(
+    "MEDIA_BASE_URL",
+    "https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images",
+)
 
 # Stable starting IDs - leave room above the WP defaults (1, 2).
 POST_ID_BASE = 1000

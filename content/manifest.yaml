@@ -561,7 +561,7 @@ posts:
       # subscribed to the feed) and an `enclosure` postmeta entry (which
       # WP rebuilds itself when the post is saved, but which we ship
       # pre-built so feed readers see it immediately on import).
-      url: https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/_media/episode-1-paper.mp3
+      url: https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/images/_media/episode-1-paper.mp3
       length: 4194304
       type: audio/mpeg
     summary: |
