@@ -29,7 +29,7 @@ import html
 import os
 import re
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from xml.sax.saxutils import escape as xml_escape
 
@@ -316,25 +316,69 @@ def render_author(author: dict, user_id: int) -> str:
     )
 
 
-def render_category(slug: str, name: str, description: str) -> str:
+# Stable per-slug term IDs. We hash so the same slug always gets the same ID
+# across builds, which keeps menu items and term assignments coherent without a
+# second pass to look IDs up.
+
+def category_term_id(slug: str) -> int:
+    return abs(hash("cat:" + slug)) % 100000
+
+
+def tag_term_id(slug: str) -> int:
+    return abs(hash("tag:" + slug)) % 100000
+
+
+def menu_term_id(slug: str) -> int:
+    return abs(hash("menu:" + slug)) % 100000
+
+
+def format_term_id(fmt: str) -> int:
+    return abs(hash("fmt:" + fmt)) % 100000
+
+
+def render_category(slug: str, name: str, description: str,
+                    parent_slug: str = "") -> str:
+    """Categories as wp:term so we can express hierarchy via term_parent.
+
+    The importer (class-wp-import.php process_term) accepts wp:term entries
+    with term_taxonomy=category and resolves parent slugs through
+    term_exists(parent_slug, taxonomy). It runs alongside process_categories,
+    so wp:term and wp:category entries can coexist - we standardise on
+    wp:term for everything to keep one code path.
+    """
     return (
-        "  <wp:category>\n"
-        f"    <wp:term_id>{abs(hash(slug)) % 100000}</wp:term_id>\n"
-        f"    <wp:category_nicename>{cdata(slug)}</wp:category_nicename>\n"
-        "    <wp:category_parent></wp:category_parent>\n"
-        f"    <wp:cat_name>{cdata(name)}</wp:cat_name>\n"
-        f"    <wp:category_description>{cdata(description)}</wp:category_description>\n"
-        "  </wp:category>\n"
+        "  <wp:term>\n"
+        f"    <wp:term_id>{category_term_id(slug)}</wp:term_id>\n"
+        "    <wp:term_taxonomy><![CDATA[category]]></wp:term_taxonomy>\n"
+        f"    <wp:term_slug>{cdata(slug)}</wp:term_slug>\n"
+        f"    <wp:term_parent>{cdata(parent_slug)}</wp:term_parent>\n"
+        f"    <wp:term_name>{cdata(name)}</wp:term_name>\n"
+        f"    <wp:term_description>{cdata(description)}</wp:term_description>\n"
+        "  </wp:term>\n"
     )
 
 
 def render_tag(slug: str) -> str:
     return (
         "  <wp:tag>\n"
-        f"    <wp:term_id>{abs(hash('tag:' + slug)) % 100000}</wp:term_id>\n"
+        f"    <wp:term_id>{tag_term_id(slug)}</wp:term_id>\n"
         f"    <wp:tag_slug>{cdata(slug)}</wp:tag_slug>\n"
         f"    <wp:tag_name>{cdata(slug.replace('-', ' '))}</wp:tag_name>\n"
         "  </wp:tag>\n"
+    )
+
+
+def render_nav_menu_term(slug: str, name: str) -> str:
+    """A nav_menu term is what classic-menu themes look up by location and what
+    block themes can convert through WP_Navigation_Fallback when no
+    wp_navigation post exists."""
+    return (
+        "  <wp:term>\n"
+        f"    <wp:term_id>{menu_term_id(slug)}</wp:term_id>\n"
+        "    <wp:term_taxonomy><![CDATA[nav_menu]]></wp:term_taxonomy>\n"
+        f"    <wp:term_slug>{cdata(slug)}</wp:term_slug>\n"
+        f"    <wp:term_name>{cdata(name)}</wp:term_name>\n"
+        "  </wp:term>\n"
     )
 
 
@@ -353,9 +397,29 @@ def render_comment(c: dict, base_id: int) -> str:
         f"      <wp:comment_approved>{cdata('1' if c.get('approved', True) else '0')}</wp:comment_approved>",
         f"      <wp:comment_type>{cdata(c.get('type', ''))}</wp:comment_type>",
         f"      <wp:comment_parent>{parent}</wp:comment_parent>",
-        "    </wp:comment>",
     ]
+    # commentmeta is processed by class-wp-import.php process_comments, which
+    # passes each entry through wp_filter_comment / add_comment_meta. Akismet,
+    # rating plugins, and translation plugins all read these keys, so emitting
+    # them lets a downstream plugin install pick the comment up correctly.
+    for key, value in (c.get("meta") or {}).items():
+        pieces.append(
+            "      <wp:commentmeta>\n"
+            f"        <wp:meta_key>{cdata(str(key))}</wp:meta_key>\n"
+            f"        <wp:meta_value>{cdata(str(value))}</wp:meta_value>\n"
+            "      </wp:commentmeta>"
+        )
+    pieces.append("    </wp:comment>")
     return "\n".join(pieces) + "\n"
+
+
+def _postmeta(key: str, value: str) -> str:
+    return (
+        "      <wp:postmeta>\n"
+        f"        <wp:meta_key>{cdata(key)}</wp:meta_key>\n"
+        f"        <wp:meta_value>{cdata(value)}</wp:meta_value>\n"
+        "      </wp:postmeta>"
+    )
 
 
 def render_post(item: dict, body: str, post_id: int, author_login: str,
@@ -391,21 +455,47 @@ def render_post(item: dict, body: str, post_id: int, author_login: str,
         )
 
     meta_lines: list[str] = []
-    meta_lines.append(
-        "      <wp:postmeta>\n"
-        f"        <wp:meta_key>{cdata('_edit_last')}</wp:meta_key>\n"
-        f"        <wp:meta_value>{cdata('1')}</wp:meta_value>\n"
-        "      </wp:postmeta>"
-    )
+    meta_lines.append(_postmeta("_edit_last", "1"))
     if item.get("featured_image"):
         meta_lines.append(
-            "      <wp:postmeta>\n"
-            f"        <wp:meta_key>{cdata('_thumbnail_id')}</wp:meta_key>\n"
-            f"        <wp:meta_value>{cdata(str(item['_thumbnail_id']))}</wp:meta_value>\n"
-            "      </wp:postmeta>"
+            _postmeta("_thumbnail_id", str(item["_thumbnail_id"]))
+        )
+    if item.get("template"):
+        # _wp_page_template is read by get_page_template_slug() and tells the
+        # theme to render this page through a specific template file. Block
+        # themes register block templates under the same meta key, so the same
+        # value works on both classic and block themes that ship the named
+        # template; if the template is missing the theme falls back silently.
+        meta_lines.append(_postmeta("_wp_page_template", item["template"]))
+    enclosure = item.get("enclosure")
+    if enclosure:
+        # The enclosure postmeta takes the form `url\nlength\nmime` on a single
+        # meta_value, with backfill_attachment_urls remapping the URL after
+        # import. We also emit an RSS <enclosure /> element below for
+        # podcasting clients that read the feed directly.
+        meta_lines.append(
+            _postmeta(
+                "enclosure",
+                f"{enclosure['url']}\n{enclosure.get('length', 0)}\n{enclosure.get('type', 'audio/mpeg')}",
+            )
+        )
+    for key, value in (item.get("custom_fields") or {}).items():
+        meta_lines.append(_postmeta(str(key), str(value)))
+
+    enclosure_element = ""
+    if enclosure:
+        enclosure_element = (
+            f'      <enclosure url="{xml_escape(enclosure["url"])}" '
+            f'length="{int(enclosure.get("length", 0))}" '
+            f'type="{xml_escape(enclosure.get("type", "audio/mpeg"))}"/>\n'
         )
 
     comment_blocks = "\n".join(render_comment(c, comment_base_id) for c in comments)
+
+    # post_name for pages that live under a parent (slug "notebooks/red") is
+    # only the leaf segment; WordPress reconstructs the full path from the
+    # post_parent chain. Posts always use the literal slug.
+    post_name = slug.rsplit("/", 1)[-1] if post_type == "page" else slug
 
     return (
         "    <item>\n"
@@ -415,6 +505,7 @@ def render_post(item: dict, body: str, post_id: int, author_login: str,
         f"      <dc:creator>{cdata(author_login)}</dc:creator>\n"
         f"      <guid isPermaLink=\"false\">{xml_escape(SITE_URL)}/?p={post_id}</guid>\n"
         "      <description></description>\n"
+        f"{enclosure_element}"
         f"      <content:encoded>{cdata(body)}</content:encoded>\n"
         f"      <excerpt:encoded>{cdata(excerpt)}</excerpt:encoded>\n"
         f"      <wp:post_id>{post_id}</wp:post_id>\n"
@@ -422,7 +513,7 @@ def render_post(item: dict, body: str, post_id: int, author_login: str,
         f"      <wp:post_date_gmt>{cdata(sql_date)}</wp:post_date_gmt>\n"
         "      <wp:comment_status><![CDATA[open]]></wp:comment_status>\n"
         "      <wp:ping_status><![CDATA[open]]></wp:ping_status>\n"
-        f"      <wp:post_name>{cdata(slug)}</wp:post_name>\n"
+        f"      <wp:post_name>{cdata(post_name)}</wp:post_name>\n"
         f"      <wp:status>{cdata(status)}</wp:status>\n"
         f"      <wp:post_parent>{item.get('post_parent', 0)}</wp:post_parent>\n"
         f"      <wp:menu_order>{item.get('order', 0)}</wp:menu_order>\n"
@@ -549,13 +640,20 @@ def render_nav_block(item: dict) -> str:
     return "".join(parts)
 
 
-def render_navigation_post(menu: dict, post_id: int) -> str:
-    """Emit a `wp_navigation` post whose content is the menu block tree."""
+def render_navigation_post(menu: dict, post_id: int,
+                           when: datetime) -> str:
+    """Emit a `wp_navigation` post whose content is the menu block tree.
+
+    `when` controls publish date; WP_Navigation_Fallback picks the most
+    recently published wp_navigation post when the Navigation block has no
+    explicit ref, so the primary menu's `when` must be newer than any other
+    wp_navigation post in the dataset.
+    """
     slug = menu["slug"]
     name = menu.get("name", slug.replace("-", " ").title())
     body = "".join(render_nav_block(item) for item in menu.get("items", []))
-    pubdate = fmt_dt(datetime(2026, 4, 20, tzinfo=timezone.utc))
-    sql_date = fmt_sql(datetime(2026, 4, 20))
+    pubdate = fmt_dt(when)
+    sql_date = fmt_sql(when)
     return (
         "    <item>\n"
         f"      <title>{cdata(name)}</title>\n"
@@ -582,10 +680,139 @@ def render_navigation_post(menu: dict, post_id: int) -> str:
     )
 
 
+# ---------------------------------------------------------------------------
+# Classic nav_menu / nav_menu_item emission
+#
+# The Customizer-era "Menus" UI in classic themes reads from the nav_menu
+# taxonomy: each menu is a term, each menu item is a `nav_menu_item` post in
+# that term, and ordering is by menu_order.  Hierarchy uses the postmeta
+# `_menu_item_menu_item_parent`, which references another nav_menu_item's
+# post ID.  Targets are encoded through three other postmeta entries:
+#   - _menu_item_type   = 'post_type' | 'taxonomy' | 'custom'
+#   - _menu_item_object = 'page' | 'category' | 'post_tag' | 'custom'
+#   - _menu_item_object_id = the referenced post / term ID
+# Custom URLs additionally use _menu_item_url.
+#
+# Emitting these alongside the wp_navigation post means classic themes get a
+# full editable menu (assigned to `primary` by the blueprint runPHP step),
+# while block themes still pick up the curated wp_navigation post and avoid
+# the page-list fallback.
+# ---------------------------------------------------------------------------
+
+
+def _flatten_menu_items(menus: list[dict],
+                        next_post_id_ref: list[int]) -> list[dict]:
+    """Walk every menu tree, allocating a post_id per item.
+
+    Returns a flat list of dicts ready for render_nav_menu_item().  IDs are
+    allocated depth-first so children always have a stable numerical parent
+    reference.
+    """
+    out: list[dict] = []
+    for menu in menus:
+        menu_slug = menu["slug"]
+        menu_name = menu["name"]
+        position = [0]
+
+        def walk(items: list[dict], parent_post_id: int) -> None:
+            for item in items:
+                pid = next_post_id_ref[0]
+                next_post_id_ref[0] += 1
+                position[0] += 1
+                out.append({
+                    "menu_slug": menu_slug,
+                    "menu_name": menu_name,
+                    "label": item["label"],
+                    "target": item["target"],
+                    "post_id": pid,
+                    "parent_post_id": parent_post_id,
+                    "position": position[0],
+                })
+                if item.get("children"):
+                    walk(item["children"], pid)
+
+        walk(menu.get("items", []), 0)
+    return out
+
+
+def render_nav_menu_item(item: dict, page_id_by_slug: dict[str, int]) -> str:
+    label = item["label"]
+    target = item["target"]
+    if target.startswith("page:"):
+        slug = target[len("page:"):]
+        item_type = "post_type"
+        obj_type = "page"
+        object_id = page_id_by_slug.get(slug, 0)
+        url = ""
+    elif target.startswith("category:"):
+        slug = target[len("category:"):]
+        item_type = "taxonomy"
+        obj_type = "category"
+        object_id = category_term_id(slug)
+        url = ""
+    elif target.startswith("tag:"):
+        slug = target[len("tag:"):]
+        item_type = "taxonomy"
+        obj_type = "post_tag"
+        object_id = tag_term_id(slug)
+        url = ""
+    else:
+        item_type = "custom"
+        obj_type = "custom"
+        # WP convention: custom items store their own post_id in object_id.
+        object_id = item["post_id"]
+        url = target
+
+    pubdate = fmt_dt(datetime(2026, 4, 20, tzinfo=timezone.utc))
+    sql_date = fmt_sql(datetime(2026, 4, 20))
+
+    # `_menu_item_classes` is stored as a serialised PHP array.  WP writes
+    # `a:1:{i:0;s:0:"";}` for an empty class list and crashes on import if it
+    # is missing entirely; the importer round-trips the value verbatim.
+    metas = "\n".join([
+        _postmeta("_menu_item_type", item_type),
+        _postmeta("_menu_item_menu_item_parent", str(item["parent_post_id"])),
+        _postmeta("_menu_item_object_id", str(object_id)),
+        _postmeta("_menu_item_object", obj_type),
+        _postmeta("_menu_item_target", ""),
+        _postmeta("_menu_item_classes", 'a:1:{i:0;s:0:"";}'),
+        _postmeta("_menu_item_xfn", ""),
+        _postmeta("_menu_item_url", url),
+    ])
+
+    return (
+        "    <item>\n"
+        f"      <title>{cdata(label)}</title>\n"
+        f"      <link>{xml_escape(SITE_URL + '/?p=' + str(item['post_id']))}</link>\n"
+        f"      <pubDate>{pubdate}</pubDate>\n"
+        f"      <dc:creator>{cdata('admin')}</dc:creator>\n"
+        f"      <guid isPermaLink=\"false\">{xml_escape(SITE_URL)}/?p={item['post_id']}</guid>\n"
+        "      <description></description>\n"
+        f"      <content:encoded>{cdata('')}</content:encoded>\n"
+        f"      <excerpt:encoded>{cdata('')}</excerpt:encoded>\n"
+        f"      <wp:post_id>{item['post_id']}</wp:post_id>\n"
+        f"      <wp:post_date>{cdata(sql_date)}</wp:post_date>\n"
+        f"      <wp:post_date_gmt>{cdata(sql_date)}</wp:post_date_gmt>\n"
+        "      <wp:comment_status><![CDATA[closed]]></wp:comment_status>\n"
+        "      <wp:ping_status><![CDATA[closed]]></wp:ping_status>\n"
+        f"      <wp:post_name>{cdata(str(item['post_id']))}</wp:post_name>\n"
+        "      <wp:status><![CDATA[publish]]></wp:status>\n"
+        "      <wp:post_parent>0</wp:post_parent>\n"
+        f"      <wp:menu_order>{item['position']}</wp:menu_order>\n"
+        "      <wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>\n"
+        "      <wp:post_password><![CDATA[]]></wp:post_password>\n"
+        "      <wp:is_sticky>0</wp:is_sticky>\n"
+        f'      <category domain="nav_menu" nicename="{xml_escape(item["menu_slug"])}">'
+        f'{cdata(item["menu_name"])}</category>\n'
+        f"{metas}\n"
+        "    </item>\n"
+    )
+
+
 def render_term_for_format(fmt: str) -> str:
     return (
         "  <wp:term>\n"
-        f"    <wp:term_id>{abs(hash('fmt:' + fmt)) % 100000}</wp:term_id>\n"
+        f"    <wp:term_id>{format_term_id(fmt)}</wp:term_id>\n"
         "    <wp:term_taxonomy><![CDATA[post_format]]></wp:term_taxonomy>\n"
         f"    <wp:term_slug>{cdata('post-format-' + fmt)}</wp:term_slug>\n"
         f"    <wp:term_name>{cdata('Post Format: ' + fmt.title())}</wp:term_name>\n"
@@ -638,44 +865,83 @@ def main() -> int:
         comment_base = next_comment_base
         next_comment_base += 1000  # roomy stride per post
 
-        # Convert markdown body to HTML, but preserve raw HTML / wp:* blocks.
         html_body = absolutize_media(md_to_html(strip_leading_h1(body)))
         posts_xml.append(
             render_post(item, html_body, post_id, author_login,
                         post_comments, comment_base)
         )
 
-    # Build page items.
-    for page in manifest.get("pages", []):
+    # Pages: two-pass so post_parent backfill can use WXR-internal IDs.
+    pages = [dict(p) for p in manifest.get("pages", [])]
+    page_id_by_slug: dict[str, int] = {}
+    for page in pages:
+        page["_post_id"] = next_post_id
+        next_post_id += 1
+        page_id_by_slug[page["slug"]] = page["_post_id"]
+
+    for page in pages:
         slug = page["slug"]
         body = load_post_body(slug.split("/")[-1])
-        page = dict(page)
         page["post_type"] = "page"
-        page["post_parent"] = 0  # parent resolution would need a second pass
-        post_id = next_post_id
-        next_post_id += 1
-        page["date"] = "2026-04-20 09:00:00"
+        # Resolve parent: explicit `parent` field, or implicit "parent/child"
+        # in the slug (e.g. notebooks/red -> notebooks).
+        parent_slug = page.get("parent")
+        if not parent_slug and "/" in slug:
+            parent_slug = slug.rsplit("/", 1)[0]
+        page["post_parent"] = page_id_by_slug.get(parent_slug or "", 0)
+        page.setdefault("date", "2026-04-20 09:00:00")
         page["category"] = None
         html_body = absolutize_media(md_to_html(strip_leading_h1(body)))
         posts_xml.append(
-            render_post(page, html_body, post_id, "admin",
+            render_post(page, html_body, page["_post_id"], "admin",
                         [], next_comment_base)
         )
         next_comment_base += 1000
 
-    # Emit a wp_navigation post per declared menu so block themes use the
-    # curated structure instead of the default full-page-list fallback.
-    nav_xml: list[str] = []
-    for menu in manifest.get("menus", []) or []:
+    # ---------- Navigation menus ----------
+    menus = manifest.get("menus", []) or []
+
+    # Classic menus: one nav_menu term + one nav_menu_item post per menu item.
+    nav_term_xml: list[str] = [
+        render_nav_menu_term(m["slug"], m["name"]) for m in menus
+    ]
+    next_post_id_ref = [next_post_id]
+    flat_menu_items = _flatten_menu_items(menus, next_post_id_ref)
+    next_post_id = next_post_id_ref[0]
+    nav_item_xml: list[str] = [
+        render_nav_menu_item(it, page_id_by_slug) for it in flat_menu_items
+    ]
+
+    # Block-theme menu: one wp_navigation per declared menu, but stagger
+    # publish dates so the primary menu is always the newest. WP_Navigation_
+    # Fallback picks the most recently published wp_navigation post when no
+    # explicit ref is set on the Navigation block, which is the case for the
+    # built-in header pattern in Twenty Twenty-Four/Five.
+    nav_post_xml: list[str] = []
+    base_when = datetime(2026, 4, 19, 9, 0, 0, tzinfo=timezone.utc)
+    for offset, menu in enumerate(menus):
         post_id = next_post_id
         next_post_id += 1
-        nav_xml.append(render_navigation_post(menu, post_id))
+        # Primary first in manifest -> latest date; others walk backwards in
+        # time so they exist (and remain editable) but never win the fallback.
+        when = base_when - timedelta(days=offset)
+        if menu["slug"] == "primary-menu":
+            when = base_when + timedelta(days=1)
+        nav_post_xml.append(render_navigation_post(menu, post_id, when))
+
+    # The blueprint runPHP step looks up menus and pages by slug at runtime
+    # (set_theme_mod('nav_menu_locations', ...), update_option('page_on_front',
+    # ...)), so we deliberately don't ship a sidecar with the import IDs - WP
+    # remaps every WXR-internal ID on import anyway.
 
     authors_xml = "".join(
         render_author(a, user_id_by_login[a["login"]]) for a in authors
     )
     cats_xml = "".join(
-        render_category(c["slug"], c["name"], c.get("description", ""))
+        render_category(
+            c["slug"], c["name"], c.get("description", ""),
+            parent_slug=c.get("parent", "")
+        )
         for c in manifest.get("categories", [])
     )
     tags_xml = "".join(render_tag(t) for t in manifest.get("tags", []))
@@ -685,6 +951,7 @@ def main() -> int:
         if item.get("format", "standard") != "standard"
     })
     terms_xml = "".join(render_term_for_format(f) for f in formats)
+    terms_xml += "".join(nav_term_xml)
 
     pieces = [
         '<?xml version="1.0" encoding="UTF-8"?>\n',
@@ -708,7 +975,8 @@ def main() -> int:
         tags_xml,
         terms_xml,
         "".join(attachments_xml),
-        "".join(nav_xml),
+        "".join(nav_post_xml),
+        "".join(nav_item_xml),
         "".join(posts_xml),
         "  </channel>\n",
         "</rss>\n",

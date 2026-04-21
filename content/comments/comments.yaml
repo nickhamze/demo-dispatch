@@ -42,6 +42,13 @@ comments:
         I grew up two streets away from a working lighthouse. The flash
         pattern is, even now, the rhythm I fall asleep to when I am
         anywhere coastal. Beautiful piece.
+      meta:
+        # Demonstrates wp:commentmeta. The importer round-trips these
+        # verbatim. Akismet, Jetpack ratings, and language plugins all
+        # use this channel; we ship one realistic Akismet-style entry so
+        # themes that surface comment_meta have something to display.
+        akismet_result: 'false'
+        akismet_history: 'check-ham|2026-04-27 12:30:01|1.0'
 
     - id: 2
       author: tomas

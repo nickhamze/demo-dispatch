@@ -50,8 +50,17 @@ categories:
       Case studies of design and editorial projects the studio has shipped
       for clients. Flatters portfolio and agency themes.
 
+  - slug: catalog
+    name: Catalog
+    description: |
+      Parent category for everything the studio puts a label on — Shop Shelf
+      sits under here. Demonstrates nested category permalinks
+      (/category/catalog/shop-shelf/) and the breadcrumb behaviour many
+      themes layer onto wp:post-terms.
+
   - slug: shop-shelf
     name: Shop Shelf
+    parent: catalog
     description: |
       Product-shaped posts for items the studio sells in its small shop —
       zines, prints, notebooks, tea blends. Flatters shop-adjacent themes.
@@ -547,6 +556,14 @@ posts:
     word_target: 250
     featured_image: bookshelf
     media: episode-1-paper.mp3
+    enclosure:
+      # Becomes both an RSS <enclosure /> element (for podcast clients
+      # subscribed to the feed) and an `enclosure` postmeta entry (which
+      # WP rebuilds itself when the post is saved, but which we ship
+      # pre-built so feed readers see it immediately on import).
+      url: https://raw.githubusercontent.com/nickhamze/demo-dispatch/main/_media/episode-1-paper.mp3
+      length: 4194304
+      type: audio/mpeg
     summary: |
       A self-hosted MP3 episode with a chapter list rendered as an OL.
 
@@ -851,6 +868,12 @@ pages:
     title: Home
     parent: null
     order: 0
+    # `_wp_page_template` is read by both classic and block themes. If the
+    # theme registers `templates/no-title.html` (Twenty Twenty-Four/Five and
+    # most Obel-derived block themes do) the title is hidden so the cover
+    # block can carry the H1; otherwise the theme silently falls back to the
+    # default page template, which is exactly what we want for compatibility.
+    template: templates/no-title.html
     summary: |
       Designed landing page assembled from the studio's pattern library:
       hero (cover with overlay headline + CTA), section header, three-up
@@ -949,6 +972,10 @@ pages:
     title: Elements
     parent: null
     order: 11
+    # Many block themes ship a wide template; on themes without one this just
+    # falls back to default. Demonstrates _wp_page_template on a non-home
+    # page.
+    template: templates/page-wide.html
     summary: |
       Typography and block reference page. Renders every heading level,
       paragraph, blockquote, pullquote, ordered and unordered lists,
