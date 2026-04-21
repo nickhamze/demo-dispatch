@@ -983,28 +983,44 @@ pages:
 # ---------------------------------------------------------------------------
 
 menus:
+  # Primary navigation — four top-level items, each a small submenu. The shape
+  # (parent + children) is intentional so themes render a real dropdown /
+  # flyout and classic themes get a readable nested UL. Top-level labels are
+  # verbs or nouns a first-time visitor can parse without context.
   - slug: primary-menu
     name: Primary
     items:
-      - {label: Studio, target: page:studio}
-      - {label: Shop, target: page:shop}
-      - {label: Menu, target: page:menu}
-      - {label: Journal, target: category:field-notes, children: [
-          {label: Field Notes, target: category:field-notes},
-          {label: Dispatch, target: category:dispatch},
+      - {label: Studio, target: page:studio, children: [
+          {label: What we do, target: page:studio},
+          {label: Team, target: page:team},
           {label: Projects, target: category:projects},
-          {label: Kitchen, target: category:kitchen},
+          {label: Press kit, target: page:press-kit},
         ]}
-      - {label: Visit, target: page:visit}
-      - {label: About, target: page:about}
+      - {label: Journal, target: category:dispatch, children: [
+          {label: Dispatch, target: category:dispatch},
+          {label: Field Notes, target: category:field-notes},
+          {label: Kitchen, target: category:kitchen},
+          {label: Shop Shelf, target: category:shop-shelf},
+        ]}
+      - {label: Shop, target: page:shop, children: [
+          {label: All items, target: page:shop},
+          {label: Notebooks, target: page:notebooks},
+          {label: Prints, target: tag:print},
+          {label: Pantry, target: tag:food},
+        ]}
+      - {label: Visit, target: page:visit, children: [
+          {label: Hours & address, target: page:visit},
+          {label: Kitchen menu, target: page:menu},
+          {label: About the studio, target: page:about},
+          {label: Contact, target: page:contact},
+        ]}
 
   - slug: footer-menu
     name: Footer
     items:
-      - {label: Contact, target: page:contact}
       - {label: Press kit, target: page:press-kit}
-      - {label: Privacy, target: page:privacy}
       - {label: Colophon, target: page:colophon}
+      - {label: Privacy, target: page:privacy}
       - {label: Elements, target: page:elements}
 
   - slug: social-menu

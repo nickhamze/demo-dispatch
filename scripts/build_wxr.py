@@ -475,6 +475,113 @@ def render_attachment(slug: str, post_id: int, author_login: str,
     )
 
 
+# ---------------------------------------------------------------------------
+# Navigation menus
+#
+# Block themes (Twenty Twenty-Five, Twenty Twenty-Four, etc.) render their
+# header menu through a `wp:navigation` Navigation block. When no explicit
+# ref is set, the block falls back to the first published `wp_navigation`
+# post it can find, and if none exist it auto-generates a flat list of
+# every page - which is the default "too many top-level items" look we want
+# to replace.
+#
+# We emit one `wp_navigation` post per menu declared in `menus:`. Each item
+# becomes a `wp:navigation-link` block (or a `wp:navigation-submenu` block
+# when it has children). We resolve `page:`, `category:`, and `tag:` targets
+# to plain URLs so the blocks render without needing exact post / term IDs
+# on import.
+#
+# Classic themes do not use `wp_navigation`; they rely on menu locations
+# registered via `register_nav_menus()` and assigned in the Customizer.
+# Without setting theme mods (which a WXR cannot do) they show a flat page
+# list, which is the acceptable "ok on non-ones" fallback.
+# ---------------------------------------------------------------------------
+
+
+def _resolve_menu_target(target: str) -> tuple[str, str, str]:
+    """Return (kind, type, url) for a menu target string.
+
+    Targets look like:
+      page:home                -> post-type, page, /home/
+      category:dispatch        -> taxonomy, category, /category/dispatch/
+      tag:print                -> taxonomy, post_tag, /tag/print/
+      https://example.invalid  -> custom, custom, https://example.invalid
+      /feed/                   -> custom, custom, /feed/
+    """
+    if target.startswith("page:"):
+        slug = target[len("page:"):]
+        if slug in {"home", ""}:
+            url = "/"
+        else:
+            url = f"/{slug}/"
+        return ("post-type", "page", url)
+    if target.startswith("category:"):
+        slug = target[len("category:"):]
+        return ("taxonomy", "category", f"/category/{slug}/")
+    if target.startswith("tag:"):
+        slug = target[len("tag:"):]
+        return ("taxonomy", "post_tag", f"/tag/{slug}/")
+    return ("custom", "custom", target)
+
+
+def _nav_block_attrs(item: dict) -> str:
+    kind, obj_type, url = _resolve_menu_target(item["target"])
+    attrs = {
+        "label": item["label"],
+        "url": url,
+        "kind": kind,
+        "type": obj_type,
+    }
+    import json as _json
+    return _json.dumps(attrs, ensure_ascii=False, separators=(",", ":"))
+
+
+def render_nav_block(item: dict) -> str:
+    """Render a single menu item as a Gutenberg navigation block comment."""
+    attrs = _nav_block_attrs(item)
+    children = item.get("children") or []
+    if not children:
+        return f"<!-- wp:navigation-link {attrs} /-->\n"
+    parts = [f"<!-- wp:navigation-submenu {attrs} -->\n"]
+    for child in children:
+        parts.append(render_nav_block(child))
+    parts.append("<!-- /wp:navigation-submenu -->\n")
+    return "".join(parts)
+
+
+def render_navigation_post(menu: dict, post_id: int) -> str:
+    """Emit a `wp_navigation` post whose content is the menu block tree."""
+    slug = menu["slug"]
+    name = menu.get("name", slug.replace("-", " ").title())
+    body = "".join(render_nav_block(item) for item in menu.get("items", []))
+    pubdate = fmt_dt(datetime(2026, 4, 20, tzinfo=timezone.utc))
+    sql_date = fmt_sql(datetime(2026, 4, 20))
+    return (
+        "    <item>\n"
+        f"      <title>{cdata(name)}</title>\n"
+        f"      <link>{xml_escape(SITE_URL + '/' + slug + '/')}</link>\n"
+        f"      <pubDate>{pubdate}</pubDate>\n"
+        f"      <dc:creator>{cdata('admin')}</dc:creator>\n"
+        f"      <guid isPermaLink=\"false\">{xml_escape(SITE_URL)}/?p={post_id}</guid>\n"
+        "      <description></description>\n"
+        f"      <content:encoded>{cdata(body)}</content:encoded>\n"
+        f"      <excerpt:encoded>{cdata('')}</excerpt:encoded>\n"
+        f"      <wp:post_id>{post_id}</wp:post_id>\n"
+        f"      <wp:post_date>{cdata(sql_date)}</wp:post_date>\n"
+        f"      <wp:post_date_gmt>{cdata(sql_date)}</wp:post_date_gmt>\n"
+        "      <wp:comment_status><![CDATA[closed]]></wp:comment_status>\n"
+        "      <wp:ping_status><![CDATA[closed]]></wp:ping_status>\n"
+        f"      <wp:post_name>{cdata(slug)}</wp:post_name>\n"
+        "      <wp:status><![CDATA[publish]]></wp:status>\n"
+        "      <wp:post_parent>0</wp:post_parent>\n"
+        "      <wp:menu_order>0</wp:menu_order>\n"
+        "      <wp:post_type><![CDATA[wp_navigation]]></wp:post_type>\n"
+        "      <wp:post_password><![CDATA[]]></wp:post_password>\n"
+        "      <wp:is_sticky>0</wp:is_sticky>\n"
+        "    </item>\n"
+    )
+
+
 def render_term_for_format(fmt: str) -> str:
     return (
         "  <wp:term>\n"
@@ -556,6 +663,14 @@ def main() -> int:
         )
         next_comment_base += 1000
 
+    # Emit a wp_navigation post per declared menu so block themes use the
+    # curated structure instead of the default full-page-list fallback.
+    nav_xml: list[str] = []
+    for menu in manifest.get("menus", []) or []:
+        post_id = next_post_id
+        next_post_id += 1
+        nav_xml.append(render_navigation_post(menu, post_id))
+
     authors_xml = "".join(
         render_author(a, user_id_by_login[a["login"]]) for a in authors
     )
@@ -593,6 +708,7 @@ def main() -> int:
         tags_xml,
         terms_xml,
         "".join(attachments_xml),
+        "".join(nav_xml),
         "".join(posts_xml),
         "  </channel>\n",
         "</rss>\n",
