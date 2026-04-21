@@ -1,13 +1,8 @@
 {
-  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "landingPage": "/",
   "preferredVersions": {
     "php": "8.2",
     "wp": "latest"
-  },
-  "phpExtensionBundles": ["kitchen-sink"],
-  "features": {
-    "networking": false
   },
   "steps": [
     {
@@ -21,13 +16,8 @@
       "step": "importWxr",
       "file": {
         "resource": "url",
-        "url": "https://raw.githubusercontent.com/WordPress/theme-test-data/main/v2/themeunittestdata-v2.xml"
+        "url": "https://raw.githubusercontent.com/nickhamze/demo-dispatch/master/themeunittestdata-v2.xml"
       }
-    },
-    {
-      "step": "writeFile",
-      "path": "/wordpress/wp-content/uploads/demo-dispatch/README.txt",
-      "data": "Demo Dispatch sample media. See the theme-test-data repo for the source illustrations and the full deliverable matrix (4 crops x 3 widths x 3 formats per subject).\n"
     },
     {
       "step": "runPHP",
