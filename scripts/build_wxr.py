@@ -239,6 +239,32 @@ def load_post_body(slug: str) -> str:
     return ""
 
 
+# Bare media references in post bodies (e.g. ![alt](lighthouse.webp) or
+# src="harbor.webp") are rewritten to absolute URLs at build time so they
+# resolve in any preview environment.
+_BARE_MEDIA_RE = re.compile(
+    r'(?P<prefix>"|\(|src=")(?P<slug>[a-z][a-z0-9\-]*)\.(?P<ext>webp|mp4|mp3|pdf|jpg|jpeg|png)(?P<suffix>"|\))'
+)
+
+
+def absolutize_media(body: str) -> str:
+    if not MEDIA_BASE_URL:
+        return body
+
+    def _sub(m: re.Match) -> str:
+        slug = m.group("slug")
+        ext = m.group("ext")
+        if ext == "webp":
+            url = f"{MEDIA_BASE_URL.rstrip('/')}/{slug}/{slug}--16x9-1200.webp"
+        elif ext in {"mp3", "mp4", "pdf"}:
+            url = f"{MEDIA_BASE_URL.rstrip('/')}/_media/{slug}.{ext}"
+        else:
+            url = f"{MEDIA_BASE_URL.rstrip('/')}/{slug}/{slug}--16x9-1200.{ext}"
+        return f"{m.group('prefix')}{url}{m.group('suffix')}"
+
+    return _BARE_MEDIA_RE.sub(_sub, body)
+
+
 # ---------------------------------------------------------------------------
 # WXR emission
 # ---------------------------------------------------------------------------
@@ -496,7 +522,7 @@ def main() -> int:
         next_comment_base += 1000  # roomy stride per post
 
         # Convert markdown body to HTML, but preserve raw HTML / wp:* blocks.
-        html_body = md_to_html(body)
+        html_body = absolutize_media(md_to_html(body))
         posts_xml.append(
             render_post(item, html_body, post_id, author_login,
                         post_comments, comment_base)
@@ -513,7 +539,7 @@ def main() -> int:
         next_post_id += 1
         page["date"] = "2026-04-20 09:00:00"
         page["category"] = None
-        html_body = md_to_html(body)
+        html_body = absolutize_media(md_to_html(body))
         posts_xml.append(
             render_post(page, html_body, post_id, "admin",
                         [], next_comment_base)
