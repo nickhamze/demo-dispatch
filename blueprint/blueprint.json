@@ -16,12 +16,12 @@
       "step": "importWxr",
       "file": {
         "resource": "url",
-        "url": "https://raw.githubusercontent.com/nickhamze/demo-dispatch/e83a836b7128f752975ef0a78fb45f41ee75fd2e/themeunittestdata-v2.xml"
+        "url": "https://raw.githubusercontent.com/nickhamze/demo-dispatch/74961ee1deba2a8aeca3b522c955044cad7c9fb8/themeunittestdata-v2.xml"
       }
     },
     {
       "step": "runPHP",
-      "code": "<?php require '/wordpress/wp-load.php'; update_option('show_on_front', 'posts');"
+      "code": "<?php\nrequire '/wordpress/wp-load.php';\n\n// 1. Static front page. Look up the imported Home page by slug and set it\n// as page_on_front so themes with a designed home pattern render that\n// page instead of the latest-posts loop. show_on_front=page is required\n// for both page_on_front and page_for_posts to take effect.\n$home = get_page_by_path('home');\nif ($home) {\n    update_option('show_on_front', 'page');\n    update_option('page_on_front', (int) $home->ID);\n}\n\n// 2. Classic-theme menu locations. The Customizer can't be driven by WXR\n// alone; nav_menu_locations is a theme_mod that maps location slugs\n// (registered by register_nav_menus()) to nav_menu term IDs. We pin our\n// three imported menus to the conventional location slugs every classic\n// theme uses (primary/footer/social), then pre-fill the same map for the\n// most-used Twenty Twenty-* themes that diverge from the convention.\n$locations = array();\nforeach (array(\n    'primary-menu' => array('primary', 'main', 'menu-1', 'header'),\n    'footer-menu'  => array('footer', 'menu-2', 'footer-menu'),\n    'social-menu'  => array('social', 'social-menu'),\n) as $menu_slug => $location_slugs) {\n    $term = get_term_by('slug', $menu_slug, 'nav_menu');\n    if (! $term) { continue; }\n    foreach ($location_slugs as $loc) {\n        $locations[$loc] = (int) $term->term_id;\n    }\n}\nif ($locations) { set_theme_mod('nav_menu_locations', $locations); }\n\n// 3. Permalinks. Themes assume pretty permalinks; flush so /category/x/\n// and /tag/x/ resolve immediately after import.\nupdate_option('permalink_structure', '/%postname%/');\nflush_rewrite_rules(false);\n"
     }
   ]
 }
