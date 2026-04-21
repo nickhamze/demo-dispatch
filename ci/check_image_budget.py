@@ -17,7 +17,10 @@ IMG = ROOT / "images"
 
 PER_IMAGE_KB = 800
 PER_1200_WEBP_KB = 400
-BUNDLE_MEDIA_MB = 25
+# Bumped from 25 -> 40 in v2 when the subject corpus grew from 30 to 48
+# illustrations to cover the studio's expanded content surface (shop, menu,
+# projects, team, place). Per-image caps are unchanged.
+BUNDLE_MEDIA_MB = 40
 
 
 def main() -> int:

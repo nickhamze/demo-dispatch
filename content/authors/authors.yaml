@@ -1,15 +1,25 @@
-# Demo Dispatch - fictional author records.
-# Imported by build-wxr.js into <wp:author> blocks.
+# Demo Dispatch — fictional studio members.
+#
+# The four authors are recast as the four roles of a small multi-disciplinary
+# studio. Each has a distinct beat (so multi-author themes get differentiated
+# bylines) but they share a single voice (see spec/brand.md §2).
+#
+# Imported by build_wxr.py into <wp:author> blocks. Avatars are served via
+# Gravatar from the email address; the avatar_slug is the illustration that
+# is uploaded to that Gravatar account (see docs/gravatar-runbook.md).
 
 - login: mira
   display_name: Mira Halász
   first_name: Mira
   last_name: Halász
   email: mira@demo-dispatch.example
+  role: editor
+  beat: Editor. Long Field Notes essays, occasional Dispatch entries.
   avatar_slug: paperweight
   bio: |
-    Mira writes about objects that hold weight - in the desk drawer, in the
-    archive, in memory. Based in a small flat with a north-facing window.
+    Mira edits the Demo Dispatch journal and writes the long pieces — the
+    ones that take a month and start with a single object on a desk. She
+    keeps a north-facing studio at the back of the building.
   url: https://social.example/@mira
 
 - login: daniyal
@@ -17,10 +27,13 @@
   first_name: Daniyal
   last_name: Rashid
   email: daniyal@demo-dispatch.example
+  role: designer
+  beat: Designer. Project case studies, Press kit, things made for the shop.
   avatar_slug: brass-key
   bio: |
-    Daniyal is interested in mechanisms - locks, keys, the small clicks of
-    everyday life. Writes mostly long essays, occasionally short ones.
+    Daniyal handles the studio's design and editorial projects — books,
+    posters, identity work, the occasional small print run. Writes the
+    project case studies and most of what ends up on the shop shelf.
   url: https://social.example/@daniyal
 
 - login: akosua
@@ -28,10 +41,13 @@
   first_name: Akosua
   last_name: Mensah
   email: akosua@demo-dispatch.example
+  role: kitchen
+  beat: Kitchen. What's on this week, ingredient sourcing, the menu.
   avatar_slug: teacup
   bio: |
-    Akosua keeps notebooks of weather, light, and tea. Her recipes have
-    appeared in two anthologies that do not exist.
+    Akosua runs the small kitchen at the front of the studio. She writes
+    about what's on this week, where the ingredients came from, and the
+    occasional argument over how to cut a lemon properly.
   url: https://social.example/@akosua
 
 - login: tomas
@@ -39,8 +55,11 @@
   first_name: Tomás
   last_name: Quintero
   email: tomas@demo-dispatch.example
+  role: shopkeeper
+  beat: Shop & front of house. Shop Shelf items, Visit page, openings.
   avatar_slug: compass
   bio: |
-    Tomás writes about navigation - on water, on paper, in cities. Currently
-    pretending to learn to sail.
+    Tomás keeps the shop running and the door open. He writes most of the
+    Dispatch announcements, the Visit page, and short notes on what just
+    arrived in the back room.
   url: https://social.example/@tomas

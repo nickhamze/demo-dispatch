@@ -18,12 +18,12 @@ as Gravatar identifiers. Gravatar's account-creation flow requires email
 verification, so we use a holding inbox at a real provider and forward
 verification mail (see the *Provisioning* section below).
 
-| Author             | Email                            | Avatar slug   | Avatar source file                                   |
-| ------------------ | -------------------------------- | ------------- | ---------------------------------------------------- |
-| Mira Halász        | `mira@demo-dispatch.example`     | paperweight   | `images/paperweight/paperweight--1x1-1200.webp`      |
-| Daniyal Rashid     | `daniyal@demo-dispatch.example`  | brass-key     | `images/brass-key/brass-key--1x1-1200.webp`          |
-| Akosua Mensah      | `akosua@demo-dispatch.example`   | teacup        | `images/teacup/teacup--1x1-1200.webp`                |
-| Tomás Quintero     | `tomas@demo-dispatch.example`    | compass       | `images/compass/compass--1x1-1200.webp`              |
+| Author             | Studio role  | Email                            | Avatar slug   | Avatar source file                                   |
+| ------------------ | ------------ | -------------------------------- | ------------- | ---------------------------------------------------- |
+| Mira Halász        | Editor       | `mira@demo-dispatch.example`     | paperweight   | `images/paperweight/paperweight--1x1-1200.webp`      |
+| Daniyal Rashid     | Designer     | `daniyal@demo-dispatch.example`  | brass-key     | `images/brass-key/brass-key--1x1-1200.webp`          |
+| Akosua Mensah      | Kitchen      | `akosua@demo-dispatch.example`   | teacup        | `images/teacup/teacup--1x1-1200.webp`                |
+| Tomás Quintero     | Shopkeeper   | `tomas@demo-dispatch.example`    | compass       | `images/compass/compass--1x1-1200.webp`              |
 
 ## Provisioning (one-time, then on every art change)
 

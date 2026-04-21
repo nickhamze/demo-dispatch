@@ -1,6 +1,6 @@
 # Demo Dispatch - Art Direction Spec
 
-Version: 1.0.0
+Version: 2.0.0
 Status: Locked
 Last reviewed: 2026-04-20
 
@@ -150,7 +150,66 @@ A generated illustration is accepted only if all of the following hold:
 If any check fails, the image is regenerated against the same prompt slot
 fill until it passes. The repo only ever contains accepted images.
 
-## 9. Provenance
+## 9. Extending the system (added v2)
+
+When the studio's content surface grows (new posts, new product types, new
+marketing pages), the illustration system extends rather than restyles. The
+goal: a viewer landing on the home page, the shop page, the menu page, or
+any post hero should immediately read it as the same publication.
+
+### Subject categories that may be added
+
+The categories in §2 are extended to include:
+
+- **Studio interior objects**: a small printing press in three-quarter view,
+  a folded poster, a stack of letterpress proofs, a tea tin, a wire rack of
+  postcards.
+- **Studio shop products**: a zine cover (no readable text), a screenprint
+  flat, a small notebook seen at an angle, a tin of tea.
+- **Kitchen subjects**: a slice of lemon cake on a porcelain plate, a loaf
+  of bread, a bowl of soup, a small jar of marmalade.
+- **Place at a distance**: the studio's frontage seen from the opposite
+  curb, a stylized neighborhood map, a gallery wall with three vague
+  framed pieces.
+- **Editorial / project-metaphor objects**: a cookbook spread (no readable
+  text, page geometry only), a wayfinding card deck.
+
+What remains forbidden in §2 is unchanged: no human faces, hands, or
+silhouettes; no readable text or numerals (titles on shop covers must be
+abstract glyphs or pure shape); no real brand marks; no animals with
+humanoid expressions.
+
+### Discipline rules for new subjects
+
+1. Same prompt template, same palette, same line treatment, same paper
+   background. No exceptions.
+2. Each new subject is assigned exactly one of the four accent pairs (A, B,
+   C, D) and added to `subject-palette-map.md`. The distribution remains
+   roughly balanced across the corpus.
+3. Subjects intended to cluster in one place — kitchen subjects on the
+   menu page, shop subjects on the shop page — are assigned pairs that
+   cluster well. Kitchen subjects favor pair B (mustard ochre + sage
+   green); shop subjects spread across A and C; place subjects favor
+   pairs A and D.
+4. Same crop matrix (1:1, 4:5, 16:9, 21:9), same resolutions (1200 / 2000
+   / 3200), same formats (WebP / AVIF / JPEG).
+5. Same prompt template slot fill, same provenance sidecar, same alt-text
+   sidecar — see `subject-palette-map.md` and `alt-text.yaml`.
+
+### Acceptance for new subjects
+
+In addition to the §8 checks, new subjects must:
+
+a. Look correct standing alongside three randomly-chosen v1 subjects in a
+   row. If a viewer can pick out which is the new one without effort, the
+   new one is wrong.
+b. Read clearly at the home-page card size (~360px wide) — the silhouette
+   must be obvious.
+c. Cluster correctly with subjects in the same role (kitchen subjects
+   should look like a family on the menu page; shop subjects on the shop
+   page).
+
+## 10. Provenance
 
 Each image ships a sidecar `{slug}.provenance.json` recording:
 

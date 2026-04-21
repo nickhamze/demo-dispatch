@@ -15,8 +15,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from check_sandbox_below_fold import parse_posts  # noqa: E402
 
 ALLOWED = {
-    "articles", "notes", "reviews", "recipes",
-    "how-to", "audio", "video", "sandbox",
+    "dispatch", "field-notes", "projects",
+    "shop-shelf", "kitchen", "sandbox",
 }
 
 

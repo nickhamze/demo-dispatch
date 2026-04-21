@@ -1,47 +1,78 @@
-# Demo Dispatch - content manifest.
-# This file is the authoritative list of every post and page in the dataset.
-# build-wxr.js reads this manifest and assembles themeunittestdata-v2.xml.
+# Demo Dispatch — content manifest.
+#
+# This file is the authoritative list of every post, page, category, tag, and
+# menu in the dataset. build_wxr.py reads this manifest and assembles
+# themeunittestdata-v2.xml.
+#
+# The studio conceit (see spec/brand.md): Demo Dispatch is a small fictional
+# creative studio. Every category corresponds to a real thing the studio does,
+# which gives the dataset both personality and structural breadth.
 #
 # Date scheme:
 #   - Release date floor: 2026-04-20.
-#   - The lead marquee post is dated 2026-04-27 (release + 7 days) so it sits
-#     above WP's default Hello world! in most preview environments.
-#   - Articles posts are dated backwards from there at irregular intervals
-#     across ~17 months, ending around 2024-11.
+#   - The lead Field Notes essay is dated 2026-04-27 (release + 7 days) so it
+#     sits at the top of the blog index in most preview environments.
+#   - Public-facing posts (Dispatch, Field Notes, Projects, Shop Shelf,
+#     Kitchen) are dated backwards across ~17 months down to 2024-11.
 #   - Sandbox posts are dated 2024-09 to 2024-04 (18-24 months back) so they
 #     never appear on page 1 of the blog index given posts_per_page=10 and
-#     ~25 visible Articles posts ahead of them.
+#     ~25 visible non-Sandbox posts ahead of them.
 #   - See spec/dating-scheme.md for the full rationale.
 #
-# Block whitelist for marquee posts (must degrade in classic themes):
-#   paragraph, heading, image, quote, list, gallery, embed, separator, table.
-# Sandbox posts may use any blocks.
+# Block discipline (see spec/brand.md §3):
+#   - Marketing pages and feed posts use only blocks from the "use freely"
+#     and "use with discipline" lists.
+#   - Every styled block carries both a slug class AND inline style for color
+#     and font-size, so block themes layer on the top and classic themes get
+#     dignified inline rendering.
+#   - Sandbox is exempt; that bucket exists to torture-test edge cases.
+
+# ---------------------------------------------------------------------------
+# Categories — one per studio activity
+# ---------------------------------------------------------------------------
 
 categories:
-  - slug: articles
-    name: Articles
-    description: Long-form essays, photo-essays, recipes, reviews, and recaps.
-  - slug: notes
-    name: Notes
-    description: Short observations and asides.
-  - slug: reviews
-    name: Reviews
-    description: Considered notes on small things.
-  - slug: recipes
-    name: Recipes
-    description: A handful of seasonal recipes.
-  - slug: how-to
-    name: How-To
-    description: Step-by-step instructions.
-  - slug: audio
-    name: Audio
-    description: Self-hosted audio episodes.
-  - slug: video
-    name: Video
-    description: Self-hosted and embedded video.
+  - slug: dispatch
+    name: Dispatch
+    description: |
+      The studio journal. Short news, releases, openings, and announcements
+      from the four members. Multi-author. Flatters news and magazine themes.
+
+  - slug: field-notes
+    name: Field Notes
+    description: |
+      The long pieces. Editorial essays on objects, places, and the slow work
+      of paying attention. Flatters blog and journal themes.
+
+  - slug: projects
+    name: Projects
+    description: |
+      Case studies of design and editorial projects the studio has shipped
+      for clients. Flatters portfolio and agency themes.
+
+  - slug: shop-shelf
+    name: Shop Shelf
+    description: |
+      Product-shaped posts for items the studio sells in its small shop —
+      zines, prints, notebooks, tea blends. Flatters shop-adjacent themes.
+
+  - slug: kitchen
+    name: Kitchen
+    description: |
+      Notes from the small kitchen at the front of the studio — what's on
+      this week, where the ingredients came from, the occasional recipe
+      fragment. Flatters food and restaurant themes.
+
   - slug: sandbox
     name: Sandbox
-    description: Theme stress tests. Reachable from /category/sandbox/.
+    description: |
+      Theme stress tests. Reachable from /category/sandbox/. Below the home
+      page fold by date discipline. Verifies edge cases without polluting
+      the public feed.
+
+# ---------------------------------------------------------------------------
+# Tags — small set, each used by 3+ posts
+# ---------------------------------------------------------------------------
 
 tags:
   - light
@@ -54,34 +85,107 @@ tags:
   - maps
   - navigation
   - small-things
+  - food
+  - workshop
+  - print
+  - opening
 
 # ---------------------------------------------------------------------------
-# Marquee posts (Articles category, dated forward)
+# Posts — public-facing feed
 # ---------------------------------------------------------------------------
+#
+# Sequence (by date, newest first) is the order in which posts appear on the
+# blog index. The first ~10 form page 1. We deliberately interleave categories
+# so page 1 shows a mix of Dispatch news, a Field Notes essay or two, a
+# Project, a Shop Shelf item, and a Kitchen note — every theme genre sees
+# representative content above the fold.
 
 posts:
 
-  # Lead post - dated release+7 days so it leads the blog index.
+  # =============================================================
+  # Page 1 of the blog index (newest 10, mixed categories)
+  # =============================================================
+
+  # Lead — pinned long essay
   - slug: how-a-lighthouse-works
     title: How a lighthouse works
-    author: tomas
+    author: mira
     date: 2026-04-27 09:00:00
-    category: articles
+    category: field-notes
     tags: [light, water, navigation]
     format: standard
     sticky: true
     word_target: 1500
     featured_image: lighthouse
-    inline_images: [harbor, lantern]
+    inline_images: [harbor]
     summary: |
       A long-form essay covering Fresnel lenses, characteristic flash patterns,
       and why a lighthouse is really a clock.
 
+  # Dispatch — recent opening
+  - slug: spring-show-now-open
+    title: Spring show, now open
+    author: tomas
+    date: 2026-04-22 10:00:00
+    category: dispatch
+    tags: [opening]
+    format: standard
+    word_target: 200
+    featured_image: gallery-wall
+    summary: |
+      A short Dispatch announcing the spring exhibition opening in the front
+      gallery, hours, and a brief note on the work.
+
+  # Project — recent client case study
+  - slug: project-bell-press-rebrand
+    title: A new mark for Bell Press
+    author: daniyal
+    date: 2026-04-18 14:00:00
+    category: projects
+    tags: [print, typography]
+    format: standard
+    word_target: 800
+    featured_image: print-press
+    inline_images: [poster-stack, proofs]
+    summary: |
+      Identity, two-color letterpress card, and a small wordmark for a 70-
+      year-old neighborhood print shop. Brief / approach / outcome.
+
+  # Kitchen — what's on this week
+  - slug: lemon-cake-thursday
+    title: Lemon cake, Thursday
+    author: akosua
+    date: 2026-04-16 08:30:00
+    category: kitchen
+    tags: [food]
+    format: standard
+    word_target: 300
+    featured_image: lemon-cake
+    inline_images: [lemon]
+    summary: |
+      Notes on this Thursday's lemon cake: the lemons, the proportions, and
+      what we changed from last time.
+
+  # Shop Shelf — recent product
+  - slug: shop-quiet-rooms-zine
+    title: 'Shop: Quiet Rooms, a 24-page zine'
+    author: daniyal
+    date: 2026-04-12 11:00:00
+    category: shop-shelf
+    tags: [print, paper]
+    format: standard
+    word_target: 250
+    featured_image: zine-cover
+    summary: |
+      A two-color zine collecting six short essays from Field Notes, printed
+      letterpress in a run of 200. Includes price, contents, and availability.
+
+  # Field Notes — second long essay
   - slug: notes-on-the-color-blue
     title: Notes on the color blue
     author: mira
-    date: 2026-04-12 14:30:00
-    category: articles
+    date: 2026-04-08 14:30:00
+    category: field-notes
     tags: [color, light]
     format: standard
     word_target: 1500
@@ -91,12 +195,41 @@ posts:
       An essay on the long, strange history of blue as a pigment, ending at
       the Yves Klein patent.
 
+  # Dispatch — workshop
+  - slug: workshop-letterpress-saturday
+    title: 'Workshop: Letterpress, Saturday afternoon'
+    author: tomas
+    date: 2026-04-04 09:00:00
+    category: dispatch
+    tags: [workshop, print]
+    format: standard
+    word_target: 220
+    featured_image: print-press
+    summary: |
+      Announcement for the half-day letterpress workshop, with what to bring
+      and the fee.
+
+  # Kitchen — sourcing note
+  - slug: morning-bread-from-the-bakery-down-the-block
+    title: Morning bread, from the bakery down the block
+    author: akosua
+    date: 2026-03-29 07:00:00
+    category: kitchen
+    tags: [food]
+    format: standard
+    word_target: 250
+    featured_image: bread-loaf
+    summary: |
+      A short post about where the morning bread comes from and why we don't
+      bake it ourselves.
+
+  # Field Notes — third long essay
   - slug: a-short-history-of-the-printed-page
     title: A short history of the printed page
-    author: daniyal
-    date: 2026-03-30 11:15:00
-    category: articles
-    tags: [paper, typography]
+    author: mira
+    date: 2026-03-22 11:15:00
+    category: field-notes
+    tags: [paper, typography, print]
     format: standard
     word_target: 1500
     featured_image: typewriter
@@ -105,38 +238,143 @@ posts:
       From woodblock to movable type to phototypesetting, with sidebars on
       paper sizes.
 
+  # Project — second case study
+  - slug: project-harbor-museum-wayfinding
+    title: Wayfinding for the harbor museum
+    author: daniyal
+    date: 2026-03-15 10:00:00
+    category: projects
+    tags: [maps, navigation]
+    format: standard
+    word_target: 900
+    featured_image: folded-map
+    inline_images: [compass, harbor]
+    summary: |
+      A small wayfinding system for a one-room museum: floor plan, deck of
+      cards, exterior sign. Brief / approach / outcome.
+
+  # =============================================================
+  # Page 2 onward (still in the public feed)
+  # =============================================================
+
+  # Shop Shelf — print
+  - slug: shop-harbor-print
+    title: 'Shop: Harbor at five o''clock, two-color print'
+    author: daniyal
+    date: 2026-03-08 13:00:00
+    category: shop-shelf
+    tags: [print]
+    format: standard
+    word_target: 220
+    featured_image: harbor-print
+    summary: |
+      A two-color screenprint of the harbor at five o'clock. Numbered edition
+      of 50. Includes price, dimensions, and shipping note.
+
+  # Dispatch — release
+  - slug: issue-three-now-shipping
+    title: Issue three is now shipping
+    author: tomas
+    date: 2026-03-01 09:30:00
+    category: dispatch
+    tags: [print]
+    format: standard
+    word_target: 180
+    featured_image: zine-stack
+    summary: |
+      Announcement that Issue three has gone to press and shipping starts
+      this week.
+
+  # Field Notes — postcards
   - slug: why-we-still-write-postcards
     title: Why we still write postcards
     author: akosua
-    date: 2026-03-18 08:00:00
-    category: articles
+    date: 2026-02-22 08:00:00
+    category: field-notes
     tags: [paper, small-things]
     format: standard
-    word_target: 1500
+    word_target: 1400
     featured_image: postcard
-    inline_images: []
     summary: |
       A defense of the postcard as the slowest message worth sending.
 
+  # Project — third case study (gallery-heavy)
+  - slug: project-quarterly-cookbook
+    title: 'Quarterly: a 96-page cookbook for a friend'
+    author: daniyal
+    date: 2026-02-14 15:00:00
+    category: projects
+    tags: [food, print, typography]
+    format: gallery
+    word_target: 800
+    featured_image: cookbook-cover
+    inline_images: [cookbook-spread, lemon-cake]
+    gallery_subjects: [cookbook-cover, cookbook-spread, lemon-cake, bread-loaf]
+    summary: |
+      Editorial design and typesetting for a small-press cookbook. Includes a
+      five-image gallery of spreads.
+
+  # Kitchen — recipe fragment
+  - slug: lemon-ice
+    title: Lemon ice
+    author: akosua
+    date: 2026-02-06 15:00:00
+    category: kitchen
+    tags: [food, color]
+    format: standard
+    word_target: 350
+    featured_image: lemon
+    inline_images: [teacup]
+    summary: |
+      A two-ingredient recipe with structured ingredient and method lists.
+
+  # Shop Shelf — small good
+  - slug: shop-pocket-notebook
+    title: 'Shop: Pocket notebook, undated'
+    author: daniyal
+    date: 2026-01-29 12:00:00
+    category: shop-shelf
+    tags: [paper, small-things]
+    format: standard
+    word_target: 230
+    featured_image: pocket-notebook
+    summary: |
+      A small pocket notebook, sewn binding, 96 pages, undated. Includes
+      price, paper weight, and stocking note.
+
+  # Field Notes — maps
   - slug: the-grammar-of-maps
     title: The grammar of maps
-    author: tomas
-    date: 2026-02-22 19:45:00
-    category: articles
+    author: mira
+    date: 2026-01-21 19:45:00
+    category: field-notes
     tags: [maps, navigation]
     format: standard
     word_target: 1500
     featured_image: folded-map
     inline_images: [compass]
     summary: |
-      How cartographers compose information - and what an honest map omits.
+      How cartographers compose information — and what an honest map omits.
 
-  # Photo essays
+  # Dispatch — short note
+  - slug: closing-early-thursday
+    title: Closing early Thursday
+    author: tomas
+    date: 2026-01-12 16:00:00
+    category: dispatch
+    tags: []
+    format: aside
+    word_target: 80
+    featured_image: null
+    summary: |
+      A two-paragraph aside about an early closing for studio cleaning.
+
+  # Field Notes — gallery essay (kept from v1)
   - slug: twelve-fountain-pens
     title: Twelve fountain pens
     author: mira
-    date: 2026-02-08 12:00:00
-    category: articles
+    date: 2026-01-04 12:00:00
+    category: field-notes
     tags: [small-things, paper]
     format: gallery
     word_target: 700
@@ -146,11 +384,12 @@ posts:
     summary: |
       An illustrated catalogue of twelve pens, with captions on each.
 
+  # Field Notes — image-format short essay (kept from v1)
   - slug: harbor-light-at-five-oclock
     title: Harbor light at five o'clock
     author: tomas
-    date: 2026-01-28 17:05:00
-    category: articles
+    date: 2025-12-21 17:05:00
+    category: field-notes
     tags: [light, water]
     format: image
     word_target: 600
@@ -159,25 +398,66 @@ posts:
     summary: |
       A short photo-essay about evening light on a small harbor.
 
-  - slug: a-field-guide-to-weather-vanes
-    title: A field guide to weather vanes
-    author: daniyal
-    date: 2026-01-14 10:30:00
-    category: articles
-    tags: [weather, small-things]
-    format: gallery
-    word_target: 700
-    featured_image: weather-vane
-    inline_images: [weather-vane]
-    gallery_subjects: [weather-vane, kite]
+  # Kitchen — short note
+  - slug: tea-blend-for-cold-mornings
+    title: A tea blend for cold mornings
+    author: akosua
+    date: 2025-12-12 07:30:00
+    category: kitchen
+    tags: [food]
+    format: standard
+    word_target: 280
+    featured_image: tea-tin
     summary: |
-      Field notes on rooftop weather vanes seen on a slow walk.
+      A note on the new house tea blend — what's in it, who toasts the
+      cinnamon, and where to buy a tin.
 
+  # Shop Shelf — tea tin
+  - slug: shop-house-tea-tin
+    title: 'Shop: House tea, in a small tin'
+    author: tomas
+    date: 2025-12-05 10:00:00
+    category: shop-shelf
+    tags: [food]
+    format: standard
+    word_target: 240
+    featured_image: tea-tin
+    summary: |
+      A small tin of the house blend. Includes price, weight, and steeping
+      notes.
+
+  # Dispatch — link-format
+  - slug: an-essay-elsewhere-worth-reading
+    title: An essay elsewhere, worth reading
+    author: daniyal
+    date: 2025-11-22 13:45:00
+    category: dispatch
+    tags: [paper]
+    format: link
+    word_target: 80
+    featured_image: null
+    summary: |
+      A link-format Dispatch entry pointing to a single outbound URL.
+
+  # Dispatch — quote-format
+  - slug: on-quiet-rooms
+    title: On quiet rooms
+    author: mira
+    date: 2025-11-08 07:15:00
+    category: dispatch
+    tags: [listening]
+    format: quote
+    word_target: 100
+    featured_image: null
+    summary: |
+      A quote-format Dispatch built around a single short pull-quote.
+
+  # Field Notes — list essay (kept)
   - slug: things-found-in-a-library-window
     title: Things found in a library window
-    author: akosua
-    date: 2025-12-30 16:00:00
-    category: articles
+    author: mira
+    date: 2025-10-22 16:00:00
+    category: field-notes
     tags: [light, small-things]
     format: image
     word_target: 600
@@ -186,125 +466,12 @@ posts:
     summary: |
       A list essay catalogued by what the afternoon sun illuminates.
 
-  # Short notes (post formats workout)
-  - slug: an-aside-about-listening
-    title: An aside about listening
-    author: akosua
-    date: 2025-12-12 21:00:00
-    category: notes
-    tags: [listening]
-    format: aside
-    word_target: 120
-    featured_image: null
-    summary: |
-      A two-paragraph note about listening to rain through an open window.
-
-  - slug: status-update-still-here
-    title: ""
-    author: mira
-    date: 2025-11-29 09:30:00
-    category: notes
-    tags: [small-things]
-    format: status
-    word_target: 30
-    featured_image: null
-    summary: |
-      Twitter-length post, intentionally empty title to test theme handling.
-
-  - slug: a-link-worth-keeping
-    title: A link worth keeping
-    author: daniyal
-    date: 2025-11-18 13:45:00
-    category: notes
-    tags: [paper]
-    format: link
-    word_target: 80
-    featured_image: null
-    summary: |
-      A link-format post with a single outbound URL.
-
-  - slug: on-quiet-rooms
-    title: On quiet rooms
-    author: tomas
-    date: 2025-10-30 07:15:00
-    category: notes
-    tags: [listening]
-    format: quote
-    word_target: 100
-    featured_image: null
-    summary: |
-      A quote-format post built around a single short pull-quote.
-
-  - slug: two-photographs-of-snow
-    title: Two photographs of snow
-    author: mira
-    date: 2025-10-09 11:00:00
-    category: notes
-    tags: [weather]
-    format: image
-    word_target: 90
-    featured_image: snowdrop
-    summary: |
-      Image-format post with one image and one caption.
-
-  - slug: a-six-second-clip
-    title: A six-second clip
-    author: tomas
-    date: 2025-09-22 18:20:00
-    category: video
-    tags: [water]
-    format: video
-    word_target: 60
-    featured_image: paper-boat
-    media: paper-boat-clip.mp4
-    summary: |
-      Video-format post that embeds the bundled MP4.
-
-  # Specialised posts
-  - slug: lemon-ice
-    title: Lemon ice
-    author: akosua
-    date: 2025-09-04 15:00:00
-    category: recipes
-    tags: [color]
-    format: standard
-    word_target: 350
-    featured_image: lemon
-    inline_images: [teacup]
-    summary: |
-      A two-ingredient recipe with structured ingredient and method lists.
-
-  - slug: folding-a-paper-boat
-    title: Folding a paper boat
-    author: mira
-    date: 2025-08-18 12:30:00
-    category: how-to
-    tags: [paper, water]
-    format: standard
-    word_target: 400
-    featured_image: paper-boat
-    inline_images: [paper-boat]
-    summary: |
-      Five numbered steps with one inline image per step.
-
-  - slug: on-a-particular-teacup
-    title: On a particular teacup
-    author: akosua
-    date: 2025-07-29 08:45:00
-    category: reviews
-    tags: [small-things]
-    format: standard
-    word_target: 500
-    featured_image: teacup
-    inline_images: []
-    summary: |
-      A review of a single ceramic teacup, with a star-rating-shaped table.
-
+  # Field Notes — kept
   - slug: notes-from-a-small-observatory
     title: Notes from a small observatory
-    author: tomas
-    date: 2025-07-04 22:10:00
-    category: articles
+    author: mira
+    date: 2025-10-04 22:10:00
+    category: field-notes
     tags: [light, navigation]
     format: standard
     word_target: 800
@@ -313,11 +480,68 @@ posts:
     summary: |
       A recap-style post about a quiet evening at a small hilltop observatory.
 
+  # Kitchen — short
+  - slug: two-photographs-of-snow
+    title: Two photographs of snow
+    author: akosua
+    date: 2025-09-18 11:00:00
+    category: kitchen
+    tags: [weather, food]
+    format: image
+    word_target: 200
+    featured_image: snowdrop
+    summary: |
+      Image-format Kitchen post — two photographs and a sentence about
+      cooking in cold weather.
+
+  # Dispatch — video
+  - slug: a-six-second-clip
+    title: A six-second clip from the print room
+    author: daniyal
+    date: 2025-09-02 18:20:00
+    category: dispatch
+    tags: [print]
+    format: video
+    word_target: 90
+    featured_image: paper-boat
+    media: paper-boat-clip.mp4
+    summary: |
+      Video-format Dispatch post that embeds the bundled MP4.
+
+  # Field Notes — how-to (kept)
+  - slug: folding-a-paper-boat
+    title: Folding a paper boat
+    author: mira
+    date: 2025-08-15 12:30:00
+    category: field-notes
+    tags: [paper, water]
+    format: standard
+    word_target: 400
+    featured_image: paper-boat
+    inline_images: [paper-boat]
+    summary: |
+      Five numbered steps with one inline image per step.
+
+  # Field Notes — review-shaped (kept, recategorized)
+  - slug: on-a-particular-teacup
+    title: On a particular teacup
+    author: akosua
+    date: 2025-07-29 08:45:00
+    category: field-notes
+    tags: [small-things]
+    format: standard
+    word_target: 500
+    featured_image: teacup
+    summary: |
+      A short essay about a single ceramic teacup, with a star-rating-shaped
+      table at the end.
+
+  # Dispatch — audio (kept, recategorized)
   - slug: episode-1-paper
     title: 'Episode 1: Paper'
-    author: daniyal
+    author: mira
     date: 2025-06-12 10:00:00
-    category: audio
+    category: dispatch
     tags: [paper, listening]
     format: audio
     word_target: 250
@@ -326,12 +550,15 @@ posts:
     summary: |
       A self-hosted MP3 episode with a chapter list rendered as an OL.
 
-  # Filler Articles posts to push Sandbox below the fold
+  # ---------------------------------------------------------------
+  # Filler Field Notes posts to push Sandbox below the fold
+  # ---------------------------------------------------------------
+
   - slug: an-evening-on-the-pier
     title: An evening on the pier
     author: tomas
     date: 2025-05-22 19:00:00
-    category: articles
+    category: field-notes
     tags: [water, light]
     format: standard
     word_target: 500
@@ -343,7 +570,7 @@ posts:
     title: A kettle and a clock
     author: akosua
     date: 2025-04-30 06:30:00
-    category: articles
+    category: field-notes
     tags: [small-things, listening]
     format: standard
     word_target: 500
@@ -355,7 +582,7 @@ posts:
     title: Stones that fit the hand
     author: mira
     date: 2025-03-14 14:15:00
-    category: articles
+    category: field-notes
     tags: [small-things]
     format: standard
     word_target: 500
@@ -367,7 +594,7 @@ posts:
     title: The fern uncurls slowly
     author: akosua
     date: 2025-02-19 09:20:00
-    category: articles
+    category: field-notes
     tags: [weather, color]
     format: standard
     word_target: 500
@@ -377,9 +604,9 @@ posts:
 
   - slug: bicycles-i-have-known
     title: Bicycles I have known
-    author: daniyal
+    author: tomas
     date: 2024-12-08 11:50:00
-    category: articles
+    category: field-notes
     tags: [small-things]
     format: standard
     word_target: 600
@@ -387,12 +614,13 @@ posts:
     summary: |
       An affectionate list essay about three former bicycles.
 
-# ---------------------------------------------------------------------------
-# Sandbox posts (theme stress tests, dated 18-24 months back)
-# ---------------------------------------------------------------------------
+  # ---------------------------------------------------------------
+  # Sandbox posts (theme stress tests, dated 18-24 months back).
+  # Unchanged from v1.
+  # ---------------------------------------------------------------
 
   - slug: cover-block-stress-test
-    title: Cover block - text overlay at every alignment
+    title: Cover block — text overlay at every alignment
     author: mira
     date: 2024-09-18 12:00:00
     category: sandbox
@@ -462,7 +690,7 @@ posts:
       Title and body both contain the longest word in the dataset.
 
   - slug: many-comments-pagination-test
-    title: Many comments - pagination test
+    title: Many comments — pagination test
     author: tomas
     date: 2024-06-02 18:00:00
     category: sandbox
@@ -608,38 +836,103 @@ posts:
       A post whose title leads with an emoji glyph.
 
 # ---------------------------------------------------------------------------
-# Pages
+# Pages — the marketing surface of the studio
 # ---------------------------------------------------------------------------
+#
+# All marketing pages assemble from the seven patterns in spec/brand.md §3,
+# which means they look amazing in block themes and dignified in classic
+# themes from the same WXR.
 
 pages:
-  - slug: about
-    title: About
+
+  # Front-of-house pages first (ordered to flatter primary nav)
+
+  - slug: home
+    title: Home
+    parent: null
+    order: 0
+    summary: |
+      Designed landing page assembled from the studio's pattern library:
+      hero (cover with overlay headline + CTA), section header, three-up
+      "what we do" cards, recent dispatches via wp:latest-posts, recent
+      project, kitchen + visit teaser, CTA band.
+
+  - slug: studio
+    title: Studio
     parent: null
     order: 1
     summary: |
-      Publication mission plus author cards (one card per author).
+      Services page. Three-up grid of what the studio offers (design,
+      editorial, small print, kitchen), each with a short blurb and a plain-
+      text price range. Closes with a CTA band.
+
+  - slug: team
+    title: Team
+    parent: null
+    order: 2
+    summary: |
+      Four member cards (avatar, name, role, one-paragraph bio, beat). Uses
+      the card row pattern. Below: a brief paragraph about the studio's
+      working principles.
+
+  - slug: shop
+    title: Shop
+    parent: null
+    order: 3
+    summary: |
+      Index of Shop Shelf items as a card grid. Each card shows the
+      illustration, title, price, and availability line. Below: a paragraph
+      on shipping and returns.
+
+  - slug: menu
+    title: Menu
+    parent: null
+    order: 4
+    summary: |
+      Structured kitchen menu by section (Morning, Lunch, Sweets, Drinks).
+      Each item: name, short description, price, optional dietary tag.
+      Closes with a note on hours and reservations.
+
+  - slug: visit
+    title: Visit
+    parent: null
+    order: 5
+    summary: |
+      Hours, address, getting here. Hero image (the studio frontage), media-
+      text block for hours + address, illustrated map placeholder, brief
+      accessibility note.
+
+  - slug: about
+    title: About
+    parent: null
+    order: 6
+    summary: |
+      What the studio is, when it was founded, why. One hero image, three
+      short sections, pullquote.
+
+  # Documentation-y pages
 
   - slug: contact
     title: Contact
     parent: null
-    order: 2
+    order: 7
     summary: |
-      A static contact page with HTML form markup; no plugin needed.
+      A static contact page: short intro, a plain HTML form (no plugin), and
+      the studio's address & hours pulled from Visit.
 
-  - slug: elements
-    title: Elements
+  - slug: press-kit
+    title: Press kit
     parent: null
-    order: 3
+    order: 8
     summary: |
-      Typography and block reference page. Renders every heading level,
-      paragraph, blockquote, pullquote, ordered and unordered lists, definition
-      list, table, code, preformatted, figure with caption, every button
-      variant, every alignment, and a six-swatch palette grid.
+      Downloadable press materials. Logo lockup, brand palette swatches,
+      a wp:file block linking to the bundled PDF, three approved photos
+      with usage notes.
 
   - slug: privacy
     title: Privacy
     parent: null
-    order: 4
+    order: 9
     summary: |
       Our published privacy policy at /privacy/. Distinct from the WP default
       /privacy-policy/ draft, which we cannot publish via WXR-only.
@@ -647,18 +940,29 @@ pages:
   - slug: colophon
     title: Colophon
     parent: null
-    order: 5
+    order: 10
     summary: |
-      Credits the illustration palette, typeface assumptions, dataset version,
-      and a link to the GitHub repo.
+      Credits the illustration palette, typeface assumptions, dataset
+      version, and a link to the GitHub repo. Briefly winks at being a demo.
 
-  # Page-hierarchy test
+  - slug: elements
+    title: Elements
+    parent: null
+    order: 11
+    summary: |
+      Typography and block reference page. Renders every heading level,
+      paragraph, blockquote, pullquote, ordered and unordered lists,
+      definition list, table, code, preformatted, figure with caption, every
+      button variant, every alignment, and a six-swatch palette grid.
+
+  # Page-hierarchy test (kept from v1 — charming and demonstrates nesting)
+
   - slug: notebooks
     title: Notebooks
     parent: null
-    order: 6
+    order: 12
     summary: |
-      Parent page for the page-hierarchy test.
+      Parent page for the page-hierarchy test. Houses two child notebooks.
 
   - slug: notebooks/red
     title: Red notebook
@@ -682,18 +986,23 @@ menus:
   - slug: primary-menu
     name: Primary
     items:
-      - {label: Articles, target: category:articles}
-      - {label: Notes, target: category:notes, children: [
-          {label: Asides, target: category:notes},
-          {label: Quotes, target: category:notes},
+      - {label: Studio, target: page:studio}
+      - {label: Shop, target: page:shop}
+      - {label: Menu, target: page:menu}
+      - {label: Journal, target: category:field-notes, children: [
+          {label: Field Notes, target: category:field-notes},
+          {label: Dispatch, target: category:dispatch},
+          {label: Projects, target: category:projects},
+          {label: Kitchen, target: category:kitchen},
         ]}
-      - {label: Audio, target: category:audio}
+      - {label: Visit, target: page:visit}
       - {label: About, target: page:about}
-      - {label: Contact, target: page:contact}
 
   - slug: footer-menu
     name: Footer
     items:
+      - {label: Contact, target: page:contact}
+      - {label: Press kit, target: page:press-kit}
       - {label: Privacy, target: page:privacy}
       - {label: Colophon, target: page:colophon}
       - {label: Elements, target: page:elements}

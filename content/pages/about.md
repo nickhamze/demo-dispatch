@@ -1,49 +1,69 @@
 ---
 slug: about
 title: About
-order: 1
+order: 6
 ---
 
-# About Demo Dispatch
+<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide">
 
-Demo Dispatch is a sample publication. It exists, in any active install, for
-exactly one reason: to make a WordPress theme look like a real site full of
-real content while a visitor is previewing it.
+<!-- wp:paragraph {"textColor":"terracotta","fontSize":"small","style":{"color":{"text":"#B8533A"},"typography":{"fontSize":"0.875rem","letterSpacing":"0.1em","textTransform":"uppercase","fontWeight":"600"}}} -->
+<p class="has-terracotta-color has-text-color has-small-font-size" style="color:#B8533A;font-size:0.875rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:600">About</p>
+<!-- /wp:paragraph -->
 
-The articles are written for the dataset, not for any particular topic.
-They are real prose, edited to a publishable standard, on neutral evergreen
-subjects - lighthouses, paper, the colour blue, the grammar of maps - so
-that the active theme can show what it looks like with thoughtful writing
-on top of it. The illustrations are produced from a single locked palette
-so the corpus reads as one publication. The structural test cases (cover
-blocks, query loops, password-protected posts, fifty-three threaded
-comments) live in a `Sandbox` category, dated old enough that they fall
-below the home page fold.
+<!-- wp:heading {"level":1,"textColor":"ink","fontSize":"display","style":{"color":{"text":"#1B1B1F"},"typography":{"fontSize":"3.5rem","lineHeight":"1.05","fontWeight":"600"}}} -->
+<h1 class="wp-block-heading has-ink-color has-text-color has-display-font-size" style="color:#1B1B1F;font-size:3.5rem;line-height:1.05;font-weight:600">A small studio doing several things at once.</h1>
+<!-- /wp:heading -->
 
-If you are reading this on a real WordPress install you have just imported
-the dataset into - welcome. The masthead, the about text you are reading
-now, the four authors, and every post in the publication can be deleted
-freely; nothing in the active theme depends on any of them. The dataset is
-the scaffolding, not the building.
+<!-- wp:paragraph {"textColor":"ink","fontSize":"large","style":{"color":{"text":"#1B1B1F"},"typography":{"fontSize":"1.5rem","lineHeight":"1.4"}}} -->
+<p class="has-ink-color has-text-color has-large-font-size" style="color:#1B1B1F;font-size:1.5rem;line-height:1.4">Demo Dispatch is a creative studio in a small storefront with a green door. Four of us work here. We publish a journal, take on design and editorial projects, run a small shop, and serve a short menu in the front room. We have been at it since 2019.</p>
+<!-- /wp:paragraph -->
 
-## The contributors
+</div>
+<!-- /wp:group -->
 
-This dataset was written and illustrated by four fictional contributors.
-Their archives are real archives - each of them owns a balanced share of
-the posts on the site - and their avatars are part of the same
-illustration corpus that produces the rest of the imagery.
+<!-- wp:spacer {"height":"3rem"} -->
+<div style="height:3rem" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
 
-- **Mira Halász** writes about objects with weight, real and metaphorical.
-- **Daniyal Rashid** writes about mechanisms - locks, keys, presses.
-- **Akosua Mensah** keeps notebooks of weather, light, and tea.
-- **Tomás Quintero** writes about navigation in all its forms.
+<!-- wp:image {"align":"wide","sizeSlug":"large","style":{"border":{"radius":"2px"}}} -->
+<figure class="wp-block-image alignwide size-large"><img src="studio-frontage.webp" alt="The studio frontage with the green door, two blocks up from the harbor." style="border-radius:2px"/></figure>
+<!-- /wp:image -->
 
-## The dataset
+<!-- wp:spacer {"height":"3rem"} -->
+<div style="height:3rem" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
 
-Demo Dispatch ships as `themeunittestdata-v2.xml` in the
-[WordPress/theme-test-data](https://github.com/WordPress/theme-test-data)
-repository. It is intended as a successor to the long-serving
-`themeunittestdata.wordpress.xml`. Full documentation, the illustration
-spec, and the build scripts are in the same repository. The colophon page
-on this site lists the typeface assumptions and the colour palette in
-full.
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"720px"}} -->
+<div class="wp-block-group">
+
+<!-- wp:heading {"level":2,"textColor":"ink","fontSize":"x-large","style":{"color":{"text":"#1B1B1F"},"typography":{"fontSize":"2.5rem","lineHeight":"1.1"}}} -->
+<h2 class="wp-block-heading has-ink-color has-text-color has-x-large-font-size" style="color:#1B1B1F;font-size:2.5rem;line-height:1.1">What this place is</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textColor":"ink","fontSize":"medium","style":{"color":{"text":"#1B1B1F"},"typography":{"fontSize":"1.125rem","lineHeight":"1.6"}}} -->
+<p class="has-ink-color has-text-color has-medium-font-size" style="color:#1B1B1F;font-size:1.125rem;line-height:1.6">A press, a design studio, a tiny shop, and a small kitchen, sharing the same room. We started by accident — Mira and Daniyal needed somewhere to put a pile of zines, Akosua had nowhere to bake, and Tomás had a list of things he wanted to sell. The studio is what happened to all of those things at once.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2,"textColor":"ink","fontSize":"x-large","style":{"color":{"text":"#1B1B1F"},"typography":{"fontSize":"2.5rem","lineHeight":"1.1"}}} -->
+<h2 class="wp-block-heading has-ink-color has-text-color has-x-large-font-size" style="color:#1B1B1F;font-size:2.5rem;line-height:1.1">What we believe</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textColor":"ink","fontSize":"medium","style":{"color":{"text":"#1B1B1F"},"typography":{"fontSize":"1.125rem","lineHeight":"1.6"}}} -->
+<p class="has-ink-color has-text-color has-medium-font-size" style="color:#1B1B1F;font-size:1.125rem;line-height:1.6">In small batches. In paying attention. In writing things down. In paper. In the bakery down the block. In closing the shop on Mondays so the print room can do its inventory and the kitchen can clean. In writing back to every email, even the long ones, even the strange ones.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pullquote {"textColor":"ink","style":{"color":{"text":"#1B1B1F"},"border":{"top":{"color":"#B8533A","width":"3px"},"bottom":{"color":"#B8533A","width":"3px"}}}} -->
+<figure class="wp-block-pullquote has-ink-color has-text-color" style="border-top-color:#B8533A;border-top-width:3px;border-bottom-color:#B8533A;border-bottom-width:3px;color:#1B1B1F"><blockquote><p>The studio is what happened when four of us decided to stop trying to do everything separately.</p></blockquote></figure>
+<!-- /wp:pullquote -->
+
+<!-- wp:heading {"level":2,"textColor":"ink","fontSize":"x-large","style":{"color":{"text":"#1B1B1F"},"typography":{"fontSize":"2.5rem","lineHeight":"1.1"}}} -->
+<h2 class="wp-block-heading has-ink-color has-text-color has-x-large-font-size" style="color:#1B1B1F;font-size:2.5rem;line-height:1.1">A note for visitors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textColor":"ink","fontSize":"medium","style":{"color":{"text":"#1B1B1F"},"typography":{"fontSize":"1.125rem","lineHeight":"1.6"}}} -->
+<p class="has-ink-color has-text-color has-medium-font-size" style="color:#1B1B1F;font-size:1.125rem;line-height:1.6">If you have just imported this dataset into a fresh WordPress install — welcome. Demo Dispatch is the sample content that ships with theme previews; the studio is, gently, fictional. You are free to delete every post, page, and author here without breaking anything. The dataset is scaffolding, not the building. The <a href="/colophon/" style="color:#2F6F6A">Colophon</a> has the rest of the credits.</p>
+<!-- /wp:paragraph -->
+
+</div>
+<!-- /wp:group -->

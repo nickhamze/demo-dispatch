@@ -11,6 +11,7 @@ guards=(
   "ci/check_dead_links.py"
   "ci/check_sandbox_below_fold.py"
   "ci/check_uncategorized_empty.py"
+  "ci/check_genre_coverage.py"
   "ci/check_dating_monotone_buffer.py"
   "ci/check_wxr_schema.py"
 )

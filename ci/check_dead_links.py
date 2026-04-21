@@ -55,13 +55,14 @@ def collect_internal_targets() -> set[str]:
     for m in re.finditer(r"^\s+- slug:\s*(.+)$", pages_block, re.MULTILINE):
         targets.add(f"/{m.group(1).strip()}/")
     for cat in [
-        "articles", "notes", "reviews", "recipes",
-        "how-to", "audio", "video", "sandbox",
+        "dispatch", "field-notes", "projects",
+        "shop-shelf", "kitchen", "sandbox",
     ]:
         targets.add(f"/category/{cat}/")
     for tag in [
         "light", "paper", "water", "weather", "color",
         "listening", "typography", "maps", "navigation", "small-things",
+        "food", "workshop", "print", "opening",
     ]:
         targets.add(f"/tag/{tag}/")
     for author in ["mira", "daniyal", "akosua", "tomas"]:

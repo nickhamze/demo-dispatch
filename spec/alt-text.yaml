@@ -93,3 +93,71 @@ sailboat: |
 library-window: |
   A tall library window framed by curtains, with no figures inside, drawn
   in flat terracotta and mustard ochre.
+
+# v2 additions — studio-reframe subjects.
+
+studio-frontage: |
+  A small two-story storefront with a green door and a single window, seen
+  from across the street, drawn in flat ocean teal and sage green.
+studio-map: |
+  A stylized neighborhood map showing two streets, a harbor edge, and one
+  marked building with no readable place names, drawn in flat terracotta
+  and ocean teal.
+gallery-wall: |
+  A plain interior wall with three vague rectangular framed pieces hung at
+  gallery height, with no readable images inside the frames, drawn in flat
+  terracotta and mustard ochre.
+print-press: |
+  A small letterpress in three-quarter view with a type drawer visible to
+  one side, drawn in flat terracotta and mustard ochre.
+poster-stack: |
+  A short stack of three letterpress posters drying on a rack, with no
+  readable text on the posters, drawn in flat terracotta and ocean teal.
+proofs: |
+  Three printed proofs on rough cotton paper laid flat, showing abstract
+  two-color shapes and no readable text, drawn in flat terracotta and
+  ocean teal.
+zine-cover: |
+  A single zine cover seen face-on, with two abstract shapes on a paper
+  field and no readable text, drawn in flat terracotta and ocean teal.
+zine-stack: |
+  A short stack of zines on a wooden counter seen from a three-quarter
+  angle, with abstract covers and no readable text, drawn in flat
+  terracotta and mustard ochre.
+harbor-print: |
+  A framed two-color print of a small harbor at dusk leaning against a
+  wall, with abstract horizon shapes only, drawn in flat terracotta and
+  ocean teal.
+pocket-notebook: |
+  Three small pocket notebooks fanned slightly in three different cover
+  colors, with the sewn binding visible, drawn in flat terracotta and
+  mustard ochre.
+tea-tin: |
+  A small steel tin of loose-leaf tea with the lid removed and resting
+  beside it, with a few tea leaves visible inside, drawn in flat mustard
+  ochre and sage green.
+lemon-cake: |
+  A single slice of lemon cake on a small porcelain plate with a fork
+  resting beside it, drawn in flat mustard ochre and sage green.
+bread-loaf: |
+  A single loaf of country bread on a wooden board with one slice cut and
+  leaning against it, drawn in flat mustard ochre and sage green.
+soup-bowl: |
+  A small ceramic bowl of soup with a wooden spoon resting on the rim and
+  a thread of steam rising, drawn in flat mustard ochre and sage green.
+marmalade-jar: |
+  A small glass jar of lemon marmalade with a hand-written label (no
+  readable text) and a sealed lid, drawn in flat mustard ochre and sage
+  green.
+cookbook-cover: |
+  A single hardbound cookbook cover with an abstract two-color geometric
+  pattern and no readable text, drawn in flat terracotta and mustard
+  ochre.
+cookbook-spread: |
+  An open cookbook spread laid flat, with abstract block shapes
+  representing text on the left page and a single image area on the
+  right, drawn in flat terracotta and mustard ochre.
+wayfinding-cards: |
+  A small fanned deck of wayfinding cards on a wooden surface, each
+  showing abstract two-color shapes and no readable text, drawn in flat
+  terracotta and ocean teal.
