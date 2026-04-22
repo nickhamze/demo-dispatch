@@ -12,9 +12,10 @@ reviewers' local environments.
 - **One WXR file** (`themeunittestdata-v2.xml`, ~240 KB) imported through
   the standard WordPress Importer, `wp-cli import`, or Playground
   `import-content`. No new tooling required.
-- **One illustration corpus** (`images/`) of 30 hand-drawn editorial
-  illustrations in a single locked palette of six colors, each delivered
-  at 4 crops x up to 3 widths x 3 formats, with alt text and AI-provenance
+- **One illustration corpus** (`images/`) of 30 AI-generated editorial
+  illustrations (gpt-image-1 via cursor.image, single locked prompt
+  template, CC0-1.0) in a six-color palette, each delivered at 4 crops
+  x up to 3 widths x 3 formats, with alt text and per-image provenance
   sidecars.
 - **One bundled MP3, PDF, and (optional) MP4** in `images/_media/` to
   exercise self-hosted audio, downloadable attachments, and
