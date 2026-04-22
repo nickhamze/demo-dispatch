@@ -69,7 +69,7 @@ order: 10
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"ink","style":{"color":{"text":"#1B1B1F"}}} -->
-<p class="has-ink-color has-text-color" style="color:#1B1B1F">Demo Dispatch ships as <code>themeunittestdata-v2.wxr</code> in the <a href="https://github.com/WordPress/theme-test-data" style="color:#2F6F6A">WordPress/theme-test-data</a> repository. It is intended as a successor to the long-serving <code>themeunittestdata.wordpress.xml</code>. Build scripts, the brand spec, and the art-direction spec are all in the same repository.</p>
+<p class="has-ink-color has-text-color" style="color:#1B1B1F">Demo Dispatch ships as <code>themeunittestdata-v2.xml</code> in the <a href="https://github.com/WordPress/theme-test-data" style="color:#2F6F6A">WordPress/theme-test-data</a> repository. It is intended as a successor to the long-serving <code>themeunittestdata.wordpress.xml</code>. Build scripts, the brand spec, and the art-direction spec are all in the same repository.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:spacer {"height":"2rem"} -->

@@ -2,7 +2,7 @@
 #
 # This file is the authoritative list of every post, page, category, tag, and
 # menu in the dataset. build_wxr.py reads this manifest and assembles
-# themeunittestdata-v2.wxr.
+# themeunittestdata-v2.xml.
 #
 # The studio conceit (see spec/brand.md): Demo Dispatch is a small fictional
 # creative studio. Every category corresponds to a real thing the studio does,

@@ -3,7 +3,7 @@
 Demo Dispatch - WXR builder.
 
 Reads the manifest, all post and page Markdown bodies, the comments file,
-and the authors file, and assembles `themeunittestdata-v2.wxr` at the repo
+and the authors file, and assembles `themeunittestdata-v2.xml` at the repo
 root. The output is RSS 2.0 with the WordPress export 1.2 namespaces, the
 exact dialect the WP Importer, wp-cli import, and Playground import-content
 all consume unchanged.
@@ -40,7 +40,7 @@ CONTENT = ROOT / "content"
 MANIFEST = CONTENT / "manifest.yaml"
 AUTHORS = CONTENT / "authors" / "authors.yaml"
 COMMENTS = CONTENT / "comments" / "comments.yaml"
-WXR_OUT = ROOT / "themeunittestdata-v2.wxr"
+WXR_OUT = ROOT / "themeunittestdata-v2.xml"
 
 SITE_URL = "https://example.com"
 SITE_TITLE = "Demo Dispatch"

@@ -11,7 +11,7 @@ This document is the briefing the maintainer carries into #meta and
 
 ## What we are asking the meta team to do
 
-1. **Import the Demo Dispatch WXR** (`themeunittestdata-v2.wxr`) onto the
+1. **Import the Demo Dispatch WXR** (`themeunittestdata-v2.xml`) onto the
    wp-themes.com network's content template, so every newly-spawned theme
    subsite imports it instead of (or alongside) the current
    `themeunittestdata.wordpress.xml` from

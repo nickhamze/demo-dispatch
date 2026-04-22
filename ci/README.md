@@ -10,7 +10,7 @@ guard blocks merge.
 | Image budget                   | `check_image_budget.py`                 | Per-image and bundle-wide size caps.                                    |
 | Alt-text presence              | `check_alt_text_presence.py`            | Every `<img>` in every post body has a non-empty `alt`.                 |
 | Dead-link check                | `check_dead_links.py`                   | Every internal link resolves to a manifest entry; external links return 200. |
-| WXR schema validity            | `check_wxr_schema.py`                   | The built `themeunittestdata-v2.wxr` parses as RSS 2.0 with the WP namespaces. |
+| WXR schema validity            | `check_wxr_schema.py`                   | The built `themeunittestdata-v2.xml` parses as RSS 2.0 with the WP namespaces. |
 | Sandbox below the fold         | `check_sandbox_below_fold.py`           | First sandbox post is at index >= `posts_per_page * 2`.                 |
 | Uncategorized stays empty      | `check_uncategorized_empty.py`          | No imported post is in `Uncategorized`.                                 |
 | Date-buffer monotonicity       | `check_dating_monotone_buffer.py`       | Gap between newest Sandbox and oldest Filler post is >= 30 days.        |
