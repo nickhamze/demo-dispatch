@@ -2,7 +2,7 @@
 """
 WXR schema validity guard.
 
-Parses the built themeunittestdata-v2.xml and asserts:
+Parses the built themeunittestdata-v2.wxr and asserts:
 
 - It is well-formed XML.
 - Root element is <rss version="2.0">.
@@ -23,7 +23,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-WXR = ROOT / "themeunittestdata-v2.xml"
+WXR = ROOT / "themeunittestdata-v2.wxr"
 
 NS = {
     "wp": "http://wordpress.org/export/1.2/",

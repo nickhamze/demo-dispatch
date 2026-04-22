@@ -9,7 +9,7 @@ reviewers' local environments.
 
 ## What this is
 
-- **One WXR file** (`themeunittestdata-v2.xml`, ~240 KB) imported through
+- **One WXR file** (`themeunittestdata-v2.wxr`, ~240 KB) imported through
   the standard WordPress Importer, `wp-cli import`, or Playground
   `import-content`. No new tooling required.
 - **One illustration corpus** (`images/`) of 30 hand-drawn editorial
@@ -36,7 +36,7 @@ python3 scripts/process_images.py
 # Build the bundled MP3, PDF, and (if ffmpeg is available) MP4.
 python3 scripts/build_media.py
 
-# Assemble themeunittestdata-v2.xml from the manifest, content, comments,
+# Assemble themeunittestdata-v2.wxr from the manifest, content, comments,
 # and authors.
 python3 scripts/build_wxr.py
 
@@ -76,7 +76,7 @@ docs/
 rfc/
   2026-04-20-demo-dispatch.md     the public RFC draft
 blueprint/blueprint.json     one-click Playground import
-themeunittestdata-v2.xml     the built artefact (regenerate with build_wxr.py)
+themeunittestdata-v2.wxr     the built artefact (regenerate with build_wxr.py)
 ```
 
 ## Constraints

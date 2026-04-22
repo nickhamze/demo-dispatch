@@ -36,7 +36,7 @@ dataset, **Demo Dispatch**, that:
   including a new `check_genre_coverage.py` that fails the build if any
   required theme genre has zero representative content.
 
-The dataset is one file (`themeunittestdata-v2.xml`, ~380 KB) plus ~35 MB
+The dataset is one file (`themeunittestdata-v2.wxr`, ~380 KB) plus ~35 MB
 of bundled images and ~10 KB of bundled MP3/PDF/MP4. It imports through
 the unmodified WordPress Importer, `wp-cli import`, and Playground's
 `importWxr` step.
